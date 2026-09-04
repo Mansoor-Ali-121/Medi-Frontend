@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Healthcare Services & Home Nursing Portal | Islamabad & Rawalpindi</title>
+    <meta name="description"
+        content="Connecting patients and families with verified hospitals, leading doctors, and qualified home-care nurses in Islamabad and Rawalpindi." />
+    <meta property="og:title" content="Healthcare Services & Home Nursing Portal" />
+    <meta property="og:description"
+        content="Find verified doctors, certified home nursing care, and 24/7 hospitals in Islamabad & Rawalpindi." />
+
+    <!-- FontAwesome 6 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <!-- AOS Library CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Dedicated Stylesheets -->
+    <link rel="stylesheet" href="/assets/css/global.css" />
+    <link rel="stylesheet" href="/assets/css/nurse.css" />
+</head>
+
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-sky-500 selection:text-white">
+
+    <!-- TOP EMERGENCY RESPONSE & UTILITY BAR -->
+    <div class="top-emergency-bar bg-slate-900 text-slate-200 border-b border-slate-800"
+        id="top-emergency-announcement-bar" data-aos="fade-down" data-aos-duration="800">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between items-center flex-wrap gap-2 py-1.5">
+            <div class="flex items-center flex-wrap gap-2 text-xs">
+                <a href="tel:1122"
+                    class="badge-emergency inline-flex items-center px-2.5 py-1 rounded-full text-white bg-red-600 hover:bg-red-700 font-semibold no-underline transition-colors">
+                    <i class="fa-solid fa-truck-medical mr-1.5"></i> 24/7 HELPLINE 1122
+                </a>
+                <span class="text-slate-500 hidden sm:inline">|</span>
+                <span class="text-slate-300 text-xs">
+                    Twin Cities EMS: <a href="tel:1122" class="text-white font-bold hover:underline">1122</a>
+                    <span class="hidden md:inline">| Bed Info &amp; Dispatch: <a href="tel:0519280000"
+                            class="text-white font-bold hover:underline">051-9280000</a></span>
+                </span>
+            </div>
+            <div class="flex items-center gap-3 text-xs">
+                <span class="hidden lg:inline text-emerald-400 font-medium">
+                    <i class="fa-solid fa-circle-check mr-1"></i> 100% PMDC &amp; PNC Certified
+                </span>
+                <span class="text-slate-500 hidden lg:inline">|</span>
+                <a href="hospitals.html" class="text-slate-300 hover:text-white hidden md:inline transition-colors">
+                    <i class="fa-solid fa-hospital-user mr-1 text-indigo-400"></i> Emergency ERs
+                </a>
+                <a href="patient-portal.html"
+                    class="text-slate-200 hover:text-white font-semibold bg-slate-800/80 px-2.5 py-1 rounded border border-slate-700 transition-colors">
+                    <i class="fa-regular fa-user-circle mr-1 text-sky-400"></i> Patient Portal
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- STICKY MAIN NAVBAR -->
+    <header
+        class="portal-navbar-wrapper sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm"
+        data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100">
+        <div class="portal-nav-container max-w-7xl mx-auto px-4 py-3 flex justify-between items-center relative">
+
+            <!-- Brand Logo -->
+            <a class="portal-brand flex items-center gap-3 no-underline" href="index.html">
+                <div
+                    class="brand-icon-box w-10 h-10 bg-sky-600 text-white flex items-center justify-center rounded-lg shadow-sm">
+                    <i class="fas fa-heartbeat"></i>
+                </div>
+                <div class="brand-text-container flex flex-col">
+                    <span class="font-extrabold text-lg text-slate-900 leading-tight">Medi <span
+                            class="text-emerald-600">Care</span></span>
+                    <span class="text-[0.65rem] font-bold text-teal-600 tracking-wider uppercase">Your Health, Our
+                        Priority</span>
+                </div>
+            </a>
+
+            <!-- Mobile Hamburger Button -->
+            <button
+                class="portal-mobile-toggle md:hidden text-slate-700 hover:text-sky-600 p-2 focus:outline-none cursor-pointer z-50"
+                id="manualMenuBtn" aria-label="Toggle Navigation">
+                <i class="fas fa-bars text-xl" id="menuIcon"></i>
+            </button>
+
+            <!-- Navigation Links Wrapper -->
+            <div class="portal-nav-links-wrapper md:flex items-center gap-8 absolute md:relative top-full left-0 right-0 bg-white shadow-xl md:shadow-none border-b md:border-none border-slate-100 p-5 md:p-0 flex-col md:flex-row transition-all"
+                id="manualNavContent">
+
+                <ul
+                    class="portal-nav-links flex flex-col md:flex-row items-start md:items-center gap-3 md:gap-2 m-0 p-0 list-none w-full md:w-auto">
+                    <li class="w-full md:w-auto">
+                        <a class="nav-link-custom active font-semibold text-sky-600 bg-sky-50 px-3.5 py-2.5 rounded-md flex items-center gap-2 no-underline transition-colors w-full"
+                            href="index.html">
+                            <i class="fas fa-home"></i> Home
+                        </a>
+                    </li>
+                    <li class="w-full md:w-auto">
+                        <a class="nav-link-custom font-semibold text-slate-700 hover:text-sky-600 hover:bg-slate-50 px-3.5 py-2.5 rounded-md flex items-center gap-2 no-underline transition-colors w-full"
+                            href="nurse.html">
+                            <i class="fas fa-user-nurse"></i> Home Nursing
+                        </a>
+                    </li>
+                    <li class="w-full md:w-auto">
+                        <a class="nav-link-custom font-semibold text-slate-700 hover:text-sky-600 hover:bg-slate-50 px-3.5 py-2.5 rounded-md flex items-center gap-2 no-underline transition-colors w-full"
+                            href="hopitals.html">
+                            <i class="fas fa-hospital"></i> Hospitals
+                        </a>
+                    </li>
+                    <li class="w-full md:w-auto">
+                        <a class="nav-link-custom font-semibold text-slate-700 hover:text-sky-600 hover:bg-slate-50 px-3.5 py-2.5 rounded-md flex items-center gap-2 no-underline transition-colors w-full"
+                            href="doctors.html">
+                            <i class="fas fa-user-md"></i> Doctors
+                        </a>
+                    </li>
+                </ul>
+
+                <div
+                    class="flex flex-col md:flex-row items-stretch md:items-center gap-4 w-full md:w-auto mt-4 md:mt-0 pt-4 md:pt-0 border-t md:border-t-0 border-slate-100">
+                    <!-- City Selection Dropdown -->
+                    <div class="relative" id="cityDropdownWrapper">
+                        <button type="button" id="cityDropdownBtn"
+                            class="flex items-center justify-between md:justify-start gap-1.5 text-sm font-semibold text-slate-700 hover:text-sky-600 focus:outline-none py-2 w-full cursor-pointer">
+                            <span class="flex items-center gap-1.5">
+                                <i class="fas fa-map-marker-alt text-sky-600"></i>
+                                <span class="selected-city-text">Islamabad / Pindi</span>
+                            </span>
+                            <i class="fas fa-chevron-down text-xs text-slate-400"></i>
+                        </button>
+
+                        <div id="cityDropdownMenu"
+                            class="absolute right-0 mt-2 w-full md:w-44 bg-white rounded-xl shadow-xl border border-slate-100 py-2 z-50 hidden">
+                            <a href="#"
+                                class="block px-4 py-2 text-sm font-semibold text-sky-600 bg-sky-50 city-dropdown-option"
+                                data-city="Islamabad">Islamabad</a>
+                            <a href="#"
+                                class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 transition-colors city-dropdown-option"
+                                data-city="Rawalpindi">Rawalpindi</a>
+                        </div>
+                    </div>
+
+                    <a href="dashboard-patient.html"
+                        class="btn-primary-health bg-sky-600 hover:bg-sky-700 text-white px-4 py-2.5 rounded-lg font-semibold text-sm no-underline flex items-center justify-center gap-1.5 shadow-sm transition-all">
+                        <i class="fas fa-user-circle"></i> Patient Portal
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </header>
+
+    <!-- NURSES HERO sidebar -->
+    <!-- NURSES HERO HEADER -->
+    <section class="nurses-hero-header py-12 md:py-16 relative overflow-hidden" id="nurses-header-section"
+        data-aos="fade-in">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+
+            <!-- Breadcrumb Navigation -->
+            <nav aria-label="breadcrumb" class="mb-4" data-aos="fade-down" data-aos-duration="600">
+                <ol class="flex items-center gap-2 text-xs text-teal-200">
+                    <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+                    <li><span class="text-teal-300">/</span></li>
+                    <li class="text-white font-medium" aria-current="page">Home Nursing Services</li>
+                </ol>
+            </nav>
+
+            <!-- Main Content Flex Wrapper (Added lg:items-center for perfect vertical alignment) -->
+            <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+
+                <!-- Left Title & Description -->
+                <div class="max-w-3xl" data-aos="fade-right" data-aos-duration="800">
+                    <h1 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight mb-2">
+                        PNC Certified Home Nursing Care
+                    </h1>
+                    <p class="text-teal-100/90 text-sm md:text-base leading-relaxed mb-0">
+                        Find vetted, compassionate male and female registered nurses for 12-hour shifts or 24/7 live-in
+                        support across Islamabad sectors and Rawalpindi.
+                    </p>
+                </div>
+
+                <!-- Right Verified Badge Box -->
+                <div class="lg:text-right" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
+                    <div
+                        class="inline-flex items-center gap-2.5 bg-teal-950/60 border border-teal-500/30 px-3.5 py-2.5 rounded-xl text-teal-100 text-xs font-semibold shadow-sm backdrop-blur-md">
+                        <i class="fa-solid fa-shield-halved text-emerald-400 text-base"></i>
+                        <span>Police Background Checked & PNC Verified</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN NURSES DIRECTORY & FILTER LAYOUT -->
+    <section class="py-12 bg-white" id="nurses-directory-section" data-aos="fade-up">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+
+                <!-- SIDEBAR FILTERS -->
+                <div class="lg:col-span-4 xl:col-span-3" data-aos="fade-right" data-aos-delay="100">
+                    <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm" id="nurse-sidebar-filters">
+
+                        <div class="flex justify-between items-center mb-4 pb-3 border-b border-slate-200">
+                            <h5 class="font-bold text-dark text-lg mb-0 flex items-center">
+                                <i class="fa-solid fa-sliders text-teal-600 mr-2"></i>Filters
+                            </h5>
+                            <button
+                                class="text-teal-600 hover:text-teal-700 text-xs font-semibold p-0 bg-transparent border-none cursor-pointer"
+                                id="btn-reset-nurse-filters">Reset All</button>
+                        </div>
+
+                        <!-- City / Sector Filter -->
+                        <div class="mb-6">
+                            <div class="text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">City & Region
+                            </div>
+                            <select
+                                class="w-full text-sm py-2 px-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 mb-2 bg-white"
+                                id="filter-nurse-city">
+                                <option value="All">All Regions (Twin Cities)</option>
+                                <option value="Islamabad">Islamabad Sectors (F, G, E, DHA)</option>
+                                <option value="Rawalpindi">Rawalpindi & Cantt (Bahria, Saddar)</option>
+                            </select>
+                        </div>
+
+                        <!-- Shift Preference -->
+                        <div class="mb-6">
+                            <div class="text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Shift Type</div>
+                            <label class="flex items-center justify-between py-1.5 cursor-pointer">
+                                <div class="flex items-center space-x-2">
+                                    <input type="checkbox"
+                                        class="w-4 h-4 text-teal-600 border-slate-300 rounded focus:ring-teal-500 nurse-filter-shift"
+                                        value="12h-day" checked />
+                                    <span class="text-sm text-slate-700">12-Hour Day Shift</span>
+                                </div>
+                                <span class="text-xs text-slate-400">210</span>
+                            </label>
+                            <label class="flex items-center justify-between py-1.5 cursor-pointer">
+                                <div class="flex items-center space-x-2">
+                                    <input type="checkbox"
+                                        class="w-4 h-4 text-teal-600 border-slate-300 rounded focus:ring-teal-500 nurse-filter-shift"
+                                        value="12h-night" checked />
+                                    <span class="text-sm text-slate-700">12-Hour Night Shift</span>
+                                </div>
+                                <span class="text-xs text-slate-400">145</span>
+                            </label>
+                            <label class="flex items-center justify-between py-1.5 cursor-pointer">
+                                <div class="flex items-center space-x-2">
+                                    <input type="checkbox"
+                                        class="w-4 h-4 text-teal-600 border-slate-300 rounded focus:ring-teal-500 nurse-filter-shift"
+                                        value="24h-livein" checked />
+                                    <span class="text-sm text-slate-700">24-Hour Live-In Care</span>
+                                </div>
+                                <span class="text-xs text-slate-400">98</span>
+                            </label>
+                        </div>
+
+                        <!-- Nursing Specialization -->
+                        <div class="mb-6">
+                            <div class="text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Specialization
+                            </div>
+                            <label class="flex items-center py-1.5 cursor-pointer">
+                                <div class="flex items-center space-x-2">
+                                    <input type="checkbox"
+                                        class="w-4 h-4 text-teal-600 border-slate-300 rounded focus:ring-teal-500 nurse-filter-spec"
+                                        value="post-op" checked />
+                                    <span class="text-sm text-slate-700">Post-Surgery / Wound</span>
+                                </div>
+                            </label>
+                            <label class="flex items-center py-1.5 cursor-pointer">
+                                <div class="flex items-center space-x-2">
+                                    <input type="checkbox"
+                                        class="w-4 h-4 text-teal-600 border-slate-300 rounded focus:ring-teal-500 nurse-filter-spec"
+                                        value="elderly" checked />
+                                    <span class="text-sm text-slate-700">Elderly / Geriatric Care</span>
+                                </div>
+                            </label>
+                            <label class="flex items-center py-1.5 cursor-pointer">
+                                <div class="flex items-center space-x-2">
+                                    <input type="checkbox"
+                                        class="w-4 h-4 text-teal-600 border-slate-300 rounded focus:ring-teal-500 nurse-filter-spec"
+                                        value="stroke" checked />
+                                    <span class="text-sm text-slate-700">Stroke / Paralysis Rehab</span>
+                                </div>
+                            </label>
+                            <label class="flex items-center py-1.5 cursor-pointer">
+                                <div class="flex items-center space-x-2">
+                                    <input type="checkbox"
+                                        class="w-4 h-4 text-teal-600 border-slate-300 rounded focus:ring-teal-500 nurse-filter-spec"
+                                        value="neonatal" checked />
+                                    <span class="text-sm text-slate-700">Infant & Mother Care</span>
+                                </div>
+                            </label>
+                            <label class="flex items-center py-1.5 cursor-pointer">
+                                <div class="flex items-center space-x-2">
+                                    <input type="checkbox"
+                                        class="w-4 h-4 text-teal-600 border-slate-300 rounded focus:ring-teal-500 nurse-filter-spec"
+                                        value="icu" checked />
+                                    <span class="text-sm text-slate-700">ICU / Tracheostomy</span>
+                                </div>
+                            </label>
+                        </div>
+
+                        <!-- Gender Preference -->
+                        <div class="mb-6">
+                            <div class="text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Nurse Gender
+                            </div>
+                            <div class="flex gap-2">
+                                <button
+                                    class="flex-1 py-1.5 px-3 text-xs font-semibold rounded-lg border border-slate-300 bg-teal-600 text-white nurse-gender-btn active"
+                                    data-gender="All">Any</button>
+                                <button
+                                    class="flex-1 py-1.5 px-3 text-xs font-semibold rounded-lg border border-slate-300 bg-white text-slate-700 hover:bg-slate-50 nurse-gender-btn"
+                                    data-gender="Female">Female</button>
+                                <button
+                                    class="flex-1 py-1.5 px-3 text-xs font-semibold rounded-lg border border-slate-300 bg-white text-slate-700 hover:bg-slate-50 nurse-gender-btn"
+                                    data-gender="Male">Male</button>
+                            </div>
+                        </div>
+
+                        <!-- Rate Range -->
+                        <div class="mb-2">
+                            <div
+                                class="text-xs font-bold text-slate-700 uppercase tracking-wider mb-2 flex justify-between">
+                                <span>Max Shift Fee</span>
+                                <span id="rate-val-display" class="font-bold text-teal-700">Rs. 5,000</span>
+                            </div>
+                            <input type="range" class="w-full accent-teal-600 cursor-pointer" min="3000" max="6000"
+                                step="200" value="5000" id="nurse-rate-range" />
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- NURSE LISTINGS & CONTROLS -->
+                <div class="lg:col-span-8 xl:col-span-9">
+
+                    <!-- Top Bar with Search & Sort -->
+                    <div class="flex flex-wrap justify-between items-center bg-white p-4 rounded-2xl border border-slate-200 shadow-sm mb-6 gap-4"
+                        data-aos="fade-down" data-aos-delay="150">
+                        <div class="flex items-center gap-2 flex-grow max-w-md">
+                            <div class="relative flex items-center w-full">
+                                <span class="absolute left-3 text-slate-400">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </span>
+                                <input type="text"
+                                    class="w-full text-sm pl-9 pr-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 bg-slate-50/50"
+                                    id="nurse-keyword-input"
+                                    placeholder="Search by nurse name, qualification, or sector..." />
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2 text-xs">
+                            <span class="text-slate-500 font-semibold">Sort by:</span>
+                            <select
+                                class="text-xs py-2 px-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 bg-white"
+                                id="sort-nurses-select">
+                                <option value="rating">Highest Rated</option>
+                                <option value="experience">Experience (Years)</option>
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="price-high">Price: High to Low</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- NURSES LIST CONTAINER -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="nurses-cards-container">
+
+                        <!-- Nurse 1 -->
+                        <div class="nurse-item-wrapper flex" data-city="Islamabad" data-gender="Female"
+                            data-spec="post-op" data-rate="3800" data-name="Rabia Bibi" data-aos="fade-up"
+                            data-aos-delay="200">
+                            <div
+                                class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm h-full w-full flex flex-col justify-between hover:shadow-md transition-shadow">
+                                <div>
+                                    <div class="flex items-start gap-4 mb-4">
+                                        <div
+                                            class="w-12 h-12 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center text-xl shrink-0">
+                                            <i class="fa-solid fa-user-nurse"></i>
+                                        </div>
+                                        <div class="flex-grow">
+                                            <div class="flex justify-between items-start">
+                                                <h5 class="font-bold text-dark text-base mb-0">Sister Rabia Bibi</h5>
+                                                <span
+                                                    class="text-[10px] font-semibold bg-teal-50 text-teal-700 px-2.5 py-1 rounded-full">12h
+                                                    Day / Night</span>
+                                            </div>
+                                            <div
+                                                class="text-[11px] text-slate-500 font-medium mt-1 flex items-center gap-1">
+                                                <i class="fa-solid fa-certificate text-teal-600"></i> PNC Reg #74921
+                                                (BScN)
+                                            </div>
+                                            <div class="flex items-center gap-1 mt-1 text-amber-400 text-xs">
+                                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                    class="fa-solid fa-star"></i>
+                                                <span class="text-xs text-slate-600 font-bold ml-1">4.95 (48 Patient
+                                                    Reviews)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <p class="text-slate-600 text-xs mb-4 leading-relaxed">
+                                        8+ years at Shifa International Hospital ICU. Expert in aseptic post-operative
+                                        wound dressing, catheter management, and IV lines.
+                                    </p>
+
+                                    <div class="flex flex-wrap gap-1.5 mb-4">
+                                        <span
+                                            class="text-[11px] bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md flex items-center"><i
+                                                class="fa-solid fa-check text-success mr-1"></i> Post-Op Care</span>
+                                        <span
+                                            class="text-[11px] bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md flex items-center"><i
+                                                class="fa-solid fa-check text-success mr-1"></i> Tracheostomy</span>
+                                        <span
+                                            class="text-[11px] bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md flex items-center"><i
+                                                class="fa-solid fa-check text-success mr-1"></i> IV Infusions</span>
+                                        <span
+                                            class="text-[11px] bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md flex items-center"><i
+                                                class="fa-solid fa-check text-success mr-1"></i> Vitals Logging</span>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="flex justify-between items-center pt-4 border-t border-slate-100 mb-4">
+                                        <div>
+                                            <div class="text-[10px] text-slate-400 uppercase tracking-wider">Primary
+                                                Locality</div>
+                                            <div class="text-xs font-bold text-dark mt-0.5 flex items-center">
+                                                <i class="fa-solid fa-location-dot text-teal-600 mr-1"></i> Islamabad
+                                                (F-6 to F-11, G-Sectors)
+                                            </div>
+                                        </div>
+                                        <div class="text-right">
+                                            <div class="text-base font-extrabold text-teal-700">Rs. 3,800</div>
+                                            <div class="text-[10px] text-slate-400">per 12-hr shift</div>
+                                        </div>
+                                    </div>
+
+                                    <button
+                                        class="w-full py-2.5 px-4 bg-teal-50 hover:bg-teal-100 text-teal-700 text-xs font-bold rounded-xl transition-colors flex items-center justify-center gap-2 border-none cursor-pointer"
+                                        onclick="openNurseBookingModal('Sister Rabia Bibi', '74921', 3800, 'Post-Operative & Wound Care')">
+                                        <i class="fa-solid fa-calendar-check"></i> Book Home Care
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Nurse 2 -->
+                        <div class="nurse-item-wrapper flex" data-city="Rawalpindi" data-gender="Male"
+                            data-spec="stroke" data-rate="4200" data-name="Tariq Masih" data-aos="fade-up"
+                            data-aos-delay="300">
+                            <div
+                                class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm h-full w-full flex flex-col justify-between hover:shadow-md transition-shadow">
+                                <div>
+                                    <div class="flex items-start gap-4 mb-4">
+                                        <div
+                                            class="w-12 h-12 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center text-xl shrink-0">
+                                            <i class="fa-solid fa-user-nurse"></i>
+                                        </div>
+                                        <div class="flex-grow">
+                                            <div class="flex justify-between items-start">
+                                                <h5 class="font-bold text-dark text-base mb-0">Staff Nurse Tariq Masih
+                                                </h5>
+                                                <span
+                                                    class="text-[10px] font-semibold bg-teal-50 text-teal-700 px-2.5 py-1 rounded-full">24h
+                                                    Live-in</span>
+                                            </div>
+                                            <div
+                                                class="text-[11px] text-slate-500 font-medium mt-1 flex items-center gap-1">
+                                                <i class="fa-solid fa-certificate text-teal-600"></i> PNC Reg #82104
+                                                (Dipl. RN)
+                                            </div>
+                                            <div class="flex items-center gap-1 mt-1 text-amber-400 text-xs">
+                                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                    class="fa-solid fa-star-half-stroke"></i>
+                                                <span class="text-xs text-slate-600 font-bold ml-1">4.88 (62 Patient
+                                                    Reviews)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <p class="text-slate-600 text-xs mb-4 leading-relaxed">
+                                        Former Holy Family Hospital trauma staff. Specialized in stroke mobility
+                                        assistance, paralyzed patient hygiene, and NG tube feeding.
+                                    </p>
+
+                                    <div class="flex flex-wrap gap-1.5 mb-4">
+                                        <span
+                                            class="text-[11px] bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md flex items-center"><i
+                                                class="fa-solid fa-check text-success mr-1"></i> Stroke Rehab</span>
+                                        <span
+                                            class="text-[11px] bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md flex items-center"><i
+                                                class="fa-solid fa-check text-success mr-1"></i> NG Tube</span>
+                                        <span
+                                            class="text-[11px] bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md flex items-center"><i
+                                                class="fa-solid fa-check text-success mr-1"></i> Bed-sore
+                                            Prevention</span>
+                                        <span
+                                            class="text-[11px] bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md flex items-center"><i
+                                                class="fa-solid fa-check text-success mr-1"></i> CPR Certified</span>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="flex justify-between items-center pt-4 border-t border-slate-100 mb-4">
+                                        <div>
+                                            <div class="text-[10px] text-slate-400 uppercase tracking-wider">Primary
+                                                Locality</div>
+                                            <div class="text-xs font-bold text-dark mt-0.5 flex items-center">
+                                                <i class="fa-solid fa-location-dot text-teal-600 mr-1"></i> Rawalpindi
+                                                (Bahria, Saddar, Satellite)
+                                            </div>
+                                        </div>
+                                        <div class="text-right">
+                                            <div class="text-base font-extrabold text-teal-700">Rs. 4,200</div>
+                                            <div class="text-[10px] text-slate-400">per 12-hr shift</div>
+                                        </div>
+                                    </div>
+
+                                    <button
+                                        class="w-full py-2.5 px-4 bg-teal-50 hover:bg-teal-100 text-teal-700 text-xs font-bold rounded-xl transition-colors flex items-center justify-center gap-2 border-none cursor-pointer"
+                                        onclick="openNurseBookingModal('Staff Nurse Tariq Masih', '82104', 4200, 'Stroke & Paralysis Care')">
+                                        <i class="fa-solid fa-calendar-check"></i> Book Home Care
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Nurse 3 -->
+                        <div class="nurse-item-wrapper flex" data-city="Islamabad" data-gender="Female"
+                            data-spec="neonatal" data-rate="4000" data-name="Samina Perveen" data-aos="fade-up"
+                            data-aos-delay="400">
+                            <div
+                                class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm h-full w-full flex flex-col justify-between hover:shadow-md transition-shadow">
+                                <div>
+                                    <div class="flex items-start gap-4 mb-4">
+                                        <div
+                                            class="w-12 h-12 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center text-xl shrink-0">
+                                            <i class="fa-solid fa-user-nurse"></i>
+                                        </div>
+                                        <div class="flex-grow">
+                                            <div class="flex justify-between items-start">
+                                                <h5 class="font-bold text-dark text-base mb-0">Sister Samina Perveen
+                                                </h5>
+                                                <span
+                                                    class="text-[10px] font-semibold bg-teal-50 text-teal-700 px-2.5 py-1 rounded-full">12h
+                                                    Day / Night</span>
+                                            </div>
+                                            <div
+                                                class="text-[11px] text-slate-500 font-medium mt-1 flex items-center gap-1">
+                                                <i class="fa-solid fa-certificate text-teal-600"></i> PNC Reg #93125
+                                                (Neonatal RN)
+                                            </div>
+                                            <div class="flex items-center gap-1 mt-1 text-amber-400 text-xs">
+                                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                    class="fa-solid fa-star"></i>
+                                                <span class="text-xs text-slate-600 font-bold ml-1">5.0 (39 Patient
+                                                    Reviews)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <p class="text-slate-600 text-xs mb-4 leading-relaxed">
+                                        Specialized in newborn baby handling, phototherapy jaundice care, lactation
+                                        guidance, and post-C-section maternal support.
+                                    </p>
+
+                                    <div class="flex flex-wrap gap-1.5 mb-4">
+                                        <span
+                                            class="text-[11px] bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md flex items-center"><i
+                                                class="fa-solid fa-check text-success mr-1"></i> Neonatal Care</span>
+                                        <span
+                                            class="text-[11px] bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md flex items-center"><i
+                                                class="fa-solid fa-check text-success mr-1"></i> Maternal
+                                            Recovery</span>
+                                        <span
+                                            class="text-[11px] bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md flex items-center"><i
+                                                class="fa-solid fa-check text-success mr-1"></i> Infant Vitals</span>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="flex justify-between items-center pt-4 border-t border-slate-100 mb-4">
+                                        <div>
+                                            <div class="text-[10px] text-slate-400 uppercase tracking-wider">Primary
+                                                Locality</div>
+                                            <div class="text-xs font-bold text-dark mt-0.5 flex items-center">
+                                                <i class="fa-solid fa-location-dot text-teal-600 mr-1"></i> Islamabad &
+                                                DHA Phase 1-3
+                                            </div>
+                                        </div>
+                                        <div class="text-right">
+                                            <div class="text-base font-extrabold text-teal-700">Rs. 4,000</div>
+                                            <div class="text-[10px] text-slate-400">per 12-hr shift</div>
+                                        </div>
+                                    </div>
+
+                                    <button
+                                        class="w-full py-2.5 px-4 bg-teal-50 hover:bg-teal-100 text-teal-700 text-xs font-bold rounded-xl transition-colors flex items-center justify-center gap-2 border-none cursor-pointer"
+                                        onclick="openNurseBookingModal('Sister Samina Perveen', '93125', 4000, 'Neonatal & Mother Care')">
+                                        <i class="fa-solid fa-calendar-check"></i> Book Home Care
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Nurse 4 -->
+                        <div class="nurse-item-wrapper flex" data-city="Islamabad" data-gender="Female"
+                            data-spec="elderly" data-rate="3500" data-name="Farzana Kausar" data-aos="fade-up"
+                            data-aos-delay="500">
+                            <div
+                                class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm h-full w-full flex flex-col justify-between hover:shadow-md transition-shadow">
+                                <div>
+                                    <div class="flex items-start gap-4 mb-4">
+                                        <div
+                                            class="w-12 h-12 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center text-xl shrink-0">
+                                            <i class="fa-solid fa-user-nurse"></i>
+                                        </div>
+                                        <div class="flex-grow">
+                                            <div class="flex justify-between items-start">
+                                                <h5 class="font-bold text-dark text-base mb-0">Sister Farzana Kausar
+                                                </h5>
+                                                <span
+                                                    class="text-[10px] font-semibold bg-teal-50 text-teal-700 px-2.5 py-1 rounded-full">12h
+                                                    Day</span>
+                                            </div>
+                                            <div
+                                                class="text-[11px] text-slate-500 font-medium mt-1 flex items-center gap-1">
+                                                <i class="fa-solid fa-certificate text-teal-600"></i> PNC Reg #61820
+                                                (BScN)
+                                            </div>
+                                            <div class="flex items-center gap-1 mt-1 text-amber-400 text-xs">
+                                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                    class="fa-solid fa-star"></i>
+                                                <span class="text-xs text-slate-600 font-bold ml-1">4.92 (54 Patient
+                                                    Reviews)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <p class="text-slate-600 text-xs mb-4 leading-relaxed">
+                                        12 years experience in elderly companionship, Parkinson's & Alzheimer's patient
+                                        monitoring, and diabetic insulin administration.
+                                    </p>
+
+                                    <div class="flex flex-wrap gap-1.5 mb-4">
+                                        <span
+                                            class="text-[11px] bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md flex items-center"><i
+                                                class="fa-solid fa-check text-success mr-1"></i> Geriatric
+                                            Support</span>
+                                        <span
+                                            class="text-[11px] bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md flex items-center"><i
+                                                class="fa-solid fa-check text-success mr-1"></i> Insulin Therapy</span>
+                                        <span
+                                            class="text-[11px] bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md flex items-center"><i
+                                                class="fa-solid fa-check text-success mr-1"></i> Blood Sugar Logs</span>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="flex justify-between items-center pt-4 border-t border-slate-100 mb-4">
+                                        <div>
+                                            <div class="text-[10px] text-slate-400 uppercase tracking-wider">Primary
+                                                Locality</div>
+                                            <div class="text-xs font-bold text-dark mt-0.5 flex items-center">
+                                                <i class="fa-solid fa-location-dot text-teal-600 mr-1"></i> Islamabad
+                                                (E-11, F-10, G-11)
+                                            </div>
+                                        </div>
+                                        <div class="text-right">
+                                            <div class="text-base font-extrabold text-teal-700">Rs. 3,500</div>
+                                            <div class="text-[10px] text-slate-400">per 12-hr shift</div>
+                                        </div>
+                                    </div>
+
+                                    <button
+                                        class="w-full py-2.5 px-4 bg-teal-50 hover:bg-teal-100 text-teal-700 text-xs font-bold rounded-xl transition-colors flex items-center justify-center gap-2 border-none cursor-pointer"
+                                        onclick="openNurseBookingModal('Sister Farzana Kausar', '61820', 3500, 'Elderly & Geriatric Care')">
+                                        <i class="fa-solid fa-calendar-check"></i> Book Home Care
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- NURSE BOOKING MODAL -->
+    <div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/50 backdrop-blur-sm hidden"
+        id="nurseBookingModal" aria-labelledby="nurseBookingModalLabel" aria-hidden="true">
+        <div
+            class="bg-white rounded-3xl shadow-2xl w-full max-w-3xl overflow-hidden border border-slate-100 transform transition-all">
+
+            <!-- Modal Header -->
+            <div class="px-6 py-5 bg-white border-b border-slate-100 flex justify-between items-start">
+                <div>
+                    <span
+                        class="inline-block text-[11px] font-bold bg-teal-50 text-teal-700 px-2.5 py-1 rounded-full mb-1"
+                        id="modal-nurse-pnc">PNC Reg #74921</span>
+                    <h5 class="text-lg font-bold text-slate-900 m-0" id="nurseBookingModalLabel">
+                        Book Home Care: <span id="modal-nurse-name" class="text-teal-700">Sister Rabia Bibi</span>
+                    </h5>
+                    <div class="text-xs text-slate-500 mt-0.5" id="modal-nurse-specialty">Post-Operative & Wound Care
+                    </div>
+                </div>
+                <button type="button"
+                    class="text-slate-400 hover:text-slate-600 bg-slate-100 hover:bg-slate-200 w-8 h-8 rounded-full flex items-center justify-center transition-colors border-none cursor-pointer"
+                    onclick="closeNurseBookingModal()" aria-label="Close">
+                    <i class="fa-solid fa-xmark text-sm"></i>
+                </button>
+            </div>
+
+            <form id="nurse-booking-form">
+                <div class="p-6 max-h-[75vh] overflow-y-auto">
+
+                    <div class="space-y-5">
+
+                        <!-- Shift Choice -->
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">Select
+                                Shift Duration</label>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+
+                                <label
+                                    class="relative flex flex-col p-3.5 rounded-2xl border-2 border-slate-200 hover:border-teal-500 cursor-pointer transition-all bg-white has-[:checked]:border-teal-600 has-[:checked]:bg-teal-50/30">
+                                    <div class="flex items-center space-x-2 mb-1">
+                                        <input type="radio" name="nurseShift" value="12-Hour Day Shift (08 AM - 08 PM)"
+                                            class="w-4 h-4 text-teal-600 border-slate-300 focus:ring-teal-500"
+                                            checked />
+                                        <span class="font-bold text-slate-900 text-sm">12h Day Shift</span>
+                                    </div>
+                                    <span class="text-xs text-slate-500 pl-6">08:00 AM – 08:00 PM</span>
+                                </label>
+
+                                <label
+                                    class="relative flex flex-col p-3.5 rounded-2xl border-2 border-slate-200 hover:border-teal-500 cursor-pointer transition-all bg-white has-[:checked]:border-teal-600 has-[:checked]:bg-teal-50/30">
+                                    <div class="flex items-center space-x-2 mb-1">
+                                        <input type="radio" name="nurseShift"
+                                            value="12-Hour Night Shift (08 PM - 08 AM)"
+                                            class="w-4 h-4 text-teal-600 border-slate-300 focus:ring-teal-500" />
+                                        <span class="font-bold text-slate-900 text-sm">12h Night Shift</span>
+                                    </div>
+                                    <span class="text-xs text-slate-500 pl-6">08:00 PM – 08:00 AM</span>
+                                </label>
+
+                                <label
+                                    class="relative flex flex-col p-3.5 rounded-2xl border-2 border-slate-200 hover:border-teal-500 cursor-pointer transition-all bg-white has-[:checked]:border-teal-600 has-[:checked]:bg-teal-50/30">
+                                    <div class="flex items-center space-x-2 mb-1">
+                                        <input type="radio" name="nurseShift" value="24-Hour Live-in Care"
+                                            class="w-4 h-4 text-teal-600 border-slate-300 focus:ring-teal-500" />
+                                        <span class="font-bold text-slate-900 text-sm">24-Hour Live-In</span>
+                                    </div>
+                                    <span class="text-xs text-slate-500 pl-6">Full Day Resident</span>
+                                </label>
+
+                            </div>
+                        </div>
+
+                        <!-- Row: Address, Start Date, Duration -->
+                        <div class="grid grid-cols-1 md:grid-cols-12 gap-4">
+                            <!-- Patient Address -->
+                            <div class="md:col-span-6">
+                                <label
+                                    class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-1.5">Home
+                                    Location / Sector *</label>
+                                <input type="text"
+                                    class="w-full text-sm px-3.5 py-2.5 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-teal-500 bg-white"
+                                    id="nurse-patient-address"
+                                    placeholder="e.g. House 14, Street 22, Sector F-8/2, Islamabad" required />
+                            </div>
+
+                            <!-- Starting Date -->
+                            <div class="md:col-span-3">
+                                <label
+                                    class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-1.5">Start
+                                    Date *</label>
+                                <input type="date"
+                                    class="w-full text-sm px-3.5 py-2.5 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-teal-500 bg-white"
+                                    id="nurse-start-date" required />
+                            </div>
+
+                            <!-- Duration Days -->
+                            <div class="md:col-span-3">
+                                <label
+                                    class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-1.5">Duration
+                                    (Days)</label>
+                                <input type="number"
+                                    class="w-full text-sm px-3.5 py-2.5 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-teal-500 bg-white"
+                                    id="nurse-duration-days" min="1" max="60" value="7" required />
+                            </div>
+                        </div>
+
+                        <!-- Patient Medical Condition Notes -->
+                        <div>
+                            <label
+                                class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-1.5">Patient
+                                Condition & Special Requirements</label>
+                            <textarea
+                                class="w-full text-sm p-3 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-teal-500 bg-white"
+                                rows="2"
+                                placeholder="Mention surgery type, allergies, mobility status, or specific instructions..."></textarea>
+                        </div>
+
+                    </div>
+
+                    <!-- Cost Summary Banner -->
+                    <div
+                        class="mt-6 p-4 bg-teal-50 border border-teal-200 rounded-2xl flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+                        <div>
+                            <div class="text-xs text-teal-800 font-bold uppercase tracking-wide">Estimated Home Care
+                                Cost</div>
+                            <div class="text-xs text-teal-600 mt-0.5" id="nurse-modal-daily-rate">Rs. 3,800 / shift
+                            </div>
+                        </div>
+                        <div class="text-left sm:text-right">
+                            <div class="text-2xl font-black text-teal-900" id="nurse-modal-total-calc">Rs. 26,600</div>
+                            <div class="text-[11px] text-slate-500">Post-paid weekly after verified duty</div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Modal Footer -->
+                <div class="px-6 py-4 bg-slate-50 border-t border-slate-100 flex justify-end items-center gap-3">
+                    <button type="button"
+                        class="px-5 py-2.5 rounded-xl border border-slate-300 bg-white text-slate-700 text-xs font-bold hover:bg-slate-100 transition-colors cursor-pointer"
+                        onclick="closeNurseBookingModal()">Cancel</button>
+                    <button type="submit"
+                        class="px-5 py-2.5 rounded-xl bg-teal-600 hover:bg-teal-700 text-white text-xs font-bold transition-colors flex items-center gap-2 border-none cursor-pointer shadow-sm">
+                        <i class="fa-solid fa-circle-check"></i> Confirm & Assign Nurse
+                    </button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 border-t border-slate-800 text-slate-400 py-12 md:py-16" id="main-portal-footer">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 w-full">
+
+            <!-- Top Grid Columns -->
+            <div
+                class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-12 gap-6 lg:gap-8 pb-12 border-b border-slate-800/80">
+
+                <!-- Brand Column (Span 4 on Desktop, Full Width on Mobile) -->
+                <div class="col-span-2 lg:col-span-4 space-y-4">
+                    <div class="flex items-center gap-2.5">
+                        <div
+                            class="w-9 h-9 rounded-xl bg-teal-600 text-white flex items-center justify-center text-base shadow-md">
+                            <i class="fa-solid fa-heart-pulse"></i>
+                        </div>
+                        <span class="text-xl font-bold text-white tracking-tight">Medi <span
+                                class="text-teal-400">Care</span></span>
+                    </div>
+                    <p class="text-sm text-slate-400 leading-relaxed max-w-sm">
+                        Connecting families with certified home nurses, licensed PMDC doctors, and leading hospital
+                        facilities across Islamabad and Rawalpindi.
+                    </p>
+                    <div class="text-xs text-slate-400 flex items-center gap-2 pt-1">
+                        <i class="fa-solid fa-location-dot text-teal-400"></i>
+                        <span>Blue Area, Jinnah Avenue, Islamabad, Pakistan</span>
+                    </div>
+                </div>
+
+                <!-- Home Nursing Links (Span 2) -->
+                <div class="col-span-1 sm:col-span-1 lg:col-span-2 space-y-3">
+                    <h4 class="text-white font-bold text-sm tracking-wide uppercase">Home Nursing</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="nurses.html?service=elderly" class="hover:text-teal-400 transition-colors">Elderly
+                                Care</a></li>
+                        <li><a href="nurses.html?service=post-op" class="hover:text-teal-400 transition-colors">Post-Op
+                                Recovery</a></li>
+                        <li><a href="nurses.html?service=stroke" class="hover:text-teal-400 transition-colors">Stroke
+                                Rehabilitation</a></li>
+                        <li><a href="nurses.html?service=neonatal" class="hover:text-teal-400 transition-colors">Mother
+                                & Baby Care</a></li>
+                        <li><a href="nurses.html?shift=24h" class="hover:text-teal-400 transition-colors">24/7 Live-In
+                                Nurses</a></li>
+                    </ul>
+                </div>
+
+                <!-- Medical Specialists Links (Span 2) -->
+                <div class="col-span-1 sm:col-span-1 lg:col-span-2 space-y-3">
+                    <h4 class="text-white font-bold text-sm tracking-wide uppercase">Medical Specialists</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="doctors.html?specialty=Cardiologist"
+                                class="hover:text-teal-400 transition-colors">Cardiologists</a></li>
+                        <li><a href="doctors.html?specialty=Gynecologist"
+                                class="hover:text-teal-400 transition-colors">Gynecologists</a></li>
+                        <li><a href="doctors.html?specialty=Pediatrician"
+                                class="hover:text-teal-400 transition-colors">Pediatricians</a></li>
+                        <li><a href="doctors.html?specialty=Neurologist"
+                                class="hover:text-teal-400 transition-colors">Neurologists</a></li>
+                        <li><a href="doctors.html?specialty=Orthopedic"
+                                class="hover:text-teal-400 transition-colors">Orthopedic Surgeons</a></li>
+                    </ul>
+                </div>
+
+                <!-- Top Hospitals Links (Span 2) -->
+                <div class="col-span-1 sm:col-span-1 lg:col-span-2 space-y-3">
+                    <h4 class="text-white font-bold text-sm tracking-wide uppercase">Top Hospitals</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="hospitals.html?id=shifa" class="hover:text-teal-400 transition-colors">Shifa
+                                International H-8</a></li>
+                        <li><a href="hospitals.html?id=pims" class="hover:text-teal-400 transition-colors">PIMS
+                                Islamabad G-8</a></li>
+                        <li><a href="hospitals.html?id=maroof" class="hover:text-teal-400 transition-colors">Maroof
+                                Hospital F-10</a></li>
+                        <li><a href="hospitals.html?id=holy-family" class="hover:text-teal-400 transition-colors">Holy
+                                Family Rawalpindi</a></li>
+                        <li><a href="hospitals.html?id=cmh" class="hover:text-teal-400 transition-colors">CMH
+                                Rawalpindi</a></li>
+                    </ul>
+                </div>
+
+                <!-- Patient Portal Links (Span 2) -->
+                <div class="col-span-1 sm:col-span-1 lg:col-span-2 space-y-3">
+                    <h4 class="text-white font-bold text-sm tracking-wide uppercase">Patient Portal</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="dashboard-patient.html?tab=appointments"
+                                class="hover:text-teal-400 transition-colors">My Appointments</a></li>
+                        <li><a href="dashboard-patient.html?tab=nurses"
+                                class="hover:text-teal-400 transition-colors">Active Caregivers</a></li>
+                        <li><a href="dashboard-patient.html?tab=vitals"
+                                class="hover:text-teal-400 transition-colors">Patient Vitals Chart</a></li>
+                        <li><a href="dashboard-patient.html?tab=payments"
+                                class="hover:text-teal-400 transition-colors">Payment Invoices</a></li>
+                        <li><a href="dashboard-patient.html?tab=favorites"
+                                class="hover:text-teal-400 transition-colors">Saved Doctors</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Footer Bottom Bar -->
+            <div
+                class="pt-8 flex flex-col sm:flex-row flex-wrap justify-between items-center gap-4 text-xs text-slate-500">
+                <div>
+                    © 2026 ShifaCare Plus - Twin Cities Healthcare & Home Nursing Portal. All Rights Reserved.
+                </div>
+                <div class="flex flex-wrap items-center gap-4">
+                    <span class="text-slate-400 flex items-center gap-1.5">
+                        <i class="fa-solid fa-shield-check text-emerald-400"></i> PNC & PMDC Certified
+                    </span>
+                    <span class="text-slate-400 flex items-center gap-1.5">
+                        <i class="fa-solid fa-lock text-sky-400"></i> 256-bit HIPAA Standard Privacy
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Notification Toast Container -->
+    <div id="toast-notification-container"></div>
+
+    <!-- JavaScript Scripts -->
+    <!-- CDN Dependencies -->
+    <!-- Tailwind CSS Play CDN (Configured for custom styles and animations) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0284c7',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- AOS Library JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,  // Animation speed (milliseconds)
+            once: false,    // Yeh FALSE karne se element scroll out hone par reset ho jaye ga aur bar bar animate hoga!
+            offset: 100,    // Kitne pixels scroll hone par trigger ho
+        });
+    </script>
+
+    <!-- Dedicated Scripts -->
+    <script src="/assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Healthcare Services & Home Nursing Portal | Islamabad & Rawalpindi</title>
+    <meta name="description"
+        content="Connecting patients and families with verified hospitals, leading doctors, and qualified home-care nurses in Islamabad and Rawalpindi." />
+    <meta property="og:title" content="Healthcare Services & Home Nursing Portal" />
+    <meta property="og:description"
+        content="Find verified doctors, certified home nursing care, and 24/7 hospitals in Islamabad & Rawalpindi." />
+
+    <!-- FontAwesome 6 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <!-- AOS Library CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Dedicated Stylesheets -->
+    <link rel="stylesheet" href="/assets/css/global.css" />
+    <link rel="stylesheet" href="/assets/css/hospitals.css" />
+</head>
+
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-sky-500 selection:text-white">
+
+    <!-- TOP EMERGENCY RESPONSE & UTILITY BAR -->
+    <div class="top-emergency-bar bg-slate-900 text-slate-200 border-b border-slate-800"
+        id="top-emergency-announcement-bar" data-aos="fade-down" data-aos-duration="800">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between items-center flex-wrap gap-2 py-1.5">
+            <div class="flex items-center flex-wrap gap-2 text-xs">
+                <a href="tel:1122"
+                    class="badge-emergency inline-flex items-center px-2.5 py-1 rounded-full text-white bg-red-600 hover:bg-red-700 font-semibold no-underline transition-colors">
+                    <i class="fa-solid fa-truck-medical mr-1.5"></i> 24/7 HELPLINE 1122
+                </a>
+                <span class="text-slate-500 hidden sm:inline">|</span>
+                <span class="text-slate-300 text-xs">
+                    Twin Cities EMS: <a href="tel:1122" class="text-white font-bold hover:underline">1122</a>
+                    <span class="hidden md:inline">| Bed Info &amp; Dispatch: <a href="tel:0519280000"
+                            class="text-white font-bold hover:underline">051-9280000</a></span>
+                </span>
+            </div>
+            <div class="flex items-center gap-3 text-xs">
+                <span class="hidden lg:inline text-emerald-400 font-medium">
+                    <i class="fa-solid fa-circle-check mr-1"></i> 100% PMDC &amp; PNC Certified
+                </span>
+                <span class="text-slate-500 hidden lg:inline">|</span>
+                <a href="hospitals.html" class="text-slate-300 hover:text-white hidden md:inline transition-colors">
+                    <i class="fa-solid fa-hospital-user mr-1 text-indigo-400"></i> Emergency ERs
+                </a>
+                <a href="patient-portal.html"
+                    class="text-slate-200 hover:text-white font-semibold bg-slate-800/80 px-2.5 py-1 rounded border border-slate-700 transition-colors">
+                    <i class="fa-regular fa-user-circle mr-1 text-sky-400"></i> Patient Portal
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- STICKY MAIN NAVBAR -->
+    <header
+        class="portal-navbar-wrapper sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm"
+        data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100">
+        <div class="portal-nav-container max-w-7xl mx-auto px-4 py-3 flex justify-between items-center relative">
+
+            <!-- Brand Logo -->
+            <a class="portal-brand flex items-center gap-3 no-underline" href="index.html">
+                <div
+                    class="brand-icon-box w-10 h-10 bg-sky-600 text-white flex items-center justify-center rounded-lg shadow-sm">
+                    <i class="fas fa-heartbeat"></i>
+                </div>
+                <div class="brand-text-container flex flex-col">
+                    <span class="font-extrabold text-lg text-slate-900 leading-tight">Medi <span
+                            class="text-emerald-600">Care</span></span>
+                    <span class="text-[0.65rem] font-bold text-teal-600 tracking-wider uppercase">Your Health, Our
+                        Priority</span>
+                </div>
+            </a>
+
+            <!-- Mobile Hamburger Button -->
+            <button
+                class="portal-mobile-toggle md:hidden text-slate-700 hover:text-sky-600 p-2 focus:outline-none cursor-pointer z-50"
+                id="manualMenuBtn" aria-label="Toggle Navigation">
+                <i class="fas fa-bars text-xl" id="menuIcon"></i>
+            </button>
+
+            <!-- Navigation Links Wrapper -->
+            <div class="portal-nav-links-wrapper md:flex items-center gap-8 absolute md:relative top-full left-0 right-0 bg-white shadow-xl md:shadow-none border-b md:border-none border-slate-100 p-5 md:p-0 flex-col md:flex-row transition-all"
+                id="manualNavContent">
+
+                <ul
+                    class="portal-nav-links flex flex-col md:flex-row items-start md:items-center gap-3 md:gap-2 m-0 p-0 list-none w-full md:w-auto">
+                    <li class="w-full md:w-auto">
+                        <a class="nav-link-custom active font-semibold text-sky-600 bg-sky-50 px-3.5 py-2.5 rounded-md flex items-center gap-2 no-underline transition-colors w-full"
+                            href="index.html">
+                            <i class="fas fa-home"></i> Home
+                        </a>
+                    </li>
+                    <li class="w-full md:w-auto">
+                        <a class="nav-link-custom font-semibold text-slate-700 hover:text-sky-600 hover:bg-slate-50 px-3.5 py-2.5 rounded-md flex items-center gap-2 no-underline transition-colors w-full"
+                            href="nurse.html">
+                            <i class="fas fa-user-nurse"></i> Home Nursing
+                        </a>
+                    </li>
+                    <li class="w-full md:w-auto">
+                        <a class="nav-link-custom font-semibold text-slate-700 hover:text-sky-600 hover:bg-slate-50 px-3.5 py-2.5 rounded-md flex items-center gap-2 no-underline transition-colors w-full"
+                            href="hospitals.html">
+                            <i class="fas fa-hospital"></i> Hospitals
+                        </a>
+                    </li>
+                    <li class="w-full md:w-auto">
+                        <a class="nav-link-custom font-semibold text-slate-700 hover:text-sky-600 hover:bg-slate-50 px-3.5 py-2.5 rounded-md flex items-center gap-2 no-underline transition-colors w-full"
+                            href="doctors.html">
+                            <i class="fas fa-user-md"></i> Doctors
+                        </a>
+                    </li>
+                </ul>
+
+                <div
+                    class="flex flex-col md:flex-row items-stretch md:items-center gap-4 w-full md:w-auto mt-4 md:mt-0 pt-4 md:pt-0 border-t md:border-t-0 border-slate-100">
+                    <!-- City Selection Dropdown -->
+                    <div class="relative" id="cityDropdownWrapper">
+                        <button type="button" id="cityDropdownBtn"
+                            class="flex items-center justify-between md:justify-start gap-1.5 text-sm font-semibold text-slate-700 hover:text-sky-600 focus:outline-none py-2 w-full cursor-pointer">
+                            <span class="flex items-center gap-1.5">
+                                <i class="fas fa-map-marker-alt text-sky-600"></i>
+                                <span class="selected-city-text">Islamabad / Pindi</span>
+                            </span>
+                            <i class="fas fa-chevron-down text-xs text-slate-400"></i>
+                        </button>
+
+                        <div id="cityDropdownMenu"
+                            class="absolute right-0 mt-2 w-full md:w-44 bg-white rounded-xl shadow-xl border border-slate-100 py-2 z-50 hidden">
+                            <a href="#"
+                                class="block px-4 py-2 text-sm font-semibold text-sky-600 bg-sky-50 city-dropdown-option"
+                                data-city="Islamabad">Islamabad</a>
+                            <a href="#"
+                                class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 transition-colors city-dropdown-option"
+                                data-city="Rawalpindi">Rawalpindi</a>
+                        </div>
+                    </div>
+
+                    <a href="dashboard-patient.html"
+                        class="btn-primary-health bg-sky-600 hover:bg-sky-700 text-white px-4 py-2.5 rounded-lg font-semibold text-sm no-underline flex items-center justify-center gap-1.5 shadow-sm transition-all">
+                        <i class="fas fa-user-circle"></i> Patient Portal
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </header>
+
+    <!-- HOSPITALS HERO HEADER -->
+    <section class="hospitals-hero-header" id="hospitals-header-section">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+
+            <!-- Breadcrumb Navigation -->
+            <nav aria-label="breadcrumb" class="mb-4" data-aos="fade-down" data-aos-duration="600">
+                <ol class="flex items-center gap-2 text-xs text-teal-200">
+                    <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+                    <li><span class="text-teal-300">/</span></li>
+                    <li class="text-white font-medium" aria-current="page">Hospitals & Healthcare Facilities</li>
+                </ol>
+            </nav>
+
+            <!-- Main Content Flex Wrapper -->
+            <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+
+                <!-- Left Title & Description -->
+                <div class="max-w-3xl" data-aos="fade-right" data-aos-duration="800">
+                    <h1 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight mb-2">
+                        Twin Cities Hospital & Facility Explorer
+                    </h1>
+                    <p class="text-teal-100/90 text-sm md:text-base leading-relaxed mb-0">
+                        Explore 38+ tertiary hospitals, trauma centers, and private clinics in Islamabad and Rawalpindi
+                        with real-time emergency hotlines, ICU bed details, and specialty departments.
+                    </p>
+                </div>
+
+                <!-- Right Verified Badge Box -->
+                <div class="lg:text-right" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
+                    <div
+                        class="inline-flex items-center gap-2.5 bg-teal-950/60 border border-teal-500/30 px-3.5 py-2.5 rounded-xl text-teal-100 text-xs font-semibold shadow-sm backdrop-blur-md">
+                        <i class="fa-solid fa-truck-medical text-red-400 text-base"></i>
+                        <span>34 Hospitals with 24/7 Level 1-3 Emergency ER</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN HOSPITALS EXPLORER (Tailwind CSS Version with Unsplash Images & AOS Animations) -->
+    <section class="py-12 bg-gradient-to-b from-slate-50 to-slate-100" id="hospitals-main-directory">
+        <div class="container mx-auto px-4">
+
+            <!-- Section Header -->
+            <div class="text-center mb-10" data-aos="fade-down" data-aos-duration="600">
+                <span
+                    class="bg-sky-100 text-sky-800 text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">Healthcare
+                    Directory</span>
+                <h2 class="text-3xl font-black text-slate-900 mt-2">Find Trusted Hospitals & Medical Centers</h2>
+                <p class="text-slate-600 text-sm mt-1">Search through top-rated private and public hospitals with 24/7
+                    emergency care.</p>
+            </div>
+
+            <!-- Filter Bar -->
+            <div class="hospital-filter-bar mb-8 bg-white p-4 rounded-2xl shadow-sm border border-slate-200/80"
+                id="hospital-filter-bar" data-aos="fade-up" data-aos-duration="600">
+                <div class="flex flex-wrap items-center gap-3">
+
+                    <div class="flex-1 min-w-[220px]">
+                        <div
+                            class="flex items-center bg-slate-50 border border-slate-300 rounded-lg shadow-inner focus-within:ring-2 focus-within:ring-sky-500 focus-within:bg-white transition-all">
+                            <span class="pl-3.5 pr-1 text-slate-400"><i class="fa-solid fa-magnifying-glass"></i></span>
+                            <input type="text"
+                                class="w-full py-2.5 px-2 text-sm bg-transparent border-0 focus:ring-0 focus:outline-none"
+                                id="hospital-search-input"
+                                placeholder="Search hospital name, sector, or department..." />
+                        </div>
+                    </div>
+
+                    <div class="w-40">
+                        <select
+                            class="w-full py-2.5 px-3 text-sm border border-slate-300 rounded-lg bg-slate-50 shadow-sm focus:ring-2 focus:ring-sky-500 focus:bg-white hover:border-slate-400 transition-all font-medium text-slate-700"
+                            id="filter-hospital-city">
+                            <option value="All">All Cities</option>
+                            <option value="Islamabad">Islamabad</option>
+                            <option value="Rawalpindi">Rawalpindi</option>
+                        </select>
+                    </div>
+
+                    <div class="w-40">
+                        <select
+                            class="w-full py-2.5 px-3 text-sm border border-slate-300 rounded-lg bg-slate-50 shadow-sm focus:ring-2 focus:ring-sky-500 focus:bg-white hover:border-slate-400 transition-all font-medium text-slate-700"
+                            id="filter-hospital-type">
+                            <option value="All">All Types</option>
+                            <option value="Private">Private Hospital</option>
+                            <option value="Public">Public / Teaching</option>
+                        </select>
+                    </div>
+
+                    <div class="flex items-center bg-slate-50 border border-slate-200 px-3 py-2 rounded-lg">
+                        <input class="h-4 w-4 text-sky-600 border-slate-300 rounded focus:ring-sky-500 cursor-pointer"
+                            type="checkbox" id="filter-emergency-toggle" checked />
+                        <label class="ml-2 text-xs font-bold text-slate-700 select-none cursor-pointer"
+                            for="filter-emergency-toggle">24/7 ER Only</label>
+                    </div>
+
+                    <div class="ml-auto">
+                        <button
+                            class="w-32 py-2.5 px-4 text-sm border border-slate-300 rounded-lg text-slate-700 bg-white hover:bg-slate-100 hover:border-slate-400 hover:text-slate-900 flex items-center justify-center gap-2 shadow-sm transition-all duration-200 font-semibold"
+                            id="btn-reset-hospitals">
+                            <i class="fa-solid fa-rotate-left"></i> Reset
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- HOSPITAL CARDS GRID -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="hospitals-list-container">
+
+                <!-- Hospital 1: Shifa International -->
+                <div class="hospital-item flex" data-city="Islamabad" data-type="Private" data-emergency="true"
+                    data-name="Shifa International Hospital" data-aos="fade-up" data-aos-duration="700"
+                    data-aos-delay="100">
+                    <div
+                        class="hospital-card bg-white rounded-2xl shadow-md overflow-hidden border border-slate-200/90 flex flex-col h-full w-full hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+
+                        <!-- Banner with Unsplash Image -->
+                        <div class="hospital-banner-img relative h-48 w-full overflow-hidden bg-sky-900">
+                            <img src="https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?auto=format&fit=crop&w=600&q=80"
+                                alt="Shifa International Hospital"
+                                class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500">
+                            <!-- Dark Overlay for better badge visibility -->
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-slate-900/20 to-transparent">
+                            </div>
+
+                            <div class="absolute top-3 left-3 z-10">
+                                <span
+                                    class="bg-white/95 backdrop-blur-sm text-slate-900 shadow-md font-bold px-2.5 py-1 rounded-md text-xs flex items-center">
+                                    <i class="fa-solid fa-award text-amber-500 mr-1.5"></i> JCI Accredited
+                                </span>
+                            </div>
+                            <div
+                                class="absolute top-3 right-3 bg-red-600 text-white px-2.5 py-1 rounded-md text-xs font-bold flex items-center gap-1.5 shadow-md z-10 animate-pulse">
+                                <i class="fa-solid fa-truck-medical"></i> 24/7 Level 1 ER
+                            </div>
+                        </div>
+
+                        <div class="hospital-body p-5 flex flex-col flex-grow">
+                            <div class="mb-2">
+                                <h5 class="font-extrabold text-slate-900 text-lg mb-0">Shifa International Hospital</h5>
+                                <div class="text-xs text-slate-500 mt-1 flex items-start">
+                                    <i class="fa-solid fa-location-dot text-sky-600 mr-1.5 mt-0.5 flex-shrink-0"></i>
+                                    <span>Pitras Bukhari Rd, Sector H-8/4, Islamabad</span>
+                                </div>
+                            </div>
+
+                            <div class="rating-stars mb-3 text-amber-400 text-sm flex items-center">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star-half-stroke"></i>
+                                <span class="text-xs text-slate-700 font-bold ml-2">4.7 <span
+                                        class="font-normal text-slate-400">(3,820 Reviews)</span></span>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-3 mb-4">
+                                <div
+                                    class="hospital-stat-chip bg-slate-50 p-2.5 rounded-xl border border-slate-100 shadow-sm">
+                                    <span class="text-slate-400 text-[11px] font-semibold block uppercase">Total
+                                        Beds</span>
+                                    <div class="font-extrabold text-slate-800 text-sm mt-0.5">550+ Beds</div>
+                                </div>
+                                <div
+                                    class="hospital-stat-chip bg-slate-50 p-2.5 rounded-xl border border-slate-100 shadow-sm">
+                                    <span class="text-slate-400 text-[11px] font-semibold block uppercase">ICU
+                                        Status</span>
+                                    <div class="font-extrabold text-emerald-600 text-sm mt-0.5 flex items-center">
+                                        <i class="fa-solid fa-circle text-[8px] text-emerald-600 mr-1.5"></i> Available
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <div class="text-xs font-extrabold text-slate-400 uppercase tracking-wider mb-2">
+                                    Specialized Departments</div>
+                                <div class="flex flex-wrap gap-1.5">
+                                    <span
+                                        class="bg-sky-50 text-sky-700 border border-sky-100 text-xs px-2.5 py-1 rounded-lg font-semibold">Cardiology</span>
+                                    <span
+                                        class="bg-sky-50 text-sky-700 border border-sky-100 text-xs px-2.5 py-1 rounded-lg font-semibold">Organ
+                                        Transplant</span>
+                                    <span
+                                        class="bg-sky-50 text-sky-700 border border-sky-100 text-xs px-2.5 py-1 rounded-lg font-semibold">Oncology</span>
+                                    <span
+                                        class="bg-sky-50 text-sky-700 border border-sky-100 text-xs px-2.5 py-1 rounded-lg font-semibold">Neurosurgery</span>
+                                    <span
+                                        class="bg-sky-50 text-sky-700 border border-sky-100 text-xs px-2.5 py-1 rounded-lg font-semibold">Pediatrics</span>
+                                </div>
+                            </div>
+
+                            <div
+                                class="emergency-hotline-box mt-auto bg-gradient-to-r from-red-50 to-orange-50 border border-red-100 p-3 rounded-xl flex justify-between items-center mb-4 shadow-sm">
+                                <div>
+                                    <div class="text-[10px] text-red-600 font-black tracking-wider uppercase">Emergency
+                                        Hotline</div>
+                                    <div class="font-extrabold text-slate-900 text-sm">051-8463000</div>
+                                </div>
+                                <a href="tel:0518463000"
+                                    class="bg-red-600 hover:bg-red-700 active:bg-red-800 text-white text-xs font-bold py-2 px-3.5 rounded-lg shadow-sm flex items-center gap-1.5 transition-all duration-200"
+                                    data-phone="051-8463000" data-facility="Shifa International Emergency">
+                                    <i class="fa-solid fa-phone"></i> Call
+                                </a>
+                            </div>
+
+                            <div class="flex gap-2.5 pt-3 border-t border-slate-100">
+                                <button
+                                    class="flex-1 py-2.5 px-2 text-xs font-bold border border-sky-600 text-sky-700 rounded-xl hover:bg-sky-600 hover:text-white active:bg-sky-700 transition-all duration-200 shadow-sm"
+                                    onclick="viewHospitalDetails('Shifa International Hospital', 'Sector H-8/4, Islamabad', '550+ Beds', '051-8463000', 'Cardiology, Liver/Kidney Transplant, Oncology, Neurosurgery, ICU')">
+                                    Facility Info
+                                </button>
+                                <a href="doctors.html?hospital=Shifa"
+                                    class="flex-1 py-2.5 px-2 text-xs font-bold bg-gradient-to-r from-sky-600 to-blue-600 text-white rounded-xl text-center hover:from-sky-700 hover:to-blue-700 active:bg-sky-800 transition-all duration-200 flex items-center justify-center shadow-md">
+                                    View Doctors
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hospital 2: Maroof International -->
+                <div class="hospital-item flex" data-city="Islamabad" data-type="Private" data-emergency="true"
+                    data-name="Maroof International Hospital" data-aos="fade-up" data-aos-duration="700"
+                    data-aos-delay="200">
+                    <div
+                        class="hospital-card bg-white rounded-2xl shadow-md overflow-hidden border border-slate-200/90 flex flex-col h-full w-full hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+
+                        <!-- Banner with Unsplash Image -->
+                        <div class="hospital-banner-img relative h-48 w-full overflow-hidden bg-teal-900">
+                            <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=600&q=80"
+                                alt="Maroof International Hospital"
+                                class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-slate-900/20 to-transparent">
+                            </div>
+
+                            <div class="absolute top-3 left-3 z-10">
+                                <span
+                                    class="bg-white/95 backdrop-blur-sm text-slate-900 shadow-md font-bold px-2.5 py-1 rounded-md text-xs flex items-center">
+                                    <i class="fa-solid fa-award text-teal-600 mr-1.5"></i> ISO 9001 Certified
+                                </span>
+                            </div>
+                            <div
+                                class="absolute top-3 right-3 bg-red-600 text-white px-2.5 py-1 rounded-md text-xs font-bold flex items-center gap-1.5 shadow-md z-10 animate-pulse">
+                                <i class="fa-solid fa-truck-medical"></i> 24/7 Emergency
+                            </div>
+                        </div>
+
+                        <div class="hospital-body p-5 flex flex-col flex-grow">
+                            <div class="mb-2">
+                                <h5 class="font-extrabold text-slate-900 text-lg mb-0">Maroof International Hospital
+                                </h5>
+                                <div class="text-xs text-slate-500 mt-1 flex items-start">
+                                    <i class="fa-solid fa-location-dot text-sky-600 mr-1.5 mt-0.5 flex-shrink-0"></i>
+                                    <span>10th Ave, Sector F-10 Markaz, Islamabad</span>
+                                </div>
+                            </div>
+
+                            <div class="rating-stars mb-3 text-amber-400 text-sm flex items-center">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i>
+                                <span class="text-xs text-slate-700 font-bold ml-2">4.8 <span
+                                        class="font-normal text-slate-400">(1,940 Reviews)</span></span>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-3 mb-4">
+                                <div
+                                    class="hospital-stat-chip bg-slate-50 p-2.5 rounded-xl border border-slate-100 shadow-sm">
+                                    <span class="text-slate-400 text-[11px] font-semibold block uppercase">Total
+                                        Beds</span>
+                                    <div class="font-extrabold text-slate-800 text-sm mt-0.5">120+ Beds</div>
+                                </div>
+                                <div
+                                    class="hospital-stat-chip bg-slate-50 p-2.5 rounded-xl border border-slate-100 shadow-sm">
+                                    <span class="text-slate-400 text-[11px] font-semibold block uppercase">ICU
+                                        Status</span>
+                                    <div class="font-extrabold text-emerald-600 text-sm mt-0.5 flex items-center">
+                                        <i class="fa-solid fa-circle text-[8px] text-emerald-600 mr-1.5"></i> Available
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <div class="text-xs font-extrabold text-slate-400 uppercase tracking-wider mb-2">
+                                    Specialized Departments</div>
+                                <div class="flex flex-wrap gap-1.5">
+                                    <span
+                                        class="bg-teal-50 text-teal-700 border border-teal-100 text-xs px-2.5 py-1 rounded-lg font-semibold">Gynecology</span>
+                                    <span
+                                        class="bg-teal-50 text-teal-700 border border-teal-100 text-xs px-2.5 py-1 rounded-lg font-semibold">Laparoscopy</span>
+                                    <span
+                                        class="bg-teal-50 text-teal-700 border border-teal-100 text-xs px-2.5 py-1 rounded-lg font-semibold">Orthopedics</span>
+                                    <span
+                                        class="bg-teal-50 text-teal-700 border border-teal-100 text-xs px-2.5 py-1 rounded-lg font-semibold">Cardiology</span>
+                                    <span
+                                        class="bg-teal-50 text-teal-700 border border-teal-100 text-xs px-2.5 py-1 rounded-lg font-semibold">Radiology</span>
+                                </div>
+                            </div>
+
+                            <div
+                                class="emergency-hotline-box mt-auto bg-gradient-to-r from-red-50 to-orange-50 border border-red-100 p-3 rounded-xl flex justify-between items-center mb-4 shadow-sm">
+                                <div>
+                                    <div class="text-[10px] text-red-600 font-black tracking-wider uppercase">Emergency
+                                        Hotline</div>
+                                    <div class="font-extrabold text-slate-900 text-sm">051-2222920</div>
+                                </div>
+                                <a href="tel:0512222920"
+                                    class="bg-red-600 hover:bg-red-700 active:bg-red-800 text-white text-xs font-bold py-2 px-3.5 rounded-lg shadow-sm flex items-center gap-1.5 transition-all duration-200"
+                                    data-phone="051-2222920" data-facility="Maroof International Emergency">
+                                    <i class="fa-solid fa-phone"></i> Call
+                                </a>
+                            </div>
+
+                            <div class="flex gap-2.5 pt-3 border-t border-slate-100">
+                                <button
+                                    class="flex-1 py-2.5 px-2 text-xs font-bold border border-sky-600 text-sky-700 rounded-xl hover:bg-sky-600 hover:text-white active:bg-sky-700 transition-all duration-200 shadow-sm"
+                                    onclick="viewHospitalDetails('Maroof International Hospital', 'Sector F-10 Markaz, Islamabad', '120+ Beds', '051-2222920', 'Gynecology & Obstetrics, Laparoscopic Surgery, Orthopedics, Cardiology')">
+                                    Facility Info
+                                </button>
+                                <a href="doctors.html?hospital=Maroof"
+                                    class="flex-1 py-2.5 px-2 text-xs font-bold bg-gradient-to-r from-sky-600 to-blue-600 text-white rounded-xl text-center hover:from-sky-700 hover:to-blue-700 active:bg-sky-800 transition-all duration-200 flex items-center justify-center shadow-md">
+                                    View Doctors
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hospital 3: PIMS Islamabad -->
+                <div class="hospital-item flex" data-city="Islamabad" data-type="Public" data-emergency="true"
+                    data-name="PIMS Hospital Pakistan Institute of Medical Sciences" data-aos="fade-up"
+                    data-aos-duration="700" data-aos-delay="300">
+                    <div
+                        class="hospital-card bg-white rounded-2xl shadow-md overflow-hidden border border-slate-200/90 flex flex-col h-full w-full hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+
+                        <!-- Banner with Unsplash Image -->
+                        <div class="hospital-banner-img relative h-48 w-full overflow-hidden bg-slate-800">
+                            <img src="https://images.unsplash.com/photo-1538108149319-fbb6c18c96fb?auto=format&fit=crop&w=600&q=80"
+                                alt="PIMS Hospital Islamabad"
+                                class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-slate-900/20 to-transparent">
+                            </div>
+
+                            <div class="absolute top-3 left-3 z-10">
+                                <span
+                                    class="bg-emerald-600 text-white shadow-md font-bold px-2.5 py-1 rounded-md text-xs flex items-center">
+                                    <i class="fa-solid fa-landmark mr-1.5"></i> Public Tertiary
+                                </span>
+                            </div>
+                            <div
+                                class="absolute top-3 right-3 bg-red-600 text-white px-2.5 py-1 rounded-md text-xs font-bold flex items-center gap-1.5 shadow-md z-10 animate-pulse">
+                                <i class="fa-solid fa-truck-medical"></i> 24/7 Level 1 Trauma
+                            </div>
+                        </div>
+
+                        <div class="hospital-body p-5 flex flex-col flex-grow">
+                            <div class="mb-2">
+                                <h5 class="font-extrabold text-slate-900 text-lg mb-0">PIMS Hospital Islamabad</h5>
+                                <div class="text-xs text-slate-500 mt-1 flex items-start">
+                                    <i class="fa-solid fa-location-dot text-sky-600 mr-1.5 mt-0.5 flex-shrink-0"></i>
+                                    <span>Ibn-e-Sina Rd, Sector G-8/3, Islamabad</span>
+                                </div>
+                            </div>
+
+                            <div class="rating-stars mb-3 text-amber-400 text-sm flex items-center">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star-half-stroke"></i>
+                                <span class="text-xs text-slate-700 font-bold ml-2">4.2 <span
+                                        class="font-normal text-slate-400">(4,100 Reviews)</span></span>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-3 mb-4">
+                                <div
+                                    class="hospital-stat-chip bg-slate-50 p-2.5 rounded-xl border border-slate-100 shadow-sm">
+                                    <span class="text-slate-400 text-[11px] font-semibold block uppercase">Total
+                                        Beds</span>
+                                    <div class="font-extrabold text-slate-800 text-sm mt-0.5">1,100+ Beds</div>
+                                </div>
+                                <div
+                                    class="hospital-stat-chip bg-slate-50 p-2.5 rounded-xl border border-slate-100 shadow-sm">
+                                    <span class="text-slate-400 text-[11px] font-semibold block uppercase">ICU
+                                        Status</span>
+                                    <div class="font-extrabold text-amber-600 text-sm mt-0.5 flex items-center">
+                                        <i class="fa-solid fa-circle text-[8px] text-amber-600 mr-1.5"></i> High Demand
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <div class="text-xs font-extrabold text-slate-400 uppercase tracking-wider mb-2">
+                                    Specialized Departments</div>
+                                <div class="flex flex-wrap gap-1.5">
+                                    <span
+                                        class="bg-slate-100 text-slate-700 border border-slate-200 text-xs px-2.5 py-1 rounded-lg font-semibold">Burn
+                                        Center</span>
+                                    <span
+                                        class="bg-slate-100 text-slate-700 border border-slate-200 text-xs px-2.5 py-1 rounded-lg font-semibold">Trauma
+                                        Surgery</span>
+                                    <span
+                                        class="bg-slate-100 text-slate-700 border border-slate-200 text-xs px-2.5 py-1 rounded-lg font-semibold">Pediatrics</span>
+                                    <span
+                                        class="bg-slate-100 text-slate-700 border border-slate-200 text-xs px-2.5 py-1 rounded-lg font-semibold">General
+                                        Medicine</span>
+                                    <span
+                                        class="bg-slate-100 text-slate-700 border border-slate-200 text-xs px-2.5 py-1 rounded-lg font-semibold">Cardiology</span>
+                                </div>
+                            </div>
+
+                            <div
+                                class="emergency-hotline-box mt-auto bg-gradient-to-r from-red-50 to-orange-50 border border-red-100 p-3 rounded-xl flex justify-between items-center mb-4 shadow-sm">
+                                <div>
+                                    <div class="text-[10px] text-red-600 font-black tracking-wider uppercase">Emergency
+                                        Hotline</div>
+                                    <div class="font-extrabold text-slate-900 text-sm">051-9261170</div>
+                                </div>
+                                <a href="tel:0519261170"
+                                    class="bg-red-600 hover:bg-red-700 active:bg-red-800 text-white text-xs font-bold py-2 px-3.5 rounded-lg shadow-sm flex items-center gap-1.5 transition-all duration-200"
+                                    data-phone="051-9261170" data-facility="PIMS Hospital Emergency">
+                                    <i class="fa-solid fa-phone"></i> Call
+                                </a>
+                            </div>
+
+                            <div class="flex gap-2.5 pt-3 border-t border-slate-100">
+                                <button
+                                    class="flex-1 py-2.5 px-2 text-xs font-bold border border-sky-600 text-sky-700 rounded-xl hover:bg-sky-600 hover:text-white active:bg-sky-700 transition-all duration-200 shadow-sm"
+                                    onclick="viewHospitalDetails('PIMS Hospital', 'Sector G-8/3, Islamabad', '1,100+ Beds', '051-9261170', 'Burn Center, Emergency Trauma, Mother & Child Center, Nephrology, General Surgery')">
+                                    Facility Info
+                                </button>
+                                <a href="doctors.html?hospital=PIMS"
+                                    class="flex-1 py-2.5 px-2 text-xs font-bold bg-gradient-to-r from-sky-600 to-blue-600 text-white rounded-xl text-center hover:from-sky-700 hover:to-blue-700 active:bg-sky-800 transition-all duration-200 flex items-center justify-center shadow-md">
+                                    View Doctors
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Model for Hospital Details (with AOS & Tailwind CSS) -->
+    <div id="hospitalModal"
+        class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/60 backdrop-blur-sm hidden transition-all duration-300">
+        <div class="bg-white rounded-2xl shadow-2xl max-w-lg w-full mx-4 overflow-hidden border border-slate-200/80 transform transition-transform"
+            data-aos="zoom-in" data-aos-duration="300" data-aos-easing="ease-out-cubic">
+
+            <!-- Modal Header -->
+            <div class="bg-gradient-to-r from-sky-900 to-blue-900 text-white px-6 py-4 flex justify-between items-center"
+                data-aos="fade-down" data-aos-duration="400" data-aos-delay="100">
+                <div class="flex items-center gap-2">
+                    <span class="bg-white/10 p-1.5 rounded-lg text-sky-200"><i class="fa-solid fa-hospital"></i></span>
+                    <h3 id="modalHospitalName" class="font-extrabold text-lg text-white tracking-wide">Hospital Name</h3>
+                </div>
+                <button onclick="closeHospitalModal()"
+                    class="text-white/70 hover:text-white bg-white/10 hover:bg-white/20 w-8 h-8 rounded-full flex items-center justify-center text-lg font-bold transition-all">&times;</button>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="p-6 space-y-5">
+                <!-- Address Box -->
+                <div data-aos="fade-up" data-aos-duration="400" data-aos-delay="150">
+                    <span class="text-xs text-slate-400 font-extrabold uppercase tracking-wider block mb-1">Location /
+                        Address</span>
+                    <p id="modalHospitalAddress"
+                        class="text-slate-700 text-sm font-semibold flex items-start gap-2 bg-slate-50 p-3 rounded-xl border border-slate-100">
+                        <i class="fa-solid fa-location-dot text-sky-600 mt-0.5 flex-shrink-0"></i>
+                        <span class="w-full">--</span>
+                    </p>
+                </div>
+
+                <!-- Beds & Phone Grid -->
+                <div class="grid grid-cols-2 gap-4" data-aos="fade-up" data-aos-duration="400" data-aos-delay="200">
+                    <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-100 shadow-sm">
+                        <span class="text-slate-400 text-[11px] font-extrabold uppercase tracking-wider block">Total
+                            Beds</span>
+                        <p id="modalHospitalBeds"
+                            class="text-slate-800 font-black text-sm mt-1 flex items-center gap-1.5">
+                            <i class="fa-solid fa-bed-pulse text-sky-600"></i> --
+                        </p>
+                    </div>
+                    <div
+                        class="bg-gradient-to-br from-red-50 to-orange-50 p-3.5 rounded-xl border border-red-100 shadow-sm">
+                        <span class="text-red-600 text-[11px] font-black uppercase tracking-wider block">Emergency
+                            Hotline</span>
+                        <p id="modalHospitalPhone"
+                            class="text-slate-900 font-black text-sm mt-1 flex items-center gap-1.5">
+                            <i class="fa-solid fa-phone-volume text-red-600"></i> --
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Departments -->
+                <div data-aos="fade-up" data-aos-duration="400" data-aos-delay="250">
+                    <span class="text-xs text-slate-400 font-extrabold uppercase tracking-wider block mb-1">Specialized
+                        Facilities & Departments</span>
+                    <p id="modalHospitalDepts"
+                        class="text-slate-700 text-xs font-semibold leading-relaxed mt-1 bg-sky-50/60 p-3.5 rounded-xl border border-sky-100/80">
+                        --
+                    </p>
+                </div>
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="bg-slate-50 px-6 py-4 border-t border-slate-100 flex justify-end gap-3" data-aos="fade-up"
+                data-aos-duration="400" data-aos-delay="300">
+                <button onclick="closeHospitalModal()"
+                    class="px-5 py-2.5 bg-slate-200 hover:bg-slate-300 active:bg-slate-400 text-slate-700 text-xs font-bold rounded-xl transition-all duration-200 shadow-sm">
+                    Close
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- POPULAR SPECIALTIES CATEGORIES SECTION -->
+    <section class="py-12 bg-slate-50 border-b border-slate-200" id="hospital-specialties-section">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Section Header -->
+            <div class="text-center max-w-2xl mx-auto mb-10" data-aos="fade-up" data-aos-duration="600">
+                <span
+                    class="text-xs font-bold uppercase tracking-wider text-teal-700 bg-teal-50 px-3 py-1 rounded-full border border-teal-100">Browse
+                    by Medical Department</span>
+                <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 mt-2 mb-2">Explore Featured Specialties
+                </h2>
+                <p class="text-slate-600 text-sm">Find specialized hospitals and expert doctors across major medical
+                    departments in the twin cities.</p>
+            </div>
+
+            <!-- Specialties Grid -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+
+                <!-- 1. Cardiology (Red Theme) -->
+                <div data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+                    <a href="#hospitals-main-directory" onclick="filterBySpecialty('Cardiology')"
+                        class="group bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-rose-500 transition-all duration-300 flex flex-col items-center text-center h-full">
+                        <div
+                            class="w-12 h-12 rounded-full bg-rose-50 text-rose-600 flex items-center justify-center text-xl mb-3 group-hover:bg-rose-600 group-hover:text-white transition-colors duration-300">
+                            <i class="fa-solid fa-heart-pulse"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-800 text-sm mb-1 group-hover:text-rose-600 transition-colors">
+                            Cardiology</h3>
+                        <span class="text-[11px] text-slate-400">12 Hospitals</span>
+                    </a>
+                </div>
+
+                <!-- 2. Neurology (Purple/Indigo Theme) -->
+                <div data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+                    <a href="#hospitals-main-directory" onclick="filterBySpecialty('Neurology')"
+                        class="group bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-indigo-500 transition-all duration-300 flex flex-col items-center text-center h-full">
+                        <div
+                            class="w-12 h-12 rounded-full bg-indigo-50 text-indigo-600 flex items-center justify-center text-xl mb-3 group-hover:bg-indigo-600 group-hover:text-white transition-colors duration-300">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-800 text-sm mb-1 group-hover:text-indigo-600 transition-colors">
+                            Neurology</h3>
+                        <span class="text-[11px] text-slate-400">8 Hospitals</span>
+                    </a>
+                </div>
+
+                <!-- 3. Orthopedics (Blue Theme) -->
+                <div data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
+                    <a href="#hospitals-main-directory" onclick="filterBySpecialty('Orthopedics')"
+                        class="group bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-blue-500 transition-all duration-300 flex flex-col items-center text-center h-full">
+                        <div
+                            class="w-12 h-12 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center text-xl mb-3 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+                            <i class="fa-solid fa-bone"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-800 text-sm mb-1 group-hover:text-blue-600 transition-colors">
+                            Orthopedics</h3>
+                        <span class="text-[11px] text-slate-400">10 Hospitals</span>
+                    </a>
+                </div>
+
+                <!-- 4. Pediatrics (Amber Theme) -->
+                <div data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
+                    <a href="#hospitals-main-directory" onclick="filterBySpecialty('Pediatrics')"
+                        class="group bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-amber-500 transition-all duration-300 flex flex-col items-center text-center h-full">
+                        <div
+                            class="w-12 h-12 rounded-full bg-amber-50 text-amber-600 flex items-center justify-center text-xl mb-3 group-hover:bg-amber-600 group-hover:text-white transition-colors duration-300">
+                            <i class="fa-solid fa-child"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-800 text-sm mb-1 group-hover:text-amber-600 transition-colors">
+                            Pediatrics</h3>
+                        <span class="text-[11px] text-slate-400">14 Hospitals</span>
+                    </a>
+                </div>
+
+                <!-- 5. Burn & Trauma (Orange/Red Theme) -->
+                <div data-aos="fade-up" data-aos-duration="600" data-aos-delay="500">
+                    <a href="#hospitals-main-directory" onclick="filterBySpecialty('Trauma')"
+                        class="group bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-orange-500 transition-all duration-300 flex flex-col items-center text-center h-full">
+                        <div
+                            class="w-12 h-12 rounded-full bg-orange-50 text-orange-600 flex items-center justify-center text-xl mb-3 group-hover:bg-orange-600 group-hover:text-white transition-colors duration-300">
+                            <i class="fa-solid fa-fire-flame-curved"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-800 text-sm mb-1 group-hover:text-orange-600 transition-colors">
+                            Burn & Trauma</h3>
+                        <span class="text-[11px] text-slate-400">6 Centers</span>
+                    </a>
+                </div>
+
+                <!-- 6. Gynecology (Emerald/Teal Theme) -->
+                <div data-aos="fade-up" data-aos-duration="600" data-aos-delay="600">
+                    <a href="#hospitals-main-directory" onclick="filterBySpecialty('Gynecology')"
+                        class="group bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-emerald-500 transition-all duration-300 flex flex-col items-center text-center h-full">
+                        <div
+                            class="w-12 h-12 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center text-xl mb-3 group-hover:bg-emerald-600 group-hover:text-white transition-colors duration-300">
+                            <i class="fa-solid fa-user-nurse"></i>
+                        </div>
+                        <h3
+                            class="font-bold text-slate-800 text-sm mb-1 group-hover:text-emerald-600 transition-colors">
+                            Gynecology</h3>
+                        <span class="text-[11px] text-slate-400">15 Hospitals</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- FREQUENTLY ASKED QUESTIONS (FAQs) SECTION -->
+    <section class="py-16 bg-slate-50 border-t border-slate-200" id="faqs" data-aos="fade-up" data-aos-duration="1000">
+        <div class="w-full px-4 sm:px-6 lg:px-12">
+
+            <!-- Section Header -->
+            <div class="text-center max-w-4xl mx-auto mb-10" data-aos="fade-up" data-aos-delay="100">
+                <span
+                    class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-teal-50 text-teal-700 border border-teal-200 mb-3 shadow-sm">
+                    <i class="fa-solid fa-circle-question"></i> Help & Patient Guidance
+                </span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">Frequently Asked Questions
+                </h2>
+                <p class="text-slate-600 mt-3 text-sm md:text-base">
+                    Find answers about home nursing PNC verification, doctor OPD booking, hospital emergency dispatch,
+                    and fee structures in Islamabad & Rawalpindi.
+                </p>
+            </div>
+
+            <!-- FAQ Live Search & Category Filter Controls -->
+            <div class="max-w-5xl mx-auto mb-8 space-y-4" data-aos="fade-up" data-aos-delay="200">
+                <!-- Live Search Input -->
+                <div class="relative">
+                    <span class="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none text-slate-400">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </span>
+                    <input type="text" id="faq-search-input"
+                        class="w-full pl-11 pr-4 py-3.5 bg-white border border-slate-200 rounded-2xl text-sm text-slate-800 placeholder-slate-400 shadow-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all"
+                        placeholder="Search FAQs (e.g., 'PNC verification', '12hr vs 24hr', 'Shifa OPD')..."
+                        autocomplete="off" />
+                </div>
+
+                <!-- Filter Category Tabs/Pills -->
+                <div class="flex flex-wrap items-center justify-center gap-2" id="faq-category-pills-list">
+                    <button
+                        class="faq-filter-pill px-4 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-2 bg-teal-600 text-white shadow-sm"
+                        data-category="all">
+                        <i class="fa-solid fa-list-ul"></i> All Topics
+                    </button>
+                    <button
+                        class="faq-filter-pill px-4 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-2 bg-white text-slate-600 border border-slate-200 hover:bg-slate-100 hover:text-slate-900"
+                        data-category="nursing">
+                        <i class="fa-solid fa-user-nurse text-teal-600"></i> Home Nursing Care
+                    </button>
+                    <button
+                        class="faq-filter-pill px-4 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-2 bg-white text-slate-600 border border-slate-200 hover:bg-slate-100 hover:text-slate-900"
+                        data-category="doctors">
+                        <i class="fa-solid fa-user-doctor text-sky-600"></i> Doctor Appointments
+                    </button>
+                    <button
+                        class="faq-filter-pill px-4 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-2 bg-white text-slate-600 border border-slate-200 hover:bg-slate-100 hover:text-slate-900"
+                        data-category="hospitals">
+                        <i class="fa-solid fa-hospital text-indigo-600"></i> Hospitals & Emergency
+                    </button>
+                    <button
+                        class="faq-filter-pill px-4 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-2 bg-white text-slate-600 border border-slate-200 hover:bg-slate-100 hover:text-slate-900"
+                        data-category="billing">
+                        <i class="fa-solid fa-credit-card text-emerald-600"></i> Pricing & Safety
+                    </button>
+                </div>
+            </div>
+
+            <!-- Accordion FAQ Items -->
+            <div class="max-w-5xl mx-auto space-y-4" id="faqAccordionPortal">
+
+                <!-- FAQ 1: PNC Verification -->
+                <div class="faq-accordion-item bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden transition-all duration-200"
+                    data-category="nursing" data-aos="fade-up" data-aos-delay="300">
+                    <button
+                        class="faq-accordion-btn w-full px-6 py-4 text-left flex items-center justify-between gap-4 focus:outline-none group">
+                        <span class="font-bold text-slate-900 text-sm md:text-base flex items-center gap-3">
+                            <i class="fa-solid fa-shield-check text-emerald-600 text-lg"></i>
+                            How do you verify PNC certification and security backgrounds for home nurses?
+                        </span>
+                        <i
+                            class="fa-solid fa-chevron-down text-slate-400 group-hover:text-teal-600 transition-transform duration-300"></i>
+                    </button>
+                    <div
+                        class="faq-accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-6 text-slate-600 text-sm">
+                        <div class="pb-6 pt-2 border-t border-slate-100">
+                            <p class="mb-3">Every nurse registered on ShifaCare Plus undergoes a rigorous <strong>3-tier
+                                    credentialing protocol</strong> before attending patients:</p>
+                            <ul class="list-disc pl-5 space-y-1.5 text-slate-700 mb-3">
+                                <li><strong>PNC License Verification:</strong> Real-time cross-check with the Pakistan
+                                    Nursing Council registry (BScN / Midwifery registration numbers).</li>
+                                <li><strong>Police Background Clearance:</strong> Character and security verification
+                                    through Islamabad Capital Police and Punjab Police Citizen Facilitation Centers.
+                                </li>
+                                <li><strong>Clinical Skills Validation:</strong> Practical testing in cannula insertion,
+                                    IV infusion, tracheostomy hygiene, Ryle's tube feeding, and emergency CPR.</li>
+                            </ul>
+                            <p class="text-xs text-slate-500 mb-0">Families can inspect the caregiver's original PNC
+                                registration card and digital profile badge upon arrival at their home.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 2: 12h vs 24h shifts -->
+                <div class="faq-accordion-item bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden transition-all duration-200"
+                    data-category="nursing" data-aos="fade-up" data-aos-delay="350">
+                    <button
+                        class="faq-accordion-btn w-full px-6 py-4 text-left flex items-center justify-between gap-4 focus:outline-none group">
+                        <span class="font-bold text-slate-900 text-sm md:text-base flex items-center gap-3">
+                            <i class="fa-solid fa-clock text-teal-600 text-lg"></i>
+                            What is the difference between 12-hour shifts and 24-hour live-in home nursing?
+                        </span>
+                        <i
+                            class="fa-solid fa-chevron-down text-slate-400 group-hover:text-teal-600 transition-transform duration-300"></i>
+                    </button>
+                    <div
+                        class="faq-accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-6 text-slate-600 text-sm">
+                        <div class="pb-6 pt-2 border-t border-slate-100">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3">
+                                <div class="p-3.5 bg-teal-50/60 rounded-xl border border-teal-200">
+                                    <div class="font-bold text-teal-900 text-sm mb-1 flex items-center gap-1.5">
+                                        <i class="fa-solid fa-sun text-amber-500"></i> 12-Hour Shifts (Day/Night)
+                                    </div>
+                                    <p class="text-xs text-slate-600 mb-0">Shift timings: 8:00 AM – 8:00 PM or 8:00 PM –
+                                        8:00 AM. Ideal for post-op surgical recovery, wound management, or night-shift
+                                        vitals monitoring.</p>
+                                </div>
+                                <div class="p-3.5 bg-sky-50/60 rounded-xl border border-sky-200">
+                                    <div class="font-bold text-sky-900 text-sm mb-1 flex items-center gap-1.5">
+                                        <i class="fa-solid fa-house-medical text-sky-600"></i> 24-Hour Live-In Nursing
+                                    </div>
+                                    <p class="text-xs text-slate-600 mb-0">Around-the-clock dedicated clinical support
+                                        with scheduled rotation. Best suited for stroke rehabilitation, coma, and
+                                        ventilator support.</p>
+                                </div>
+                            </div>
+                            <p class="text-xs text-slate-500 mb-0">Both male and female nursing staff are available
+                                according to family cultural preferences.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 3: Doctor OPD Booking -->
+                <div class="faq-accordion-item bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden transition-all duration-200"
+                    data-category="doctors" data-aos="fade-up" data-aos-delay="400">
+                    <button
+                        class="faq-accordion-btn w-full px-6 py-4 text-left flex items-center justify-between gap-4 focus:outline-none group">
+                        <span class="font-bold text-slate-900 text-sm md:text-base flex items-center gap-3">
+                            <i class="fa-solid fa-calendar-check text-sky-600 text-lg"></i>
+                            How do I book confirmed appointments with specialists at Shifa, PIMS, or Maroof?
+                        </span>
+                        <i
+                            class="fa-solid fa-chevron-down text-slate-400 group-hover:text-teal-600 transition-transform duration-300"></i>
+                    </button>
+                    <div
+                        class="faq-accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-6 text-slate-600 text-sm">
+                        <div class="pb-6 pt-2 border-t border-slate-100">
+                            <p class="mb-2">Booking takes less than 60 seconds with our integrated 6-step appointment
+                                wizard:</p>
+                            <ol class="list-decimal pl-5 space-y-1.5 text-slate-700 text-sm mb-3">
+                                <li>Select your specialist (Cardiology, Gynaecology, Pediatrics, Orthopedic, etc.).</li>
+                                <li>Choose your preferred hospital OPD facility (e.g., Shifa International H-8, Maroof
+                                    F-10, etc.).</li>
+                                <li>Pick your desired consultation date and time slot.</li>
+                                <li>Enter patient information and reason for visit.</li>
+                                <li>Confirm booking to receive an instant confirmed token number and SMS map link.</li>
+                            </ol>
+                            <p class="text-xs text-slate-500 mb-0">No waiting in long hospital queues — you can directly
+                                show your digital token at the clinic reception desk.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 4: Cancellation & Rescheduling -->
+                <div class="faq-accordion-item bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden transition-all duration-200"
+                    data-category="doctors" data-aos="fade-up" data-aos-delay="450">
+                    <button
+                        class="faq-accordion-btn w-full px-6 py-4 text-left flex items-center justify-between gap-4 focus:outline-none group">
+                        <span class="font-bold text-slate-900 text-sm md:text-base flex items-center gap-3">
+                            <i class="fa-solid fa-arrows-rotate text-indigo-600 text-lg"></i>
+                            Can I reschedule or cancel a doctor appointment or nursing booking?
+                        </span>
+                        <i
+                            class="fa-solid fa-chevron-down text-slate-400 group-hover:text-teal-600 transition-transform duration-300"></i>
+                    </button>
+                    <div
+                        class="faq-accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-6 text-slate-600 text-sm">
+                        <div class="pb-6 pt-2 border-t border-slate-100">
+                            <p class="text-slate-700 mb-2">
+                                Yes, absolutely. You can manage, reschedule, or cancel any consultation or home nurse
+                                booking with one click from your <strong><a href="dashboard-patient.html"
+                                        class="text-sky-600 font-semibold underline">Patient Dashboard</a></strong>.
+                            </p>
+                            <p class="text-xs text-slate-500 mb-0">
+                                Doctor consultations can be rescheduled up to 2 hours before the slot without penalty.
+                                For nursing shifts, we request at least 4 hours' notice.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 5: Pricing & Payment Methods -->
+                <div class="faq-accordion-item bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden transition-all duration-200"
+                    data-category="billing" data-aos="fade-up" data-aos-delay="500">
+                    <button
+                        class="faq-accordion-btn w-full px-6 py-4 text-left flex items-center justify-between gap-4 focus:outline-none group">
+                        <span class="font-bold text-slate-900 text-sm md:text-base flex items-center gap-3">
+                            <i class="fa-solid fa-money-bill-wave text-emerald-600 text-lg"></i>
+                            What are the pricing rates for home nurses and what payment methods are accepted?
+                        </span>
+                        <i
+                            class="fa-solid fa-chevron-down text-slate-400 group-hover:text-teal-600 transition-transform duration-300"></i>
+                    </button>
+                    <div
+                        class="faq-accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-6 text-slate-600 text-sm">
+                        <div class="pb-6 pt-2 border-t border-slate-100">
+                            <p class="text-slate-700 mb-3">Pricing is transparent with no hidden agency markups. Rates
+                                are set based on shift duration and patient clinical complexity:</p>
+
+                            <div class="overflow-x-auto mb-3 border border-slate-200 rounded-xl">
+                                <table class="w-full text-left border-collapse text-xs">
+                                    <thead class="bg-slate-100 text-slate-700 uppercase">
+                                        <tr>
+                                            <th class="p-3">Care Level</th>
+                                            <th class="p-3">12-Hour Shift</th>
+                                            <th class="p-3">24-Hour Live-In</th>
+                                            <th class="p-3">Included Services</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-slate-200">
+                                        <tr class="hover:bg-slate-50">
+                                            <td class="p-3 font-semibold text-slate-800">Basic Elderly Care</td>
+                                            <td class="p-3">Rs. 3,500 – 4,000</td>
+                                            <td class="p-3">Rs. 6,500 – 7,000</td>
+                                            <td class="p-3 text-slate-500">Vitals, oral medication, hygiene</td>
+                                        </tr>
+                                        <tr class="hover:bg-slate-50">
+                                            <td class="p-3 font-semibold text-slate-800">Post-Op & Wound Care</td>
+                                            <td class="p-3">Rs. 4,000 – 4,800</td>
+                                            <td class="p-3">Rs. 7,500 – 8,500</td>
+                                            <td class="p-3 text-slate-500">Sterile dressings, IV cannula</td>
+                                        </tr>
+                                        <tr class="hover:bg-slate-50">
+                                            <td class="p-3 font-semibold text-slate-800">ICU / Ventilator / Trach</td>
+                                            <td class="p-3">Rs. 5,000 – 6,000</td>
+                                            <td class="p-3">Rs. 9,500 – 11,000</td>
+                                            <td class="p-3 text-slate-500">Suctioning, bi-pap monitoring</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p class="text-xs text-slate-500 mb-0">Accepted modes: <strong>JazzCash, EasyPaisa, IBFT,
+                                    Visa/Mastercard</strong>, or Cash-on-Arrival.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- No FAQ Results Found Message -->
+            <div id="no-faq-results"
+                class="hidden text-center py-12 bg-white rounded-2xl border border-slate-200 shadow-sm max-w-5xl mx-auto mt-4">
+                <i class="fa-solid fa-circle-question text-slate-300 text-4xl mb-3"></i>
+                <h5 class="font-bold text-slate-800 text-lg">No matching questions found</h5>
+                <p class="text-slate-500 text-sm max-w-md mx-auto mb-4">We couldn't find a question matching your search
+                    term. Feel free to contact our 24/7 care desk directly!</p>
+                <a href="tel:0519280000"
+                    class="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold bg-teal-600 text-white shadow hover:bg-teal-700 transition-colors">
+                    <i class="fa-solid fa-phone"></i> Call 051-9280000
+                </a>
+            </div>
+
+            <!-- FAQ Contact & Support Card -->
+            <div class="max-w-5xl mx-auto mt-8 px-4 sm:px-0" data-aos="fade-up" data-aos-delay="600">
+                <div
+                    class="bg-gradient-to-r from-teal-950 via-teal-900 to-slate-900 rounded-3xl p-6 sm:p-8 md:p-10 text-white shadow-xl relative overflow-hidden border border-teal-800/40">
+
+                    <!-- Decorative Background Glow Effect -->
+                    <div
+                        class="absolute -right-10 -bottom-10 w-64 h-64 bg-teal-500/10 rounded-full blur-3xl pointer-events-none">
+                    </div>
+
+                    <div
+                        class="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 lg:gap-8">
+
+                        <!-- Left Content Area -->
+                        <div class="space-y-2 max-w-xl">
+                            <span
+                                class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold tracking-wide bg-teal-500/20 text-teal-300 border border-teal-500/30 shadow-inner">
+                                <i class="fa-solid fa-headset text-teal-400"></i> 24/7 PATIENT CARE DESK
+                            </span>
+                            <h4 class="text-xl sm:text-2xl md:text-3xl font-extrabold tracking-tight text-white">
+                                Have a Question Not Answered Here?
+                            </h4>
+                            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                                Our care coordinators in Islamabad are available around the clock to help match the
+                                right nurse or doctor for your family.
+                            </p>
+                        </div>
+
+                        <!-- Right Action Buttons Area -->
+                        <div class="flex flex-row sm:flex-row items-center gap-3.5 w-full lg:w-auto shrink-0">
+                            <!-- Call Button -->
+                            <a href="tel:0519280000"
+                                class="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2.5 px-5 py-3.5 rounded-2xl bg-white text-slate-900 font-bold text-xs sm:text-sm shadow-md hover:bg-teal-50 hover:text-teal-950 hover:scale-[1.02] active:scale-[0.98] transition-all text-nowrap group">
+                                <i
+                                    class="fa-solid fa-phone text-teal-600 group-hover:text-teal-800 text-base transition-colors"></i>
+                                051-9280000
+                            </a>
+
+                            <!-- Portal Button -->
+                            <a href="dashboard-patient.html"
+                                class="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2.5 px-5 py-3.5 rounded-2xl bg-teal-600 text-white font-bold text-xs sm:text-sm shadow-md hover:bg-teal-700 hover:text-white hover:shadow-teal-900/50 hover:scale-[1.02] active:scale-[0.98] transition-all text-nowrap">
+                                <i class="fa-solid fa-clipboard-user text-base"></i> Ask in Portal
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 border-t border-slate-800 text-slate-400 py-12 md:py-16" id="main-portal-footer">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 w-full">
+
+            <!-- Top Grid Columns -->
+            <div
+                class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-12 gap-6 lg:gap-8 pb-12 border-b border-slate-800/80">
+
+                <!-- Brand Column (Span 4 on Desktop, Full Width on Mobile) -->
+                <div class="col-span-2 lg:col-span-4 space-y-4">
+                    <div class="flex items-center gap-2.5">
+                        <div
+                            class="w-9 h-9 rounded-xl bg-teal-600 text-white flex items-center justify-center text-base shadow-md">
+                            <i class="fa-solid fa-heart-pulse"></i>
+                        </div>
+                        <span class="text-xl font-bold text-white tracking-tight">Medi <span
+                                class="text-teal-400">Care</span></span>
+                    </div>
+                    <p class="text-sm text-slate-400 leading-relaxed max-w-sm">
+                        Connecting families with certified home nurses, licensed PMDC doctors, and leading hospital
+                        facilities across Islamabad and Rawalpindi.
+                    </p>
+                    <div class="text-xs text-slate-400 flex items-center gap-2 pt-1">
+                        <i class="fa-solid fa-location-dot text-teal-400"></i>
+                        <span>Blue Area, Jinnah Avenue, Islamabad, Pakistan</span>
+                    </div>
+                </div>
+
+                <!-- Home Nursing Links (Span 2) -->
+                <div class="col-span-1 sm:col-span-1 lg:col-span-2 space-y-3">
+                    <h4 class="text-white font-bold text-sm tracking-wide uppercase">Home Nursing</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="nurses.html?service=elderly" class="hover:text-teal-400 transition-colors">Elderly
+                                Care</a></li>
+                        <li><a href="nurses.html?service=post-op" class="hover:text-teal-400 transition-colors">Post-Op
+                                Recovery</a></li>
+                        <li><a href="nurses.html?service=stroke" class="hover:text-teal-400 transition-colors">Stroke
+                                Rehabilitation</a></li>
+                        <li><a href="nurses.html?service=neonatal" class="hover:text-teal-400 transition-colors">Mother
+                                & Baby Care</a></li>
+                        <li><a href="nurses.html?shift=24h" class="hover:text-teal-400 transition-colors">24/7 Live-In
+                                Nurses</a></li>
+                    </ul>
+                </div>
+
+                <!-- Medical Specialists Links (Span 2) -->
+                <div class="col-span-1 sm:col-span-1 lg:col-span-2 space-y-3">
+                    <h4 class="text-white font-bold text-sm tracking-wide uppercase">Medical Specialists</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="doctors.html?specialty=Cardiologist"
+                                class="hover:text-teal-400 transition-colors">Cardiologists</a></li>
+                        <li><a href="doctors.html?specialty=Gynecologist"
+                                class="hover:text-teal-400 transition-colors">Gynecologists</a></li>
+                        <li><a href="doctors.html?specialty=Pediatrician"
+                                class="hover:text-teal-400 transition-colors">Pediatricians</a></li>
+                        <li><a href="doctors.html?specialty=Neurologist"
+                                class="hover:text-teal-400 transition-colors">Neurologists</a></li>
+                        <li><a href="doctors.html?specialty=Orthopedic"
+                                class="hover:text-teal-400 transition-colors">Orthopedic Surgeons</a></li>
+                    </ul>
+                </div>
+
+                <!-- Top Hospitals Links (Span 2) -->
+                <div class="col-span-1 sm:col-span-1 lg:col-span-2 space-y-3">
+                    <h4 class="text-white font-bold text-sm tracking-wide uppercase">Top Hospitals</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="hospitals.html?id=shifa" class="hover:text-teal-400 transition-colors">Shifa
+                                International H-8</a></li>
+                        <li><a href="hospitals.html?id=pims" class="hover:text-teal-400 transition-colors">PIMS
+                                Islamabad G-8</a></li>
+                        <li><a href="hospitals.html?id=maroof" class="hover:text-teal-400 transition-colors">Maroof
+                                Hospital F-10</a></li>
+                        <li><a href="hospitals.html?id=holy-family" class="hover:text-teal-400 transition-colors">Holy
+                                Family Rawalpindi</a></li>
+                        <li><a href="hospitals.html?id=cmh" class="hover:text-teal-400 transition-colors">CMH
+                                Rawalpindi</a></li>
+                    </ul>
+                </div>
+
+                <!-- Patient Portal Links (Span 2) -->
+                <div class="col-span-1 sm:col-span-1 lg:col-span-2 space-y-3">
+                    <h4 class="text-white font-bold text-sm tracking-wide uppercase">Patient Portal</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="dashboard-patient.html?tab=appointments"
+                                class="hover:text-teal-400 transition-colors">My Appointments</a></li>
+                        <li><a href="dashboard-patient.html?tab=nurses"
+                                class="hover:text-teal-400 transition-colors">Active
+                                Caregivers</a></li>
+                        <li><a href="dashboard-patient.html?tab=vitals"
+                                class="hover:text-teal-400 transition-colors">Patient Vitals Chart</a></li>
+                        <li><a href="dashboard-patient.html?tab=payments"
+                                class="hover:text-teal-400 transition-colors">Payment Invoices</a></li>
+                        <li><a href="dashboard-patient.html?tab=favorites"
+                                class="hover:text-teal-400 transition-colors">Saved Doctors</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Footer Bottom Bar -->
+            <div
+                class="pt-8 flex flex-col sm:flex-row flex-wrap justify-between items-center gap-4 text-xs text-slate-500">
+                <div>
+                    © 2026 ShifaCare Plus - Twin Cities Healthcare & Home Nursing Portal. All Rights Reserved.
+                </div>
+                <div class="flex flex-wrap items-center gap-4">
+                    <span class="text-slate-400 flex items-center gap-1.5">
+                        <i class="fa-solid fa-shield-check text-emerald-400"></i> PNC & PMDC Certified
+                    </span>
+                    <span class="text-slate-400 flex items-center gap-1.5">
+                        <i class="fa-solid fa-lock text-sky-400"></i> 256-bit HIPAA Standard Privacy
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Notification Toast Container -->
+    <div id="toast-notification-container"></div>
+
+    <!-- JavaScript Scripts -->
+    <!-- CDN Dependencies -->
+    <!-- Tailwind CSS Play CDN (Configured for custom styles and animations) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0284c7',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- AOS Library JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,  // Animation speed (milliseconds)
+            once: false,    // Yeh FALSE karne se element scroll out hone par reset ho jaye ga aur bar bar animate hoga!
+            offset: 100,    // Kitne pixels scroll hone par trigger ho
+        });
+    </script>
+
+    <!-- Dedicated Scripts -->
+    <script src="/assets/js/main.js"></script>
+</body>
+
+</html>

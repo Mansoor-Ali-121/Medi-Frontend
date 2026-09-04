@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Patient & Family Healthcare Dashboard | Islamabad & Rawalpindi</title>
+  <meta name="description" content="Manage your upcoming doctor consultations, active home-care nursing assignments, vitals tracking, and payment receipts." />
+  <meta property="og:title" content="Patient Dashboard | ShifaCare Plus" />
+  <meta property="og:description" content="Manage appointments, home nursing shifts, and healthcare records in Islamabad & Rawalpindi." />
+
+  <!-- CDN Dependencies -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Dedicated Stylesheets -->
+  <link rel="stylesheet" href="/assets/css/global.css" />
+  <link rel="stylesheet" href="/assets/css/dashboard.css" />
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+  <!-- TOP EMERGENCY RESPONSE & UTILITY BAR -->
+  <div class="top-emergency-bar" id="top-emergency-announcement-bar">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap gap-2 py-1">
+      <div class="d-flex align-items-center flex-wrap gap-2 text-xs">
+        <a href="tel:1122" class="badge-emergency text-decoration-none">
+          <i class="fa-solid fa-truck-medical me-1"></i> 24/7 HELPLINE 1122
+        </a>
+        <span class="text-slate-400 d-none d-sm-inline">|</span>
+        <span class="text-slate-300 text-xs">
+          Twin Cities EMS: <a href="tel:1122" class="text-white fw-bold hover:underline">1122</a> 
+          <span class="d-none d-md-inline">| Patient Care Desk: <a href="tel:0519280000" class="text-white fw-bold hover:underline">051-9280000</a></span>
+        </span>
+      </div>
+      <div class="d-flex align-items-center gap-3 text-xs">
+        <span class="text-slate-300"><i class="fa-solid fa-user-check text-emerald-400 me-1"></i> Logged in: <strong>Muhammad Usman</strong> (F-8/4, ISB)</span>
+        <span class="text-slate-400 d-none d-lg-inline">|</span>
+        <a href="hospitals.html" class="text-slate-300 hover:text-white d-none d-md-inline">
+          <i class="fa-solid fa-hospital-user me-1 text-indigo-400"></i> Emergency ERs
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- STICKY MAIN NAVBAR -->
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3">
+      <div class="container-fluid px-4">
+        <!-- Brand Logo -->
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <div class="bg-primary text-white rounded p-2 me-2 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+            <i class="fas fa-heartbeat"></i>
+          </div>
+          <div>
+            <span class="fw-bold fs-5 text-dark" style="line-height: 1.1; display: block;">ShifaCare <span class="text-primary">Plus</span></span>
+            <small class="text-muted" style="font-size: 10px; letter-spacing: 0.5px;">ISLAMABAD &amp; RAWALPINDI</small>
+          </div>
+        </a>
+
+        <!-- Location Dropdown -->
+        <div class="dropdown ms-3 d-none d-md-block">
+          <button class="btn btn-light border rounded-pill btn-sm dropdown-toggle text-dark px-3 py-1" type="button" data-bs-toggle="dropdown">
+            <i class="fas fa-map-marker-alt text-primary me-1"></i> Islamabad &amp; Rawalpindi
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Islamabad</a></li>
+            <li><a class="dropdown-item" href="#">Rawalpindi</a></li>
+          </ul>
+        </div>
+
+        <!-- Toggler for Mobile -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbarNav" aria-controls="mainNavbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Always Visible Links -->
+        <div class="collapse navbar-collapse justify-content-end" id="mainNavbarNav">
+          <ul class="navbar-nav align-items-lg-center gap-3">
+            <li class="nav-item"><a class="nav-link fw-semibold text-dark" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link fw-semibold text-dark" href="nurses.html">Home Nursing</a></li>
+            <li class="nav-item"><a class="nav-link fw-semibold text-dark" href="hospitals.html">Hospitals</a></li>
+            <li class="nav-item"><a class="nav-link fw-semibold text-dark" href="doctors.html">Doctors</a></li>
+            <li class="nav-item"><a class="btn btn-primary text-white btn-sm px-3 rounded-pill fw-semibold" href="dashboard-patient.html">Patient Dashboard</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- DASHBOARD HEADER BANNER WITH PATIENT PROFILE -->
+  <section class="dashboard-header-banner" id="patient-banner-section">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        
+        <div class="col-lg-6">
+          <div class="dashboard-user-card">
+            <div class="user-avatar-large">
+              MU
+            </div>
+            <div>
+              <div class="d-flex align-items-center gap-2">
+                <h3 class="text-2xl font-bold text-white mb-0">Muhammad Usman</h3>
+                <span class="badge bg-emerald-500 text-white text-xs px-2 py-1 rounded-full"><i class="fa-solid fa-shield-check"></i> Verified Citizen</span>
+              </div>
+              <div class="text-xs text-sky-200 mt-1">
+                <span>MRN: <strong class="text-white font-mono">#ISB-89210</strong></span> • 
+                <span>Sector F-8/2, Islamabad</span> • 
+                <span>Blood Group: <strong class="text-white">O+</strong></span>
+              </div>
+              <div class="text-xs text-slate-300 mt-1">
+                <i class="fa-solid fa-phone me-1 text-sky-400"></i> +92 300 8594210 • Emergency Contact: +92 321 5120091
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="row g-3">
+            
+            <div class="col-6 col-md-3">
+              <div class="dashboard-stat-tile text-center">
+                <div class="text-xs text-sky-200 font-semibold mb-1">Appointments</div>
+                <div class="text-2xl font-black text-white" id="stat-upcoming-count">2</div>
+                <div class="text-xs text-emerald-300 mt-1">Confirmed</div>
+              </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+              <div class="dashboard-stat-tile text-center">
+                <div class="text-xs text-teal-200 font-semibold mb-1">Home Nurses</div>
+                <div class="text-2xl font-black text-white">1</div>
+                <div class="text-xs text-teal-300 mt-1">Active on Duty</div>
+              </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+              <div class="dashboard-stat-tile text-center">
+                <div class="text-xs text-amber-200 font-semibold mb-1">Health Wallet</div>
+                <div class="text-2xl font-black text-white">Rs. 4.5k</div>
+                <div class="text-xs text-amber-300 mt-1">ShifaCare Credits</div>
+              </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+              <div class="dashboard-stat-tile text-center">
+                <div class="text-xs text-purple-200 font-semibold mb-1">Favorites</div>
+                <div class="text-2xl font-black text-white">3</div>
+                <div class="text-xs text-purple-300 mt-1">Saved Caregivers</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DASHBOARD MAIN CONTENT & TABS -->
+  <section class="pb-5" id="dashboard-main-tabs-section">
+    <div class="container">
+      
+      <!-- NAV TABS WRAPPER -->
+      <div class="dashboard-tabs-wrapper d-flex flex-nowrap overflow-x-auto gap-2" id="patient-dash-tabs-bar">
+        <button class="dash-nav-link active" data-tab-target="appointments" id="tab-btn-appointments">
+          <i class="fa-regular fa-calendar-check"></i>
+          <span>Doctor Appointments</span>
+        </button>
+        <button class="dash-nav-link" data-tab-target="nurses" id="tab-btn-nurses">
+          <i class="fa-solid fa-user-nurse"></i>
+          <span>Home Nursing & Vitals</span>
+        </button>
+        <button class="dash-nav-link" data-tab-target="payments" id="tab-btn-payments">
+          <i class="fa-solid fa-file-invoice-dollar"></i>
+          <span>Payment History & Receipts</span>
+        </button>
+        <button class="dash-nav-link" data-tab-target="favorites" id="tab-btn-favorites">
+          <i class="fa-regular fa-heart"></i>
+          <span>Saved Favorites</span>
+        </button>
+      </div>
+
+      <!-- TAB 1: DOCTOR APPOINTMENTS -->
+      <div class="dash-content-pane" id="dash-pane-appointments">
+        
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <div>
+            <h4 class="fw-bold text-dark mb-0">Upcoming Consultations</h4>
+            <p class="text-xs text-muted">Hospital Outpatient Department (OPD) verified booking tokens.</p>
+          </div>
+          <a href="doctors.html" class="btn btn-sm btn-primary-health">
+            <i class="fa-solid fa-plus me-1"></i> Book Another Doctor
+          </a>
+        </div>
+
+        <div id="dashboard-appointments-list">
+          <!-- Dynamically populated via dashboard.js -->
+        </div>
+
+      </div>
+
+      <!-- TAB 2: ACTIVE HOME NURSING & LIVE VITALS -->
+      <div class="dash-content-pane" id="dash-pane-nurses" style="display: none;">
+        
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <div>
+            <h4 class="fw-bold text-dark mb-0">Active Home Care Nursing</h4>
+            <p class="text-xs text-muted">Live care assignment and recorded patient vital stats.</p>
+          </div>
+          <a href="nurses.html" class="btn btn-sm btn-secondary-health">
+            <i class="fa-solid fa-user-plus me-1"></i> Request Additional Nurse
+          </a>
+        </div>
+
+        <div id="dashboard-nurses-list">
+          <!-- Dynamically populated via dashboard.js -->
+        </div>
+
+      </div>
+
+      <!-- TAB 3: PAYMENT HISTORY & INVOICES -->
+      <div class="dash-content-pane" id="dash-pane-payments" style="display: none;">
+        
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <div>
+            <h4 class="fw-bold text-dark mb-0">Payment History & Digital Invoices</h4>
+            <p class="text-xs text-muted">Itemized receipts for hospital visits and home nursing packages.</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden mb-4">
+          <div class="table-responsive">
+            <table class="custom-table">
+              <thead>
+                <tr>
+                  <th>Invoice ID</th>
+                  <th>Service Description</th>
+                  <th>Facility / Nurse</th>
+                  <th>Date</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                  <th class="text-end">Receipt</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="font-mono fw-bold text-sky-700 text-xs">#INV-2026-891</td>
+                  <td>
+                    <div class="fw-bold text-dark">Cardiology Specialist OPD</div>
+                    <div class="text-xs text-muted">Prof. Dr. Tariq Mahmood</div>
+                  </td>
+                  <td>Shifa International H-8</td>
+                  <td class="text-xs text-muted">Aug 20, 2026</td>
+                  <td class="fw-bold text-dark">Rs. 3,500</td>
+                  <td><span class="badge bg-emerald-100 text-emerald-800 border border-emerald-200">Paid (Card)</span></td>
+                  <td class="text-end">
+                    <button class="btn btn-sm btn-outline-secondary py-1 px-2 text-xs" onclick="downloadInvoiceMock('INV-2026-891', 'Rs. 3,500')">
+                      <i class="fa-solid fa-download me-1"></i> PDF
+                    </button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="font-mono fw-bold text-sky-700 text-xs">#INV-2026-784</td>
+                  <td>
+                    <div class="fw-bold text-dark">Home Nursing 14-Day Shift</div>
+                    <div class="text-xs text-muted">Sister Rabia Bibi (Post-Op)</div>
+                  </td>
+                  <td>Home Care Islamabad F-8</td>
+                  <td class="text-xs text-muted">Aug 28, 2026</td>
+                  <td class="fw-bold text-dark">Rs. 53,200</td>
+                  <td><span class="badge bg-amber-100 text-amber-800 border border-amber-200">Partially Paid (50%)</span></td>
+                  <td class="text-end">
+                    <button class="btn btn-sm btn-outline-secondary py-1 px-2 text-xs" onclick="downloadInvoiceMock('INV-2026-784', 'Rs. 53,200')">
+                      <i class="fa-solid fa-download me-1"></i> PDF
+                    </button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="font-mono fw-bold text-sky-700 text-xs">#INV-2026-642</td>
+                  <td>
+                    <div class="fw-bold text-dark">Gynecology Consultation</div>
+                    <div class="text-xs text-muted">Dr. Ayesha Siddiqa</div>
+                  </td>
+                  <td>Maroof International F-10</td>
+                  <td class="text-xs text-muted">Jul 15, 2026</td>
+                  <td class="fw-bold text-dark">Rs. 3,000</td>
+                  <td><span class="badge bg-emerald-100 text-emerald-800 border border-emerald-200">Paid (Cash OPD)</span></td>
+                  <td class="text-end">
+                    <button class="btn btn-sm btn-outline-secondary py-1 px-2 text-xs" onclick="downloadInvoiceMock('INV-2026-642', 'Rs. 3,000')">
+                      <i class="fa-solid fa-download me-1"></i> PDF
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- TAB 4: SAVED FAVORITES -->
+      <div class="dash-content-pane" id="dash-pane-favorites" style="display: none;">
+        
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <div>
+            <h4 class="fw-bold text-dark mb-0">Saved Doctors & Caregivers</h4>
+            <p class="text-xs text-muted">Quick access to book your preferred specialists again.</p>
+          </div>
+        </div>
+
+        <div id="dashboard-favorites-list">
+          <!-- Dynamically populated via dashboard.js -->
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="portal-footer" id="main-portal-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <div class="brand-icon-box" style="width: 36px; height: 36px; font-size: 1rem;">
+              <i class="fa-solid fa-heart-pulse"></i>
+            </div>
+            <span class="text-xl font-bold text-white">ShifaCare <span class="text-sky-400">Plus</span></span>
+          </div>
+          <p class="text-sm text-slate-400 leading-relaxed mb-3">
+            Patient Portal for managing home health visits, consultations, and medical records in Islamabad & Rawalpindi.
+          </p>
+        </div>
+        <div class="col-6 col-lg-2">
+          <div class="footer-title">Patient Services</div>
+          <ul class="footer-links">
+            <li><a href="doctors.html">Doctor Directory</a></li>
+            <li><a href="nurses.html">Home Nursing</a></li>
+            <li><a href="hospitals.html">Hospital Beds</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <div class="footer-title">Support</div>
+          <ul class="footer-links">
+            <li><a href="tel:1122">Emergency (1122)</a></li>
+            <li><a href="tel:0519280000">Care Desk (051-9280000)</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-4 text-lg-end">
+          <div class="footer-title">Security & Confidentiality</div>
+          <p class="text-xs text-slate-400">All medical records and vitals are encrypted with role-based caregiver access.</p>
+        </div>
+      </div>
+      <div class="footer-bottom text-center text-slate-500">
+        © 2026 ShifaCare Plus - Twin Cities Healthcare Portal.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Notification Toast Container -->
+  <div id="toast-notification-container"></div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/dashboard.js"></script>
+</body>
+</html>
