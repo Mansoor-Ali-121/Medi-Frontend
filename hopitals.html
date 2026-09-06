@@ -47,18 +47,13 @@
                 <a href="hospitals.html" class="text-slate-300 hover:text-white hidden md:inline transition-colors">
                     <i class="fa-solid fa-hospital-user mr-1 text-indigo-400"></i> Emergency ERs
                 </a>
-                <a href="patient-portal.html"
-                    class="text-slate-200 hover:text-white font-semibold bg-slate-800/80 px-2.5 py-1 rounded border border-slate-700 transition-colors">
-                    <i class="fa-regular fa-user-circle mr-1 text-sky-400"></i> Patient Portal
-                </a>
             </div>
         </div>
     </div>
 
     <!-- STICKY MAIN NAVBAR -->
-    <!-- STICKY MAIN NAVBAR -->
     <header
-        class="portal-navbar-wrapper fixed top-0 left-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm"
+        class="portal-navbar-wrapper sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm"
         data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100">
         <div class="portal-nav-container max-w-7xl mx-auto px-4 py-3 flex justify-between items-center relative">
 
@@ -103,7 +98,7 @@
                     </li>
                     <li class="w-full lg:w-auto">
                         <a class="nav-link-custom font-semibold text-slate-700 hover:text-sky-600 hover:bg-slate-50 px-3.5 py-2.5 rounded-md flex items-center gap-2 no-underline transition-colors w-full"
-                            href="hospitals.html">
+                            href="hopitals.html">
                             <i class="fas fa-hospital w-5 text-center"></i> Hospitals
                         </a>
                     </li>
@@ -117,27 +112,6 @@
 
                 <div
                     class="flex flex-col lg:flex-row items-stretch lg:items-center gap-4 w-full lg:w-auto mt-4 lg:mt-0 pt-4 lg:pt-0 border-t lg:border-t-0 border-slate-100">
-                    <!-- City Selection Dropdown -->
-                    <div class="relative" id="cityDropdownWrapper">
-                        <button type="button" id="cityDropdownBtn"
-                            class="flex items-center justify-between lg:justify-start gap-1.5 text-sm font-semibold text-slate-700 hover:text-sky-600 focus:outline-none py-2 w-full cursor-pointer">
-                            <span class="flex items-center gap-1.5">
-                                <i class="fas fa-map-marker-alt text-sky-600"></i>
-                                <span class="selected-city-text">Islamabad / Pindi</span>
-                            </span>
-                            <i class="fas fa-chevron-down text-xs text-slate-400"></i>
-                        </button>
-
-                        <div id="cityDropdownMenu"
-                            class="absolute right-0 mt-2 w-full lg:w-44 bg-white rounded-xl shadow-xl border border-slate-100 py-2 z-50 hidden">
-                            <a href="#"
-                                class="block px-4 py-2 text-sm font-semibold text-sky-600 bg-sky-50 city-dropdown-option"
-                                data-city="Islamabad">Islamabad</a>
-                            <a href="#"
-                                class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 transition-colors city-dropdown-option"
-                                data-city="Rawalpindi">Rawalpindi</a>
-                        </div>
-                    </div>
 
                     <a href="patient-portal.html"
                         class="btn-primary-health bg-sky-600 hover:bg-sky-700 text-white px-4 py-2.5 rounded-lg font-semibold text-sm no-underline flex items-center justify-center gap-1.5 shadow-sm transition-all shrink-0">
@@ -149,6 +123,7 @@
 
         </div>
     </header>
+
 
 
     <!-- HOSPITALS HERO HEADER -->
