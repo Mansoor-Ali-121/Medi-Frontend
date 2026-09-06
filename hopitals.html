@@ -56,15 +56,16 @@
     </div>
 
     <!-- STICKY MAIN NAVBAR -->
+    <!-- STICKY MAIN NAVBAR -->
     <header
-        class="portal-navbar-wrapper sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm"
+        class="portal-navbar-wrapper fixed top-0 left-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm"
         data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100">
         <div class="portal-nav-container max-w-7xl mx-auto px-4 py-3 flex justify-between items-center relative">
 
             <!-- Brand Logo -->
             <a class="portal-brand flex items-center gap-3 no-underline" href="index.html">
                 <div
-                    class="brand-icon-box w-10 h-10 bg-sky-600 text-white flex items-center justify-center rounded-lg shadow-sm">
+                    class="brand-icon-box w-10 h-10 bg-sky-600 text-white flex items-center justify-center rounded-lg shadow-sm shrink-0">
                     <i class="fas fa-heartbeat"></i>
                 </div>
                 <div class="brand-text-container flex flex-col">
@@ -75,51 +76,51 @@
                 </div>
             </a>
 
-            <!-- Mobile Hamburger Button -->
+            <!-- Mobile & Tablet Hamburger Button (Visible up to 1024px) -->
             <button
-                class="portal-mobile-toggle md:hidden text-slate-700 hover:text-sky-600 p-2 focus:outline-none cursor-pointer z-50"
+                class="portal-mobile-toggle lg:hidden text-slate-700 hover:text-sky-600 p-2 focus:outline-none cursor-pointer z-50"
                 id="manualMenuBtn" aria-label="Toggle Navigation">
                 <i class="fas fa-bars text-xl" id="menuIcon"></i>
             </button>
 
-            <!-- Navigation Links Wrapper -->
-            <div class="portal-nav-links-wrapper md:flex items-center gap-8 absolute md:relative top-full left-0 right-0 bg-white shadow-xl md:shadow-none border-b md:border-none border-slate-100 p-5 md:p-0 flex-col md:flex-row transition-all"
+            <!-- Navigation Links Wrapper (Hidden on mobile/tablet by default, shown on lg+) -->
+            <div class="portal-nav-links-wrapper hidden lg:flex items-center gap-6 xl:gap-8 absolute lg:relative top-full left-0 right-0 bg-white shadow-xl lg:shadow-none border-b lg:border-none border-slate-100 p-5 lg:p-0 flex-col lg:flex-row transition-all"
                 id="manualNavContent">
 
                 <ul
-                    class="portal-nav-links flex flex-col md:flex-row items-start md:items-center gap-3 md:gap-2 m-0 p-0 list-none w-full md:w-auto">
-                    <li class="w-full md:w-auto">
+                    class="portal-nav-links flex flex-col lg:flex-row items-start lg:items-center gap-3 lg:gap-2 m-0 p-0 list-none w-full lg:w-auto">
+                    <li class="w-full lg:w-auto">
                         <a class="nav-link-custom active font-semibold text-sky-600 bg-sky-50 px-3.5 py-2.5 rounded-md flex items-center gap-2 no-underline transition-colors w-full"
                             href="index.html">
-                            <i class="fas fa-home"></i> Home
+                            <i class="fas fa-home w-5 text-center"></i> Home
                         </a>
                     </li>
-                    <li class="w-full md:w-auto">
+                    <li class="w-full lg:w-auto">
                         <a class="nav-link-custom font-semibold text-slate-700 hover:text-sky-600 hover:bg-slate-50 px-3.5 py-2.5 rounded-md flex items-center gap-2 no-underline transition-colors w-full"
                             href="nurse.html">
-                            <i class="fas fa-user-nurse"></i> Home Nursing
+                            <i class="fas fa-user-nurse w-5 text-center"></i> Home Nursing
                         </a>
                     </li>
-                    <li class="w-full md:w-auto">
+                    <li class="w-full lg:w-auto">
                         <a class="nav-link-custom font-semibold text-slate-700 hover:text-sky-600 hover:bg-slate-50 px-3.5 py-2.5 rounded-md flex items-center gap-2 no-underline transition-colors w-full"
                             href="hospitals.html">
-                            <i class="fas fa-hospital"></i> Hospitals
+                            <i class="fas fa-hospital w-5 text-center"></i> Hospitals
                         </a>
                     </li>
-                    <li class="w-full md:w-auto">
+                    <li class="w-full lg:w-auto">
                         <a class="nav-link-custom font-semibold text-slate-700 hover:text-sky-600 hover:bg-slate-50 px-3.5 py-2.5 rounded-md flex items-center gap-2 no-underline transition-colors w-full"
                             href="doctors.html">
-                            <i class="fas fa-user-md"></i> Doctors
+                            <i class="fas fa-user-md w-5 text-center"></i> Doctors
                         </a>
                     </li>
                 </ul>
 
                 <div
-                    class="flex flex-col md:flex-row items-stretch md:items-center gap-4 w-full md:w-auto mt-4 md:mt-0 pt-4 md:pt-0 border-t md:border-t-0 border-slate-100">
+                    class="flex flex-col lg:flex-row items-stretch lg:items-center gap-4 w-full lg:w-auto mt-4 lg:mt-0 pt-4 lg:pt-0 border-t lg:border-t-0 border-slate-100">
                     <!-- City Selection Dropdown -->
                     <div class="relative" id="cityDropdownWrapper">
                         <button type="button" id="cityDropdownBtn"
-                            class="flex items-center justify-between md:justify-start gap-1.5 text-sm font-semibold text-slate-700 hover:text-sky-600 focus:outline-none py-2 w-full cursor-pointer">
+                            class="flex items-center justify-between lg:justify-start gap-1.5 text-sm font-semibold text-slate-700 hover:text-sky-600 focus:outline-none py-2 w-full cursor-pointer">
                             <span class="flex items-center gap-1.5">
                                 <i class="fas fa-map-marker-alt text-sky-600"></i>
                                 <span class="selected-city-text">Islamabad / Pindi</span>
@@ -128,7 +129,7 @@
                         </button>
 
                         <div id="cityDropdownMenu"
-                            class="absolute right-0 mt-2 w-full md:w-44 bg-white rounded-xl shadow-xl border border-slate-100 py-2 z-50 hidden">
+                            class="absolute right-0 mt-2 w-full lg:w-44 bg-white rounded-xl shadow-xl border border-slate-100 py-2 z-50 hidden">
                             <a href="#"
                                 class="block px-4 py-2 text-sm font-semibold text-sky-600 bg-sky-50 city-dropdown-option"
                                 data-city="Islamabad">Islamabad</a>
@@ -138,8 +139,8 @@
                         </div>
                     </div>
 
-                    <a href="dashboard-patient.html"
-                        class="btn-primary-health bg-sky-600 hover:bg-sky-700 text-white px-4 py-2.5 rounded-lg font-semibold text-sm no-underline flex items-center justify-center gap-1.5 shadow-sm transition-all">
+                    <a href="patient-portal.html"
+                        class="btn-primary-health bg-sky-600 hover:bg-sky-700 text-white px-4 py-2.5 rounded-lg font-semibold text-sm no-underline flex items-center justify-center gap-1.5 shadow-sm transition-all shrink-0">
                         <i class="fas fa-user-circle"></i> Patient Portal
                     </a>
                 </div>
@@ -148,6 +149,7 @@
 
         </div>
     </header>
+
 
     <!-- HOSPITALS HERO HEADER -->
     <section class="hospitals-hero-header" id="hospitals-header-section">
@@ -258,111 +260,117 @@
             </div>
 
             <!-- HOSPITAL CARDS GRID -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="hospitals-list-container">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="hospitals-list-container">
 
                 <!-- Hospital 1: Shifa International -->
-                <div class="hospital-item flex" data-city="Islamabad" data-type="Private" data-emergency="true"
-                    data-name="Shifa International Hospital" data-aos="fade-up" data-aos-duration="700"
-                    data-aos-delay="100">
+                <div class="hospital-item flex group" data-city="Islamabad" data-type="Private" data-emergency="true"
+                    data-name="Shifa International Hospital">
                     <div
-                        class="hospital-card bg-white rounded-2xl shadow-md overflow-hidden border border-slate-200/90 flex flex-col h-full w-full hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                        class="hospital-card bg-white rounded-2xl shadow-md shadow-slate-100 overflow-hidden border border-slate-100/80 flex flex-col h-full w-full hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300">
 
-                        <!-- Banner with Unsplash Image -->
-                        <div class="hospital-banner-img relative h-48 w-full overflow-hidden bg-sky-900">
+                        <!-- Banner with Shorter Height (h-40) -->
+                        <div class="hospital-banner-img relative h-40 w-full overflow-hidden bg-sky-900">
                             <img src="https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?auto=format&fit=crop&w=600&q=80"
                                 alt="Shifa International Hospital"
-                                class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500">
-                            <!-- Dark Overlay for better badge visibility -->
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+
                             <div
-                                class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-slate-900/20 to-transparent">
+                                class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent">
                             </div>
 
                             <div class="absolute top-3 left-3 z-10">
                                 <span
-                                    class="bg-white/95 backdrop-blur-sm text-slate-900 shadow-md font-bold px-2.5 py-1 rounded-md text-xs flex items-center">
-                                    <i class="fa-solid fa-award text-amber-500 mr-1.5"></i> JCI Accredited
+                                    class="bg-white/90 backdrop-blur-md text-slate-900 shadow-sm font-semibold px-2.5 py-1 rounded-md text-[11px] flex items-center border border-white/20">
+                                    <i class="fa-solid fa-award text-amber-500 mr-1"></i> JCI Accredited
                                 </span>
                             </div>
+
                             <div
-                                class="absolute top-3 right-3 bg-red-600 text-white px-2.5 py-1 rounded-md text-xs font-bold flex items-center gap-1.5 shadow-md z-10 animate-pulse">
-                                <i class="fa-solid fa-truck-medical"></i> 24/7 Level 1 ER
+                                class="absolute top-3 right-3 bg-red-500/90 backdrop-blur-md text-white px-2.5 py-1 rounded-md text-[11px] font-bold flex items-center gap-1 shadow-sm z-10 animate-pulse">
+                                <i class="fa-solid fa-truck-medical text-[10px]"></i> 24/7 ER
                             </div>
                         </div>
 
+                        <!-- Compact Body -->
                         <div class="hospital-body p-5 flex flex-col flex-grow">
-                            <div class="mb-2">
-                                <h5 class="font-extrabold text-slate-900 text-lg mb-0">Shifa International Hospital</h5>
+                            <div class="mb-2.5">
+                                <h5
+                                    class="font-bold text-slate-900 text-lg tracking-tight group-hover:text-sky-600 transition-colors">
+                                    Shifa International Hospital</h5>
                                 <div class="text-xs text-slate-500 mt-1 flex items-start">
-                                    <i class="fa-solid fa-location-dot text-sky-600 mr-1.5 mt-0.5 flex-shrink-0"></i>
-                                    <span>Pitras Bukhari Rd, Sector H-8/4, Islamabad</span>
+                                    <i class="fa-solid fa-location-dot text-sky-500 mr-1.5 mt-0.5 flex-shrink-0"></i>
+                                    <span class="line-clamp-1">Pitras Bukhari Rd, Sector H-8/4, Islamabad</span>
                                 </div>
                             </div>
 
-                            <div class="rating-stars mb-3 text-amber-400 text-sm flex items-center">
-                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                    class="fa-solid fa-star-half-stroke"></i>
-                                <span class="text-xs text-slate-700 font-bold ml-2">4.7 <span
-                                        class="font-normal text-slate-400">(3,820 Reviews)</span></span>
+                            <div
+                                class="rating-stars mb-3 text-amber-400 text-xs flex items-center bg-amber-50/50 w-fit px-2 py-0.5 rounded-full border border-amber-100/60">
+                                <div class="flex gap-0.5 text-[10px]">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star-half-stroke"></i>
+                                </div>
+                                <span class="text-xs text-slate-700 font-bold ml-1.5">4.7 <span
+                                        class="font-medium text-slate-400 text-[11px]">(3,820)</span></span>
                             </div>
 
-                            <div class="grid grid-cols-2 gap-3 mb-4">
-                                <div
-                                    class="hospital-stat-chip bg-slate-50 p-2.5 rounded-xl border border-slate-100 shadow-sm">
-                                    <span class="text-slate-400 text-[11px] font-semibold block uppercase">Total
+                            <!-- Stats Grid -->
+                            <div class="grid grid-cols-2 gap-2.5 mb-3">
+                                <div class="hospital-stat-chip bg-slate-50/80 p-2.5 rounded-xl border border-slate-100">
+                                    <span
+                                        class="text-slate-400 text-[9px] font-bold tracking-wider block uppercase">Total
                                         Beds</span>
-                                    <div class="font-extrabold text-slate-800 text-sm mt-0.5">550+ Beds</div>
+                                    <div class="font-bold text-slate-800 text-xs mt-0.5">550+ Beds</div>
                                 </div>
-                                <div
-                                    class="hospital-stat-chip bg-slate-50 p-2.5 rounded-xl border border-slate-100 shadow-sm">
-                                    <span class="text-slate-400 text-[11px] font-semibold block uppercase">ICU
+                                <div class="hospital-stat-chip bg-slate-50/80 p-2.5 rounded-xl border border-slate-100">
+                                    <span class="text-slate-400 text-[9px] font-bold tracking-wider block uppercase">ICU
                                         Status</span>
-                                    <div class="font-extrabold text-emerald-600 text-sm mt-0.5 flex items-center">
-                                        <i class="fa-solid fa-circle text-[8px] text-emerald-600 mr-1.5"></i> Available
+                                    <div class="font-bold text-emerald-600 text-xs mt-0.5 flex items-center">
+                                        <span class="h-1.5 w-1.5 rounded-full bg-emerald-500 mr-1 animate-ping"></span>
+                                        Available
                                     </div>
                                 </div>
                             </div>
 
+                            <!-- Specialized Departments -->
                             <div class="mb-4">
-                                <div class="text-xs font-extrabold text-slate-400 uppercase tracking-wider mb-2">
-                                    Specialized Departments</div>
-                                <div class="flex flex-wrap gap-1.5">
+                                <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">
+                                    Departments</div>
+                                <div class="flex flex-wrap gap-1">
                                     <span
-                                        class="bg-sky-50 text-sky-700 border border-sky-100 text-xs px-2.5 py-1 rounded-lg font-semibold">Cardiology</span>
+                                        class="bg-sky-50 text-sky-700 border border-sky-100 text-[10px] px-2 py-0.5 rounded-md font-medium">Cardiology</span>
                                     <span
-                                        class="bg-sky-50 text-sky-700 border border-sky-100 text-xs px-2.5 py-1 rounded-lg font-semibold">Organ
-                                        Transplant</span>
+                                        class="bg-sky-50 text-sky-700 border border-sky-100 text-[10px] px-2 py-0.5 rounded-md font-medium">Transplant</span>
                                     <span
-                                        class="bg-sky-50 text-sky-700 border border-sky-100 text-xs px-2.5 py-1 rounded-lg font-semibold">Oncology</span>
+                                        class="bg-sky-50 text-sky-700 border border-sky-100 text-[10px] px-2 py-0.5 rounded-md font-medium">Oncology</span>
                                     <span
-                                        class="bg-sky-50 text-sky-700 border border-sky-100 text-xs px-2.5 py-1 rounded-lg font-semibold">Neurosurgery</span>
-                                    <span
-                                        class="bg-sky-50 text-sky-700 border border-sky-100 text-xs px-2.5 py-1 rounded-lg font-semibold">Pediatrics</span>
+                                        class="bg-sky-50 text-sky-700 border border-sky-100 text-[10px] px-2 py-0.5 rounded-md font-medium">Neurosurgery</span>
                                 </div>
                             </div>
 
+                            <!-- Emergency Hotline Box -->
                             <div
-                                class="emergency-hotline-box mt-auto bg-gradient-to-r from-red-50 to-orange-50 border border-red-100 p-3 rounded-xl flex justify-between items-center mb-4 shadow-sm">
+                                class="emergency-hotline-box mt-auto bg-red-50/60 border border-red-100 p-2.5 rounded-xl flex justify-between items-center mb-3">
                                 <div>
-                                    <div class="text-[10px] text-red-600 font-black tracking-wider uppercase">Emergency
-                                        Hotline</div>
-                                    <div class="font-extrabold text-slate-900 text-sm">051-8463000</div>
+                                    <div class="text-[9px] text-red-600 font-extrabold tracking-wider uppercase">
+                                        Emergency Hotline</div>
+                                    <div class="font-bold text-slate-900 text-xs mt-0.5">051-8463000</div>
                                 </div>
                                 <a href="tel:0518463000"
-                                    class="bg-red-600 hover:bg-red-700 active:bg-red-800 text-white text-xs font-bold py-2 px-3.5 rounded-lg shadow-sm flex items-center gap-1.5 transition-all duration-200"
-                                    data-phone="051-8463000" data-facility="Shifa International Emergency">
-                                    <i class="fa-solid fa-phone"></i> Call
+                                    class="bg-red-600 hover:bg-red-700 text-white text-[11px] font-bold py-1.5 px-3 rounded-lg shadow-sm flex items-center gap-1 transition-all">
+                                    <i class="fa-solid fa-phone text-[9px]"></i> Call
                                 </a>
                             </div>
 
-                            <div class="flex gap-2.5 pt-3 border-t border-slate-100">
+                            <!-- Action Buttons -->
+                            <div class="flex gap-2 pt-2.5 border-t border-slate-100">
                                 <button
-                                    class="flex-1 py-2.5 px-2 text-xs font-bold border border-sky-600 text-sky-700 rounded-xl hover:bg-sky-600 hover:text-white active:bg-sky-700 transition-all duration-200 shadow-sm"
-                                    onclick="viewHospitalDetails('Shifa International Hospital', 'Sector H-8/4, Islamabad', '550+ Beds', '051-8463000', 'Cardiology, Liver/Kidney Transplant, Oncology, Neurosurgery, ICU')">
+                                    class="flex-1 py-2 px-2 text-xs font-bold border border-slate-200 text-slate-700 rounded-xl hover:bg-slate-50 transition-all"
+                                    onclick="viewHospitalDetails(...)">
                                     Facility Info
                                 </button>
                                 <a href="doctors.html?hospital=Shifa"
-                                    class="flex-1 py-2.5 px-2 text-xs font-bold bg-gradient-to-r from-sky-600 to-blue-600 text-white rounded-xl text-center hover:from-sky-700 hover:to-blue-700 active:bg-sky-800 transition-all duration-200 flex items-center justify-center shadow-md">
+                                    class="flex-1 py-2 px-2 text-xs font-bold bg-sky-600 text-white rounded-xl text-center hover:bg-sky-700 hover:text-white transition-all shadow-sm shadow-sky-100 flex items-center justify-center">
                                     View Doctors
                                 </a>
                             </div>
@@ -371,107 +379,106 @@
                 </div>
 
                 <!-- Hospital 2: Maroof International -->
-                <div class="hospital-item flex" data-city="Islamabad" data-type="Private" data-emergency="true"
-                    data-name="Maroof International Hospital" data-aos="fade-up" data-aos-duration="700"
-                    data-aos-delay="200">
+                <div class="hospital-item flex group" data-city="Islamabad" data-type="Private" data-emergency="true"
+                    data-name="Maroof International Hospital">
                     <div
-                        class="hospital-card bg-white rounded-2xl shadow-md overflow-hidden border border-slate-200/90 flex flex-col h-full w-full hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                        class="hospital-card bg-white rounded-2xl shadow-md shadow-slate-100 overflow-hidden border border-slate-100/80 flex flex-col h-full w-full hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300">
 
-                        <!-- Banner with Unsplash Image -->
-                        <div class="hospital-banner-img relative h-48 w-full overflow-hidden bg-teal-900">
+                        <div class="hospital-banner-img relative h-40 w-full overflow-hidden bg-teal-900">
                             <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=600&q=80"
                                 alt="Maroof International Hospital"
-                                class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500">
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             <div
-                                class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-slate-900/20 to-transparent">
+                                class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent">
                             </div>
 
                             <div class="absolute top-3 left-3 z-10">
                                 <span
-                                    class="bg-white/95 backdrop-blur-sm text-slate-900 shadow-md font-bold px-2.5 py-1 rounded-md text-xs flex items-center">
-                                    <i class="fa-solid fa-award text-teal-600 mr-1.5"></i> ISO 9001 Certified
+                                    class="bg-white/90 backdrop-blur-md text-slate-900 shadow-sm font-semibold px-2.5 py-1 rounded-md text-[11px] flex items-center border border-white/20">
+                                    <i class="fa-solid fa-award text-teal-600 mr-1"></i> ISO Certified
                                 </span>
                             </div>
                             <div
-                                class="absolute top-3 right-3 bg-red-600 text-white px-2.5 py-1 rounded-md text-xs font-bold flex items-center gap-1.5 shadow-md z-10 animate-pulse">
-                                <i class="fa-solid fa-truck-medical"></i> 24/7 Emergency
+                                class="absolute top-3 right-3 bg-red-500/90 backdrop-blur-md text-white px-2.5 py-1 rounded-md text-[11px] font-bold flex items-center gap-1 shadow-sm z-10 animate-pulse">
+                                <i class="fa-solid fa-truck-medical text-[10px]"></i> 24/7 ER
                             </div>
                         </div>
 
                         <div class="hospital-body p-5 flex flex-col flex-grow">
-                            <div class="mb-2">
-                                <h5 class="font-extrabold text-slate-900 text-lg mb-0">Maroof International Hospital
-                                </h5>
+                            <div class="mb-2.5">
+                                <h5
+                                    class="font-bold text-slate-900 text-lg tracking-tight group-hover:text-sky-600 transition-colors">
+                                    Maroof International Hospital</h5>
                                 <div class="text-xs text-slate-500 mt-1 flex items-start">
-                                    <i class="fa-solid fa-location-dot text-sky-600 mr-1.5 mt-0.5 flex-shrink-0"></i>
-                                    <span>10th Ave, Sector F-10 Markaz, Islamabad</span>
+                                    <i class="fa-solid fa-location-dot text-sky-500 mr-1.5 mt-0.5 flex-shrink-0"></i>
+                                    <span class="line-clamp-1">10th Ave, Sector F-10 Markaz, Islamabad</span>
                                 </div>
                             </div>
 
-                            <div class="rating-stars mb-3 text-amber-400 text-sm flex items-center">
-                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                    class="fa-solid fa-star"></i>
-                                <span class="text-xs text-slate-700 font-bold ml-2">4.8 <span
-                                        class="font-normal text-slate-400">(1,940 Reviews)</span></span>
+                            <div
+                                class="rating-stars mb-3 text-amber-400 text-xs flex items-center bg-amber-50/50 w-fit px-2 py-0.5 rounded-full border border-amber-100/60">
+                                <div class="flex gap-0.5 text-[10px]">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i>
+                                </div>
+                                <span class="text-xs text-slate-700 font-bold ml-1.5">4.8 <span
+                                        class="font-medium text-slate-400 text-[11px]">(1,940)</span></span>
                             </div>
 
-                            <div class="grid grid-cols-2 gap-3 mb-4">
-                                <div
-                                    class="hospital-stat-chip bg-slate-50 p-2.5 rounded-xl border border-slate-100 shadow-sm">
-                                    <span class="text-slate-400 text-[11px] font-semibold block uppercase">Total
+                            <div class="grid grid-cols-2 gap-2.5 mb-3">
+                                <div class="hospital-stat-chip bg-slate-50/80 p-2.5 rounded-xl border border-slate-100">
+                                    <span
+                                        class="text-slate-400 text-[9px] font-bold tracking-wider block uppercase">Total
                                         Beds</span>
-                                    <div class="font-extrabold text-slate-800 text-sm mt-0.5">120+ Beds</div>
+                                    <div class="font-bold text-slate-800 text-xs mt-0.5">120+ Beds</div>
                                 </div>
-                                <div
-                                    class="hospital-stat-chip bg-slate-50 p-2.5 rounded-xl border border-slate-100 shadow-sm">
-                                    <span class="text-slate-400 text-[11px] font-semibold block uppercase">ICU
+                                <div class="hospital-stat-chip bg-slate-50/80 p-2.5 rounded-xl border border-slate-100">
+                                    <span class="text-slate-400 text-[9px] font-bold tracking-wider block uppercase">ICU
                                         Status</span>
-                                    <div class="font-extrabold text-emerald-600 text-sm mt-0.5 flex items-center">
-                                        <i class="fa-solid fa-circle text-[8px] text-emerald-600 mr-1.5"></i> Available
+                                    <div class="font-bold text-emerald-600 text-xs mt-0.5 flex items-center">
+                                        <span class="h-1.5 w-1.5 rounded-full bg-emerald-500 mr-1 animate-ping"></span>
+                                        Available
                                     </div>
                                 </div>
                             </div>
 
                             <div class="mb-4">
-                                <div class="text-xs font-extrabold text-slate-400 uppercase tracking-wider mb-2">
-                                    Specialized Departments</div>
-                                <div class="flex flex-wrap gap-1.5">
+                                <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">
+                                    Departments</div>
+                                <div class="flex flex-wrap gap-1">
                                     <span
-                                        class="bg-teal-50 text-teal-700 border border-teal-100 text-xs px-2.5 py-1 rounded-lg font-semibold">Gynecology</span>
+                                        class="bg-teal-50 text-teal-700 border border-teal-100 text-[10px] px-2 py-0.5 rounded-md font-medium">Gynecology</span>
                                     <span
-                                        class="bg-teal-50 text-teal-700 border border-teal-100 text-xs px-2.5 py-1 rounded-lg font-semibold">Laparoscopy</span>
+                                        class="bg-teal-50 text-teal-700 border border-teal-100 text-[10px] px-2 py-0.5 rounded-md font-medium">Laparoscopy</span>
                                     <span
-                                        class="bg-teal-50 text-teal-700 border border-teal-100 text-xs px-2.5 py-1 rounded-lg font-semibold">Orthopedics</span>
+                                        class="bg-teal-50 text-teal-700 border border-teal-100 text-[10px] px-2 py-0.5 rounded-md font-medium">Orthopedics</span>
                                     <span
-                                        class="bg-teal-50 text-teal-700 border border-teal-100 text-xs px-2.5 py-1 rounded-lg font-semibold">Cardiology</span>
-                                    <span
-                                        class="bg-teal-50 text-teal-700 border border-teal-100 text-xs px-2.5 py-1 rounded-lg font-semibold">Radiology</span>
+                                        class="bg-teal-50 text-teal-700 border border-teal-100 text-[10px] px-2 py-0.5 rounded-md font-medium">Cardiology</span>
                                 </div>
                             </div>
 
                             <div
-                                class="emergency-hotline-box mt-auto bg-gradient-to-r from-red-50 to-orange-50 border border-red-100 p-3 rounded-xl flex justify-between items-center mb-4 shadow-sm">
+                                class="emergency-hotline-box mt-auto bg-red-50/60 border border-red-100 p-2.5 rounded-xl flex justify-between items-center mb-3">
                                 <div>
-                                    <div class="text-[10px] text-red-600 font-black tracking-wider uppercase">Emergency
-                                        Hotline</div>
-                                    <div class="font-extrabold text-slate-900 text-sm">051-2222920</div>
+                                    <div class="text-[9px] text-red-600 font-extrabold tracking-wider uppercase">
+                                        Emergency Hotline</div>
+                                    <div class="font-bold text-slate-900 text-xs mt-0.5">051-2222920</div>
                                 </div>
                                 <a href="tel:0512222920"
-                                    class="bg-red-600 hover:bg-red-700 active:bg-red-800 text-white text-xs font-bold py-2 px-3.5 rounded-lg shadow-sm flex items-center gap-1.5 transition-all duration-200"
-                                    data-phone="051-2222920" data-facility="Maroof International Emergency">
-                                    <i class="fa-solid fa-phone"></i> Call
+                                    class="bg-red-600 hover:bg-red-700 text-white text-[11px] font-bold py-1.5 px-3 rounded-lg shadow-sm flex items-center gap-1 transition-all">
+                                    <i class="fa-solid fa-phone text-[9px]"></i> Call
                                 </a>
                             </div>
 
-                            <div class="flex gap-2.5 pt-3 border-t border-slate-100">
+                            <div class="flex gap-2 pt-2.5 border-t border-slate-100">
                                 <button
-                                    class="flex-1 py-2.5 px-2 text-xs font-bold border border-sky-600 text-sky-700 rounded-xl hover:bg-sky-600 hover:text-white active:bg-sky-700 transition-all duration-200 shadow-sm"
-                                    onclick="viewHospitalDetails('Maroof International Hospital', 'Sector F-10 Markaz, Islamabad', '120+ Beds', '051-2222920', 'Gynecology & Obstetrics, Laparoscopic Surgery, Orthopedics, Cardiology')">
+                                    class="flex-1 py-2 px-2 text-xs font-bold border border-slate-200 text-slate-700 rounded-xl hover:bg-slate-50 transition-all"
+                                    onclick="viewHospitalDetails(...)">
                                     Facility Info
                                 </button>
                                 <a href="doctors.html?hospital=Maroof"
-                                    class="flex-1 py-2.5 px-2 text-xs font-bold bg-gradient-to-r from-sky-600 to-blue-600 text-white rounded-xl text-center hover:from-sky-700 hover:to-blue-700 active:bg-sky-800 transition-all duration-200 flex items-center justify-center shadow-md">
+                                    class="flex-1 py-2 px-2 text-xs font-bold bg-sky-600 text-white rounded-xl text-center hover:bg-sky-700 hover:text-white transition-all shadow-sm shadow-sky-100 flex items-center justify-center">
                                     View Doctors
                                 </a>
                             </div>
@@ -480,109 +487,106 @@
                 </div>
 
                 <!-- Hospital 3: PIMS Islamabad -->
-                <div class="hospital-item flex" data-city="Islamabad" data-type="Public" data-emergency="true"
-                    data-name="PIMS Hospital Pakistan Institute of Medical Sciences" data-aos="fade-up"
-                    data-aos-duration="700" data-aos-delay="300">
+                <div class="hospital-item flex group" data-city="Islamabad" data-type="Public" data-emergency="true"
+                    data-name="PIMS Hospital Pakistan Institute of Medical Sciences">
                     <div
-                        class="hospital-card bg-white rounded-2xl shadow-md overflow-hidden border border-slate-200/90 flex flex-col h-full w-full hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                        class="hospital-card bg-white rounded-2xl shadow-md shadow-slate-100 overflow-hidden border border-slate-100/80 flex flex-col h-full w-full hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300">
 
-                        <!-- Banner with Unsplash Image -->
-                        <div class="hospital-banner-img relative h-48 w-full overflow-hidden bg-slate-800">
+                        <div class="hospital-banner-img relative h-40 w-full overflow-hidden bg-slate-800">
                             <img src="https://images.unsplash.com/photo-1538108149319-fbb6c18c96fb?auto=format&fit=crop&w=600&q=80"
                                 alt="PIMS Hospital Islamabad"
-                                class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500">
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             <div
-                                class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-slate-900/20 to-transparent">
+                                class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent">
                             </div>
 
                             <div class="absolute top-3 left-3 z-10">
                                 <span
-                                    class="bg-emerald-600 text-white shadow-md font-bold px-2.5 py-1 rounded-md text-xs flex items-center">
-                                    <i class="fa-solid fa-landmark mr-1.5"></i> Public Tertiary
+                                    class="bg-emerald-600 text-white shadow-sm font-semibold px-2.5 py-1 rounded-md text-[11px] flex items-center">
+                                    <i class="fa-solid fa-landmark mr-1"></i> Public
                                 </span>
                             </div>
                             <div
-                                class="absolute top-3 right-3 bg-red-600 text-white px-2.5 py-1 rounded-md text-xs font-bold flex items-center gap-1.5 shadow-md z-10 animate-pulse">
-                                <i class="fa-solid fa-truck-medical"></i> 24/7 Level 1 Trauma
+                                class="absolute top-3 right-3 bg-red-500/90 backdrop-blur-md text-white px-2.5 py-1 rounded-md text-[11px] font-bold flex items-center gap-1 shadow-sm z-10 animate-pulse">
+                                <i class="fa-solid fa-truck-medical text-[10px]"></i> 24/7 Trauma
                             </div>
                         </div>
 
                         <div class="hospital-body p-5 flex flex-col flex-grow">
-                            <div class="mb-2">
-                                <h5 class="font-extrabold text-slate-900 text-lg mb-0">PIMS Hospital Islamabad</h5>
+                            <div class="mb-2.5">
+                                <h5
+                                    class="frontend font-bold text-slate-900 text-lg tracking-tight group-hover:text-sky-600 transition-colors">
+                                    PIMS Hospital Islamabad</h5>
                                 <div class="text-xs text-slate-500 mt-1 flex items-start">
-                                    <i class="fa-solid fa-location-dot text-sky-600 mr-1.5 mt-0.5 flex-shrink-0"></i>
-                                    <span>Ibn-e-Sina Rd, Sector G-8/3, Islamabad</span>
+                                    <i class="fa-solid fa-location-dot text-sky-500 mr-1.5 mt-0.5 flex-shrink-0"></i>
+                                    <span class="line-clamp-1">Ibn-e-Sina Rd, Sector G-8/3, Islamabad</span>
                                 </div>
                             </div>
 
-                            <div class="rating-stars mb-3 text-amber-400 text-sm flex items-center">
-                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                    class="fa-solid fa-star-half-stroke"></i>
-                                <span class="text-xs text-slate-700 font-bold ml-2">4.2 <span
-                                        class="font-normal text-slate-400">(4,100 Reviews)</span></span>
+                            <div
+                                class="rating-stars mb-3 text-amber-400 text-xs flex items-center bg-amber-50/50 w-fit px-2 py-0.5 rounded-full border border-amber-100/60">
+                                <div class="flex gap-0.5 text-[10px]">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star-half-stroke"></i>
+                                </div>
+                                <span class="text-xs text-slate-700 font-bold ml-1.5">4.2 <span
+                                        class="font-medium text-slate-400 text-[11px]">(4,100)</span></span>
                             </div>
 
-                            <div class="grid grid-cols-2 gap-3 mb-4">
-                                <div
-                                    class="hospital-stat-chip bg-slate-50 p-2.5 rounded-xl border border-slate-100 shadow-sm">
-                                    <span class="text-slate-400 text-[11px] font-semibold block uppercase">Total
+                            <div class="grid grid-cols-2 gap-2.5 mb-3">
+                                <div class="hospital-stat-chip bg-slate-50/80 p-2.5 rounded-xl border border-slate-100">
+                                    <span
+                                        class="text-slate-400 text-[9px] font-bold tracking-wider block uppercase">Total
                                         Beds</span>
-                                    <div class="font-extrabold text-slate-800 text-sm mt-0.5">1,100+ Beds</div>
+                                    <div class="font-bold text-slate-800 text-xs mt-0.5">1,100+ Beds</div>
                                 </div>
-                                <div
-                                    class="hospital-stat-chip bg-slate-50 p-2.5 rounded-xl border border-slate-100 shadow-sm">
-                                    <span class="text-slate-400 text-[11px] font-semibold block uppercase">ICU
+                                <div class="hospital-stat-chip bg-slate-50/80 p-2.5 rounded-xl border border-slate-100">
+                                    <span class="text-slate-400 text-[9px] font-bold tracking-wider block uppercase">ICU
                                         Status</span>
-                                    <div class="font-extrabold text-amber-600 text-sm mt-0.5 flex items-center">
-                                        <i class="fa-solid fa-circle text-[8px] text-amber-600 mr-1.5"></i> High Demand
+                                    <div class="font-bold text-amber-600 text-xs mt-0.5 flex items-center">
+                                        <span class="h-1.5 w-1.5 rounded-full bg-amber-500 mr-1"></span> High Demand
                                     </div>
                                 </div>
                             </div>
 
                             <div class="mb-4">
-                                <div class="text-xs font-extrabold text-slate-400 uppercase tracking-wider mb-2">
-                                    Specialized Departments</div>
-                                <div class="flex flex-wrap gap-1.5">
+                                <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">
+                                    Departments</div>
+                                <div class="flex flex-wrap gap-1">
                                     <span
-                                        class="bg-slate-100 text-slate-700 border border-slate-200 text-xs px-2.5 py-1 rounded-lg font-semibold">Burn
+                                        class="bg-slate-100 text-slate-700 border border-slate-200 text-[10px] px-2 py-0.5 rounded-md font-medium">Burn
                                         Center</span>
                                     <span
-                                        class="bg-slate-100 text-slate-700 border border-slate-200 text-xs px-2.5 py-1 rounded-lg font-semibold">Trauma
-                                        Surgery</span>
+                                        class="bg-slate-100 text-slate-700 border border-slate-200 text-[10px] px-2 py-0.5 rounded-md font-medium">Trauma</span>
                                     <span
-                                        class="bg-slate-100 text-slate-700 border border-slate-200 text-xs px-2.5 py-1 rounded-lg font-semibold">Pediatrics</span>
+                                        class="bg-slate-100 text-slate-700 border border-slate-200 text-[10px] px-2 py-0.5 rounded-md font-medium">Pediatrics</span>
                                     <span
-                                        class="bg-slate-100 text-slate-700 border border-slate-200 text-xs px-2.5 py-1 rounded-lg font-semibold">General
-                                        Medicine</span>
-                                    <span
-                                        class="bg-slate-100 text-slate-700 border border-slate-200 text-xs px-2.5 py-1 rounded-lg font-semibold">Cardiology</span>
+                                        class="bg-slate-100 text-slate-700 border border-slate-200 text-[10px] px-2 py-0.5 rounded-md font-medium">Cardiology</span>
                                 </div>
                             </div>
 
                             <div
-                                class="emergency-hotline-box mt-auto bg-gradient-to-r from-red-50 to-orange-50 border border-red-100 p-3 rounded-xl flex justify-between items-center mb-4 shadow-sm">
+                                class="emergency-hotline-box mt-auto bg-red-50/60 border border-red-100 p-2.5 rounded-xl flex justify-between items-center mb-3">
                                 <div>
-                                    <div class="text-[10px] text-red-600 font-black tracking-wider uppercase">Emergency
-                                        Hotline</div>
-                                    <div class="font-extrabold text-slate-900 text-sm">051-9261170</div>
+                                    <div class="text-[9px] text-red-600 font-extrabold tracking-wider uppercase">
+                                        Emergency Hotline</div>
+                                    <div class="font-bold text-slate-900 text-xs mt-0.5">051-9261170</div>
                                 </div>
                                 <a href="tel:0519261170"
-                                    class="bg-red-600 hover:bg-red-700 active:bg-red-800 text-white text-xs font-bold py-2 px-3.5 rounded-lg shadow-sm flex items-center gap-1.5 transition-all duration-200"
-                                    data-phone="051-9261170" data-facility="PIMS Hospital Emergency">
-                                    <i class="fa-solid fa-phone"></i> Call
+                                    class="bg-red-600 hover:bg-red-700 text-white text-[11px] font-bold py-1.5 px-3 rounded-lg shadow-sm flex items-center gap-1 transition-all">
+                                    <i class="fa-solid fa-phone text-[9px]"></i> Call
                                 </a>
                             </div>
 
-                            <div class="flex gap-2.5 pt-3 border-t border-slate-100">
+                            <div class="flex gap-2 pt-2.5 border-t border-slate-100">
                                 <button
-                                    class="flex-1 py-2.5 px-2 text-xs font-bold border border-sky-600 text-sky-700 rounded-xl hover:bg-sky-600 hover:text-white active:bg-sky-700 transition-all duration-200 shadow-sm"
-                                    onclick="viewHospitalDetails('PIMS Hospital', 'Sector G-8/3, Islamabad', '1,100+ Beds', '051-9261170', 'Burn Center, Emergency Trauma, Mother & Child Center, Nephrology, General Surgery')">
+                                    class="flex-1 py-2 px-2 text-xs font-bold border border-slate-200 text-slate-700 rounded-xl hover:bg-slate-50 transition-all"
+                                    onclick="viewHospitalDetails(...)">
                                     Facility Info
                                 </button>
                                 <a href="doctors.html?hospital=PIMS"
-                                    class="flex-1 py-2.5 px-2 text-xs font-bold bg-gradient-to-r from-sky-600 to-blue-600 text-white rounded-xl text-center hover:from-sky-700 hover:to-blue-700 active:bg-sky-800 transition-all duration-200 flex items-center justify-center shadow-md">
+                                    class="flex-1 py-2 px-2 text-xs font-bold bg-sky-600 text-white rounded-xl text-center hover:bg-sky-700 hover:text-white transition-all shadow-sm shadow-sky-100 flex items-center justify-center">
                                     View Doctors
                                 </a>
                             </div>
@@ -605,7 +609,8 @@
                 data-aos="fade-down" data-aos-duration="400" data-aos-delay="100">
                 <div class="flex items-center gap-2">
                     <span class="bg-white/10 p-1.5 rounded-lg text-sky-200"><i class="fa-solid fa-hospital"></i></span>
-                    <h3 id="modalHospitalName" class="font-extrabold text-lg text-white tracking-wide">Hospital Name</h3>
+                    <h3 id="modalHospitalName" class="font-extrabold text-lg text-white tracking-wide">Hospital Name
+                    </h3>
                 </div>
                 <button onclick="closeHospitalModal()"
                     class="text-white/70 hover:text-white bg-white/10 hover:bg-white/20 w-8 h-8 rounded-full flex items-center justify-center text-lg font-bold transition-all">&times;</button>

@@ -68,12 +68,17 @@ body {
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    /* overflow-x: hidden; */
+    /* Body se overflow-x hata diya hai taake sticky navbar na kharab ho */
 }
 
-html, body {
+html {
     width: 100%;
-    /* overflow-x: hidden; */
+    overflow-x: hidden; /* Sirf html par overflow-x rakhein */
+}
+
+body {
+    width: 100%;
+    overflow-x: clip; /* Yeh sticky element ko todta nahi hai lekin extra horizontal scroll rok leta hai */
 }
 
 h1,
@@ -762,7 +767,8 @@ a:hover {
         border-bottom: 1px solid #e2e8f0;
         flex-direction: column !important;
         align-items: stretch !important;
-        gap: 12px !important; /* Gap ko mazeed tight aur clean kar diya hai */
+        gap: 12px !important;
+        /* Gap ko mazeed tight aur clean kar diya hai */
         z-index: 1000;
 
         opacity: 0;
@@ -797,7 +803,7 @@ a:hover {
     }
 
     /* Darmiyan wala extra border aur margin khatam karne ke liye */
-    .portal-nav-links-wrapper > div:last-child {
+    .portal-nav-links-wrapper>div:last-child {
         display: flex !important;
         flex-direction: column !important;
         width: 100% !important;
@@ -814,12 +820,14 @@ a:hover {
 
     #cityDropdownBtn {
         width: 100% !important;
-        background: #f8fafc !important; /* Patient portal jaisi clean styling */
+        background: #f8fafc !important;
+        /* Patient portal jaisi clean styling */
         border: 1px solid #e2e8f0 !important;
         padding: 10px 16px !important;
         border-radius: 8px !important;
         display: flex !important;
-        justify-content: center !important; /* Bilkul center mein text */
+        justify-content: center !important;
+        /* Bilkul center mein text */
         align-items: center !important;
         gap: 8px !important;
     }

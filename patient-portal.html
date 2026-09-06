@@ -1,151 +1,284 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Patient & Family Healthcare Dashboard | Islamabad & Rawalpindi</title>
-  <meta name="description" content="Manage your upcoming doctor consultations, active home-care nursing assignments, vitals tracking, and payment receipts." />
-  <meta property="og:title" content="Patient Dashboard | ShifaCare Plus" />
-  <meta property="og:description" content="Manage appointments, home nursing shifts, and healthcare records in Islamabad & Rawalpindi." />
+  <title>Healthcare Services & Home Nursing Portal | Islamabad & Rawalpindi</title>
+  <meta name="description"
+    content="Connecting patients and families with verified hospitals, leading doctors, and qualified home-care nurses in Islamabad and Rawalpindi." />
+  <meta property="og:title" content="Healthcare Services & Home Nursing Portal" />
+  <meta property="og:description"
+    content="Find verified doctors, certified home nursing care, and 24/7 hospitals in Islamabad & Rawalpindi." />
 
-  <!-- CDN Dependencies -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome 6 Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- AOS Library CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <!-- Dedicated Stylesheets -->
   <link rel="stylesheet" href="/assets/css/global.css" />
-  <link rel="stylesheet" href="/assets/css/dashboard.css" />
+  <link rel="stylesheet" href="/assets/css/doctors.css" />
 </head>
-<body class="bg-slate-50 text-slate-800">
+
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-sky-500 selection:text-white">
 
   <!-- TOP EMERGENCY RESPONSE & UTILITY BAR -->
-  <div class="top-emergency-bar" id="top-emergency-announcement-bar">
-    <div class="container d-flex justify-content-between align-items-center flex-wrap gap-2 py-1">
-      <div class="d-flex align-items-center flex-wrap gap-2 text-xs">
-        <a href="tel:1122" class="badge-emergency text-decoration-none">
-          <i class="fa-solid fa-truck-medical me-1"></i> 24/7 HELPLINE 1122
+  <div class="top-emergency-bar bg-slate-900 text-slate-200 border-b border-slate-800"
+    id="top-emergency-announcement-bar" data-aos="fade-down" data-aos-duration="800">
+    <div class="max-w-7xl mx-auto px-4 flex justify-between items-center flex-wrap gap-2 py-1.5">
+      <div class="flex items-center flex-wrap gap-2 text-xs">
+        <a href="tel:1122"
+          class="badge-emergency inline-flex items-center px-2.5 py-1 rounded-full text-white bg-red-600 hover:bg-red-700 font-semibold no-underline transition-colors">
+          <i class="fa-solid fa-truck-medical mr-1.5"></i> 24/7 HELPLINE 1122
         </a>
-        <span class="text-slate-400 d-none d-sm-inline">|</span>
+        <span class="text-slate-500 hidden sm:inline">|</span>
         <span class="text-slate-300 text-xs">
-          Twin Cities EMS: <a href="tel:1122" class="text-white fw-bold hover:underline">1122</a> 
-          <span class="d-none d-md-inline">| Patient Care Desk: <a href="tel:0519280000" class="text-white fw-bold hover:underline">051-9280000</a></span>
+          Twin Cities EMS: <a href="tel:1122" class="text-white font-bold hover:underline">1122</a>
+          <span class="hidden md:inline">| Bed Info &amp; Dispatch: <a href="tel:0519280000"
+              class="text-white font-bold hover:underline">051-9280000</a></span>
         </span>
       </div>
-      <div class="d-flex align-items-center gap-3 text-xs">
-        <span class="text-slate-300"><i class="fa-solid fa-user-check text-emerald-400 me-1"></i> Logged in: <strong>Muhammad Usman</strong> (F-8/4, ISB)</span>
-        <span class="text-slate-400 d-none d-lg-inline">|</span>
-        <a href="hospitals.html" class="text-slate-300 hover:text-white d-none d-md-inline">
-          <i class="fa-solid fa-hospital-user me-1 text-indigo-400"></i> Emergency ERs
+      <div class="flex items-center gap-3 text-xs">
+        <span class="hidden lg:inline text-emerald-400 font-medium">
+          <i class="fa-solid fa-circle-check mr-1"></i> 100% PMDC &amp; PNC Certified
+        </span>
+        <span class="text-slate-500 hidden lg:inline">|</span>
+        <a href="hospitals.html" class="text-slate-300 hover:text-white hidden md:inline transition-colors">
+          <i class="fa-solid fa-hospital-user mr-1 text-indigo-400"></i> Emergency ERs
+        </a>
+        <a href="patient-portal.html"
+          class="text-slate-200 hover:text-white font-semibold bg-slate-800/80 px-2.5 py-1 rounded border border-slate-700 transition-colors">
+          <i class="fa-regular fa-user-circle mr-1 text-sky-400"></i> Patient Portal
         </a>
       </div>
     </div>
   </div>
 
   <!-- STICKY MAIN NAVBAR -->
-  <header class="sticky-top">
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3">
-      <div class="container-fluid px-4">
-        <!-- Brand Logo -->
-        <a class="navbar-brand d-flex align-items-center" href="index.html">
-          <div class="bg-primary text-white rounded p-2 me-2 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
-            <i class="fas fa-heartbeat"></i>
-          </div>
-          <div>
-            <span class="fw-bold fs-5 text-dark" style="line-height: 1.1; display: block;">ShifaCare <span class="text-primary">Plus</span></span>
-            <small class="text-muted" style="font-size: 10px; letter-spacing: 0.5px;">ISLAMABAD &amp; RAWALPINDI</small>
-          </div>
-        </a>
+  <header
+    class="portal-navbar-wrapper sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm"
+    data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100">
+    <div class="portal-nav-container max-w-7xl mx-auto px-4 py-3 flex justify-between items-center relative">
 
-        <!-- Location Dropdown -->
-        <div class="dropdown ms-3 d-none d-md-block">
-          <button class="btn btn-light border rounded-pill btn-sm dropdown-toggle text-dark px-3 py-1" type="button" data-bs-toggle="dropdown">
-            <i class="fas fa-map-marker-alt text-primary me-1"></i> Islamabad &amp; Rawalpindi
-          </button>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Islamabad</a></li>
-            <li><a class="dropdown-item" href="#">Rawalpindi</a></li>
-          </ul>
+      <!-- Brand Logo -->
+      <a class="portal-brand flex items-center gap-3 no-underline" href="index.html">
+        <div
+          class="brand-icon-box w-10 h-10 bg-sky-600 text-white flex items-center justify-center rounded-lg shadow-sm shrink-0">
+          <i class="fas fa-heartbeat"></i>
+        </div>
+        <div class="brand-text-container flex flex-col">
+          <span class="font-extrabold text-lg text-slate-900 leading-tight">Medi <span
+              class="text-emerald-600">Care</span></span>
+          <span class="text-[0.65rem] font-bold text-teal-600 tracking-wider uppercase">Your Health, Our
+            Priority</span>
+        </div>
+      </a>
+
+      <!-- Mobile & Tablet Hamburger Button (Visible up to 1024px) -->
+      <button
+        class="portal-mobile-toggle lg:hidden text-slate-700 hover:text-sky-600 p-2 focus:outline-none cursor-pointer z-50"
+        id="manualMenuBtn" aria-label="Toggle Navigation">
+        <i class="fas fa-bars text-xl" id="menuIcon"></i>
+      </button>
+
+      <!-- Navigation Links Wrapper (Hidden on mobile/tablet by default, shown on lg+) -->
+      <div
+        class="portal-nav-links-wrapper hidden lg:flex items-center gap-6 xl:gap-8 absolute lg:relative top-full left-0 right-0 bg-white shadow-xl lg:shadow-none border-b lg:border-none border-slate-100 p-5 lg:p-0 flex-col lg:flex-row transition-all"
+        id="manualNavContent">
+
+        <ul
+          class="portal-nav-links flex flex-col lg:flex-row items-start lg:items-center gap-3 lg:gap-2 m-0 p-0 list-none w-full lg:w-auto">
+          <li class="w-full lg:w-auto">
+            <a class="nav-link-custom active font-semibold text-sky-600 bg-sky-50 px-3.5 py-2.5 rounded-md flex items-center gap-2 no-underline transition-colors w-full"
+              href="index.html">
+              <i class="fas fa-home w-5 text-center"></i> Home
+            </a>
+          </li>
+          <li class="w-full lg:w-auto">
+            <a class="nav-link-custom font-semibold text-slate-700 hover:text-sky-600 hover:bg-slate-50 px-3.5 py-2.5 rounded-md flex items-center gap-2 no-underline transition-colors w-full"
+              href="nurse.html">
+              <i class="fas fa-user-nurse w-5 text-center"></i> Home Nursing
+            </a>
+          </li>
+          <li class="w-full lg:w-auto">
+            <a class="nav-link-custom font-semibold text-slate-700 hover:text-sky-600 hover:bg-slate-50 px-3.5 py-2.5 rounded-md flex items-center gap-2 no-underline transition-colors w-full"
+              href="hopitals.html">
+              <i class="fas fa-hospital w-5 text-center"></i> Hospitals
+            </a>
+          </li>
+          <li class="w-full lg:w-auto">
+            <a class="nav-link-custom font-semibold text-slate-700 hover:text-sky-600 hover:bg-slate-50 px-3.5 py-2.5 rounded-md flex items-center gap-2 no-underline transition-colors w-full"
+              href="doctors.html">
+              <i class="fas fa-user-md w-5 text-center"></i> Doctors
+            </a>
+          </li>
+        </ul>
+
+        <div
+          class="flex flex-col lg:flex-row items-stretch lg:items-center gap-4 w-full lg:w-auto mt-4 lg:mt-0 pt-4 lg:pt-0 border-t lg:border-t-0 border-slate-100">
+          <!-- City Selection Dropdown -->
+          <div class="relative" id="cityDropdownWrapper">
+            <button type="button" id="cityDropdownBtn"
+              class="flex items-center justify-between lg:justify-start gap-1.5 text-sm font-semibold text-slate-700 hover:text-sky-600 focus:outline-none py-2 w-full cursor-pointer">
+              <span class="flex items-center gap-1.5">
+                <i class="fas fa-map-marker-alt text-sky-600"></i>
+                <span class="selected-city-text">Islamabad / Pindi</span>
+              </span>
+              <i class="fas fa-chevron-down text-xs text-slate-400"></i>
+            </button>
+
+            <div id="cityDropdownMenu"
+              class="absolute right-0 mt-2 w-full lg:w-44 bg-white rounded-xl shadow-xl border border-slate-100 py-2 z-50 hidden">
+              <a href="#" class="block px-4 py-2 text-sm font-semibold text-sky-600 bg-sky-50 city-dropdown-option"
+                data-city="Islamabad">Islamabad</a>
+              <a href="#"
+                class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 transition-colors city-dropdown-option"
+                data-city="Rawalpindi">Rawalpindi</a>
+            </div>
+          </div>
+
+          <a href="patient-portal.html"
+            class="btn-primary-health bg-sky-600 hover:bg-sky-700 text-white px-4 py-2.5 rounded-lg font-semibold text-sm no-underline flex items-center justify-center gap-1.5 shadow-sm transition-all shrink-0">
+            <i class="fas fa-user-circle"></i> Patient Portal
+          </a>
         </div>
 
-        <!-- Toggler for Mobile -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbarNav" aria-controls="mainNavbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Always Visible Links -->
-        <div class="collapse navbar-collapse justify-content-end" id="mainNavbarNav">
-          <ul class="navbar-nav align-items-lg-center gap-3">
-            <li class="nav-item"><a class="nav-link fw-semibold text-dark" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link fw-semibold text-dark" href="nurses.html">Home Nursing</a></li>
-            <li class="nav-item"><a class="nav-link fw-semibold text-dark" href="hospitals.html">Hospitals</a></li>
-            <li class="nav-item"><a class="nav-link fw-semibold text-dark" href="doctors.html">Doctors</a></li>
-            <li class="nav-item"><a class="btn btn-primary text-white btn-sm px-3 rounded-pill fw-semibold" href="dashboard-patient.html">Patient Dashboard</a></li>
-          </ul>
-        </div>
       </div>
-    </nav>
+
+    </div>
   </header>
 
-  <!-- DASHBOARD HEADER BANNER WITH PATIENT PROFILE -->
-  <section class="dashboard-header-banner" id="patient-banner-section">
-    <div class="container">
-      <div class="row align-items-center g-4">
-        
-        <div class="col-lg-6">
-          <div class="dashboard-user-card">
-            <div class="user-avatar-large">
-              MU
+  <!-- Header banner profile -->
+  <section
+    class="relative bg-gradient-to-br from-slate-950 via-slate-900 to-sky-950 text-white py-8 md:py-10 shadow-2xl overflow-hidden border-b border-slate-800/80"
+    id="patient-banner-section">
+    <div class="absolute -top-24 -left-24 w-72 h-72 bg-sky-500/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute -bottom-24 -right-24 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none">
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+
+        <!-- Left Column (Profile Card) with Fade Right -->
+        <div class="lg:col-span-7 flex flex-col" data-aos="fade-right" data-aos-duration="800" data-aos-mirror="true">
+          <div
+            class="relative bg-gradient-to-r from-slate-900/90 to-slate-800/90 backdrop-blur-xl border border-slate-700/60 p-6 md:p-7 rounded-3xl shadow-2xl flex flex-col sm:flex-row items-start sm:items-center gap-6 group hover:border-sky-500/40 transition-all duration-300 h-full justify-between">
+
+            <div class="relative shrink-0">
+              <div
+                class="absolute -inset-1 bg-gradient-to-r from-sky-500 to-emerald-400 rounded-3xl blur opacity-30 group-hover:opacity-75 transition duration-500">
+              </div>
+              <div
+                class="relative w-20 h-20 md:w-22 md:h-22 rounded-2xl bg-gradient-to-tr from-sky-600 via-sky-500 to-teal-400 text-white font-black flex items-center justify-center text-2xl md:text-3xl shadow-inner tracking-wider">
+                MU
+              </div>
+              <span
+                class="absolute bottom-0 right-0 w-4 h-4 bg-emerald-500 border-2 border-slate-900 rounded-full"></span>
             </div>
-            <div>
-              <div class="d-flex align-items-center gap-2">
-                <h3 class="text-2xl font-bold text-white mb-0">Muhammad Usman</h3>
-                <span class="badge bg-emerald-500 text-white text-xs px-2 py-1 rounded-full"><i class="fa-solid fa-shield-check"></i> Verified Citizen</span>
+
+            <div class="w-full flex flex-col justify-between h-full">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                <h3 class="text-xl md:text-2xl font-black text-white tracking-tight">Muhammad Usman</h3>
+                <span
+                  class="inline-flex items-center gap-1.5 bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 text-[11px] px-3 py-1 rounded-full font-bold shadow-xs">
+                  <i class="fa-solid fa-shield-check text-emerald-400"></i> Verified Citizen
+                </span>
               </div>
-              <div class="text-xs text-sky-200 mt-1">
-                <span>MRN: <strong class="text-white font-mono">#ISB-89210</strong></span> • 
-                <span>Sector F-8/2, Islamabad</span> • 
-                <span>Blood Group: <strong class="text-white">O+</strong></span>
+
+              <div class="flex flex-wrap items-center gap-y-1.5 text-xs md:text-sm text-sky-200/90 mb-3">
+                <span class="bg-slate-800/80 px-2.5 py-0.5 rounded-lg border border-slate-700">MRN: <strong
+                    class="text-white font-mono">#ISB-89210</strong></span>
+                <span class="text-slate-600 hidden sm:inline">•</span>
+                <span class="flex items-center gap-1"><i class="fa-solid fa-location-dot text-sky-400"></i> Sector
+                  F-8/2, Islamabad</span>
+                <span class="text-slate-600 hidden sm:inline">•</span>
+                <span class="bg-sky-950/60 px-2.5 py-0.5 rounded-lg border border-sky-800/50">Blood: <strong
+                    class="text-white">O+</strong></span>
               </div>
-              <div class="text-xs text-slate-300 mt-1">
-                <i class="fa-solid fa-phone me-1 text-sky-400"></i> +92 300 8594210 • Emergency Contact: +92 321 5120091
+
+              <div
+                class="pt-3 border-t border-slate-700/60 flex flex-wrap items-center justify-between gap-2 text-xs text-slate-300">
+                <span class="flex items-center gap-1.5 font-medium"><i class="fa-solid fa-phone text-sky-400"></i> +92
+                  300 8594210</span>
+                <span
+                  class="flex items-center gap-1.5 text-slate-400 bg-slate-950/40 px-3 py-1 rounded-xl border border-slate-800">
+                  <i class="fa-solid fa-heart-pulse text-rose-400"></i> Emergency: <strong class="text-slate-100">+92
+                    321 5120091</strong>
+                </span>
               </div>
             </div>
+
           </div>
         </div>
 
-        <div class="col-lg-6">
-          <div class="row g-3">
-            
-            <div class="col-6 col-md-3">
-              <div class="dashboard-stat-tile text-center">
-                <div class="text-xs text-sky-200 font-semibold mb-1">Appointments</div>
-                <div class="text-2xl font-black text-white" id="stat-upcoming-count">2</div>
-                <div class="text-xs text-emerald-300 mt-1">Confirmed</div>
+        <!-- Right Column (Stats Grid Cards with Staggered Fade Left) -->
+        <div class="lg:col-span-5 flex flex-col" data-aos="fade-left" data-aos-duration="800" data-aos-mirror="true">
+          <div class="grid grid-cols-2 gap-3 md:gap-4 h-full">
+
+            <!-- Card 1: Appointments -->
+            <div
+              class="bg-gradient-to-b from-slate-800/90 to-slate-900/90 backdrop-blur-md border border-slate-700/80 rounded-2xl p-4 text-center shadow-lg hover:border-sky-500/50 hover:scale-[1.02] transition-all duration-300 group flex flex-col justify-between"
+              data-aos="zoom-in" data-aos-delay="100" data-aos-mirror="true">
+              <div class="flex items-center justify-center gap-1.5 text-xs text-sky-300 font-bold mb-1">
+                <i class="fa-regular fa-calendar-check text-sky-400"></i> Appointments
+              </div>
+              <div class="text-2xl md:text-3xl font-black text-white group-hover:text-sky-300 transition-colors my-auto"
+                id="stat-upcoming-count">2</div>
+              <div>
+                <span
+                  class="inline-block text-[10px] uppercase tracking-wider font-extrabold bg-sky-500/20 text-sky-300 px-2.5 py-0.5 rounded-md border border-sky-500/30">Confirmed</span>
               </div>
             </div>
 
-            <div class="col-6 col-md-3">
-              <div class="dashboard-stat-tile text-center">
-                <div class="text-xs text-teal-200 font-semibold mb-1">Home Nurses</div>
-                <div class="text-2xl font-black text-white">1</div>
-                <div class="text-xs text-teal-300 mt-1">Active on Duty</div>
+            <!-- Card 2: Home Nurses -->
+            <div
+              class="bg-gradient-to-b from-slate-800/90 to-slate-900/90 backdrop-blur-md border border-slate-700/80 rounded-2xl p-4 text-center shadow-lg hover:border-teal-500/50 hover:scale-[1.02] transition-all duration-300 group flex flex-col justify-between"
+              data-aos="zoom-in" data-aos-delay="200" data-aos-mirror="true">
+              <div class="flex items-center justify-center gap-1.5 text-xs text-teal-300 font-bold mb-1">
+                <i class="fa-solid fa-user-nurse text-teal-400"></i> Home Nurses
+              </div>
+              <div
+                class="text-2xl md:text-3xl font-black text-white group-hover:text-teal-300 transition-colors my-auto">1
+              </div>
+              <div>
+                <span
+                  class="inline-block text-[10px] uppercase tracking-wider font-extrabold bg-teal-500/20 text-teal-300 px-2.5 py-0.5 rounded-md border border-teal-500/30">Active
+                  on Duty</span>
               </div>
             </div>
 
-            <div class="col-6 col-md-3">
-              <div class="dashboard-stat-tile text-center">
-                <div class="text-xs text-amber-200 font-semibold mb-1">Health Wallet</div>
-                <div class="text-2xl font-black text-white">Rs. 4.5k</div>
-                <div class="text-xs text-amber-300 mt-1">ShifaCare Credits</div>
+            <!-- Card 3: Health Wallet -->
+            <div
+              class="bg-gradient-to-b from-slate-800/90 to-slate-900/90 backdrop-blur-md border border-slate-700/80 rounded-2xl p-4 text-center shadow-lg hover:border-amber-500/50 hover:scale-[1.02] transition-all duration-300 group flex flex-col justify-between"
+              data-aos="zoom-in" data-aos-delay="300" data-aos-mirror="true">
+              <div class="flex items-center justify-center gap-1.5 text-xs text-amber-300 font-bold mb-1">
+                <i class="fa-solid fa-wallet text-amber-400"></i> Health Wallet
+              </div>
+              <div
+                class="text-xl md:text-2xl font-black text-white group-hover:text-amber-300 transition-colors my-auto">
+                Rs. 4.5k</div>
+              <div>
+                <span
+                  class="inline-block text-[10px] uppercase tracking-wider font-extrabold bg-amber-500/20 text-amber-300 px-2.5 py-0.5 rounded-md border border-amber-500/30">ShifaCare
+                  Credits</span>
               </div>
             </div>
 
-            <div class="col-6 col-md-3">
-              <div class="dashboard-stat-tile text-center">
-                <div class="text-xs text-purple-200 font-semibold mb-1">Favorites</div>
-                <div class="text-2xl font-black text-white">3</div>
-                <div class="text-xs text-purple-300 mt-1">Saved Caregivers</div>
+            <!-- Card 4: Favorites -->
+            <div
+              class="bg-gradient-to-b from-slate-800/90 to-slate-900/90 backdrop-blur-md border border-slate-700/80 rounded-2xl p-4 text-center shadow-lg hover:border-purple-500/50 hover:scale-[1.02] transition-all duration-300 group flex flex-col justify-between"
+              data-aos="zoom-in" data-aos-delay="400" data-aos-mirror="true">
+              <div class="flex items-center justify-center gap-1.5 text-xs text-purple-300 font-bold mb-1">
+                <i class="fa-solid fa-heart text-purple-400"></i> Favorites
+              </div>
+              <div
+                class="text-2xl md:text-3xl font-black text-white group-hover:text-purple-300 transition-colors my-auto">
+                3</div>
+              <div>
+                <span
+                  class="inline-block text-[10px] uppercase tracking-wider font-extrabold bg-purple-500/20 text-purple-300 px-2.5 py-0.5 rounded-md border border-purple-500/30">Saved
+                  Caregivers</span>
               </div>
             </div>
 
@@ -157,139 +290,399 @@
   </section>
 
   <!-- DASHBOARD MAIN CONTENT & TABS -->
-  <section class="pb-5" id="dashboard-main-tabs-section">
-    <div class="container">
-      
-      <!-- NAV TABS WRAPPER -->
-      <div class="dashboard-tabs-wrapper d-flex flex-nowrap overflow-x-auto gap-2" id="patient-dash-tabs-bar">
-        <button class="dash-nav-link active" data-tab-target="appointments" id="tab-btn-appointments">
-          <i class="fa-regular fa-calendar-check"></i>
-          <span>Doctor Appointments</span>
-        </button>
-        <button class="dash-nav-link" data-tab-target="nurses" id="tab-btn-nurses">
-          <i class="fa-solid fa-user-nurse"></i>
-          <span>Home Nursing & Vitals</span>
-        </button>
-        <button class="dash-nav-link" data-tab-target="payments" id="tab-btn-payments">
-          <i class="fa-solid fa-file-invoice-dollar"></i>
-          <span>Payment History & Receipts</span>
-        </button>
-        <button class="dash-nav-link" data-tab-target="favorites" id="tab-btn-favorites">
-          <i class="fa-regular fa-heart"></i>
-          <span>Saved Favorites</span>
-        </button>
+  <section class="pb-12" id="dashboard-main-tabs-section">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- NAV TABS WRAPPER (Centered & Modern) -->
+      <div class="flex justify-center mb-8" data-aos="fade-up" data-aos-duration="800" data-aos-mirror="true">
+        <div
+          class="bg-slate-100/80 p-1.5 rounded-2xl border border-slate-200/60 shadow-inner flex flex-nowrap overflow-x-auto gap-2 scrollbar-none max-w-full"
+          id="patient-dash-tabs-bar">
+
+          <button
+            class="dash-nav-link group inline-flex items-center justify-center gap-2.5 px-5 py-3 rounded-xl text-xs md:text-sm font-semibold transition-all shrink-0 cursor-pointer text-slate-600 hover:text-white hover:bg-sky-600 [&.active]:bg-sky-600 [&.active]:text-white [&.active]:shadow-md"
+            data-tab-target="appointments" id="tab-btn-appointments">
+            <i class="fa-regular fa-calendar-check text-sky-600 group-hover:text-white text-base transition-colors"
+              style="color: inherit;"></i>
+            <span>Doctor Appointments</span>
+          </button>
+
+          <button
+            class="dash-nav-link group inline-flex items-center justify-center gap-2.5 px-5 py-3 rounded-xl text-xs md:text-sm font-semibold transition-all shrink-0 cursor-pointer text-slate-600 hover:text-white hover:bg-teal-600 [&.active]:bg-teal-600 [&.active]:text-white [&.active]:shadow-md"
+            data-tab-target="nurses" id="tab-btn-nurses">
+            <i class="fa-solid fa-user-nurse text-teal-600 group-hover:text-white text-base transition-colors"></i>
+            <span>Home Nursing & Vitals</span>
+          </button>
+
+          <button
+            class="dash-nav-link group inline-flex items-center justify-center gap-2.5 px-5 py-3 rounded-xl text-xs md:text-sm font-semibold transition-all shrink-0 cursor-pointer text-slate-600 hover:text-white hover:bg-indigo-600 [&.active]:bg-indigo-600 [&.active]:text-white [&.active]:shadow-md"
+            data-tab-target="payments" id="tab-btn-payments">
+            <i
+              class="fa-solid fa-file-invoice-dollar text-indigo-600 group-hover:text-white text-base transition-colors"></i>
+            <span>Payment History & Receipts</span>
+          </button>
+
+          <button
+            class="dash-nav-link group inline-flex items-center justify-center gap-2.5 px-5 py-3 rounded-xl text-xs md:text-sm font-semibold transition-all shrink-0 cursor-pointer text-slate-600 hover:text-white hover:bg-rose-600 [&.active]:bg-rose-600 [&.active]:text-white [&.active]:shadow-md"
+            data-tab-target="favorites" id="tab-btn-favorites">
+            <i class="fa-regular fa-heart text-rose-600 group-hover:text-white text-base transition-colors"></i>
+            <span>Saved Favorites</span>
+          </button>
+
+        </div>
       </div>
 
       <!-- TAB 1: DOCTOR APPOINTMENTS -->
-      <div class="dash-content-pane" id="dash-pane-appointments">
-        
-        <div class="d-flex justify-content-between align-items-center mb-4">
+      <div class="dash-content-pane" id="dash-pane-appointments" data-aos="fade-up" data-aos-duration="700"
+        data-aos-mirror="true">
+
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6">
           <div>
-            <h4 class="fw-bold text-dark mb-0">Upcoming Consultations</h4>
-            <p class="text-xs text-muted">Hospital Outpatient Department (OPD) verified booking tokens.</p>
+            <h4 class="font-bold text-slate-900 text-lg md:text-xl mb-0.5">Upcoming Consultations</h4>
+            <p class="text-xs text-slate-500">Hospital Outpatient Department (OPD) verified booking tokens.</p>
           </div>
-          <a href="doctors.html" class="btn btn-sm btn-primary-health">
-            <i class="fa-solid fa-plus me-1"></i> Book Another Doctor
+          <a href="doctors.html"
+            class="inline-flex items-center justify-center gap-1.5 px-4 py-2 bg-sky-600 hover:bg-sky-700 text-white text-xs md:text-sm font-bold rounded-xl shadow-md transition-colors shrink-0">
+            <i class="fa-solid fa-plus text-xs"></i> Book Another Doctor
           </a>
         </div>
 
-        <div id="dashboard-appointments-list">
-          <!-- Dynamically populated via dashboard.js -->
+        <!-- Yahan apna foreach loop laga dein (Static structure tayar hai) -->
+        <div class="space-y-4">
+
+          <!-- Appointment Card 1 -->
+          <div
+            class="bg-white rounded-3xl border border-slate-200/80 p-5 md:p-6 shadow-sm hover:shadow-md transition-all"
+            data-aos="fade-up" data-aos-duration="600" data-aos-mirror="true">
+            <div class="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-slate-100">
+              <span
+                class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">
+                <i class="fa-solid fa-circle-check text-[10px]"></i> Confirmed
+              </span>
+              <span class="text-xs font-mono text-slate-500">Ref: #ISB-DOC-15524</span>
+              <span class="font-bold text-slate-900 text-sm">Rs. 2,000</span>
+            </div>
+            <div class="pt-4 flex flex-col md:flex-row md:items-center justify-between gap-4">
+              <div class="flex items-start gap-3.5">
+                <div
+                  class="w-12 h-12 rounded-2xl bg-sky-100 text-sky-600 flex items-center justify-center text-lg font-bold shrink-0">
+                  <i class="fa-solid fa-user-doctor"></i>
+                </div>
+                <div>
+                  <h5 class="font-bold text-slate-900 text-base">Dr. Ayesha Siddiqa</h5>
+                  <p class="text-xs text-slate-500">Gynecologist & Obstetrician</p>
+                  <p class="text-xs text-slate-400 mt-0.5"><i class="fa-solid fa-location-dot text-sky-500 mr-1"></i>
+                    Ali Medical Center</p>
+                </div>
+              </div>
+              <div class="bg-slate-50 p-3 rounded-2xl border border-slate-100 text-xs flex flex-col gap-1">
+                <span class="text-slate-400 uppercase tracking-wider font-bold text-[10px]">Date & Consultation
+                  Time</span>
+                <span class="font-semibold text-slate-700"><i class="fa-regular fa-calendar text-sky-600 mr-1"></i>
+                  2026-09-05 at 05:00 PM - 05:30 PM</span>
+                <span class="text-slate-500">Patient: wdwc</span>
+              </div>
+              <div class="flex items-center gap-2 shrink-0">
+                <button
+                  class="px-3.5 py-2 rounded-xl border border-rose-200 text-rose-600 hover:bg-rose-50 text-xs font-semibold transition-colors cursor-pointer">Cancel</button>
+                <button
+                  class="px-3.5 py-2 rounded-xl bg-sky-50 text-sky-700 hover:bg-sky-100 text-xs font-semibold transition-colors cursor-pointer">Reschedule</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Appointment Card 2 -->
+          <div
+            class="bg-white rounded-3xl border border-slate-200/80 p-5 md:p-6 shadow-sm hover:shadow-md transition-all"
+            data-aos="fade-up" data-aos-duration="600" data-aos-mirror="true">
+            <div class="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-slate-100">
+              <span
+                class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">
+                <i class="fa-solid fa-circle-check text-[10px]"></i> Confirmed
+              </span>
+              <span class="text-xs font-mono text-slate-500">Ref: #ISB-DOC-96535</span>
+              <span class="font-bold text-slate-900 text-sm">Rs. 2,000</span>
+            </div>
+            <div class="pt-4 flex flex-col md:flex-row md:items-center justify-between gap-4">
+              <div class="flex items-start gap-3.5">
+                <div
+                  class="w-12 h-12 rounded-2xl bg-sky-100 text-sky-600 flex items-center justify-center text-lg font-bold shrink-0">
+                  <i class="fa-solid fa-user-doctor"></i>
+                </div>
+                <div>
+                  <h5 class="font-bold text-slate-900 text-base">Dr. Ayesha Siddiqa</h5>
+                  <p class="text-xs text-slate-500">Gynecologist & Obstetrician</p>
+                  <p class="text-xs text-slate-400 mt-0.5"><i class="fa-solid fa-location-dot text-sky-500 mr-1"></i>
+                    Maroof International</p>
+                </div>
+              </div>
+              <div class="bg-slate-50 p-3 rounded-2xl border border-slate-100 text-xs flex flex-col gap-1">
+                <span class="text-slate-400 uppercase tracking-wider font-bold text-[10px]">Date & Consultation
+                  Time</span>
+                <span class="font-semibold text-slate-700"><i class="fa-regular fa-calendar text-sky-600 mr-1"></i>
+                  2026-09-08 at 03:00 PM - 03:30 PM</span>
+                <span class="text-slate-500">Patient: wdwc</span>
+              </div>
+              <div class="flex items-center gap-2 shrink-0">
+                <button
+                  class="px-3.5 py-2 rounded-xl border border-rose-200 text-rose-600 hover:bg-rose-50 text-xs font-semibold transition-colors cursor-pointer">Cancel</button>
+                <button
+                  class="px-3.5 py-2 rounded-xl bg-sky-50 text-sky-700 hover:bg-sky-100 text-xs font-semibold transition-colors cursor-pointer">Reschedule</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Appointment Card 3 -->
+          <div
+            class="bg-white rounded-3xl border border-slate-200/80 p-5 md:p-6 shadow-sm hover:shadow-md transition-all"
+            data-aos="fade-up" data-aos-duration="600" data-aos-mirror="true">
+            <div class="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-slate-100">
+              <span
+                class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">
+                <i class="fa-solid fa-circle-check text-[10px]"></i> Confirmed
+              </span>
+              <span class="text-xs font-mono text-slate-500">Ref: #ISB-DOC-44812</span>
+              <span class="font-bold text-slate-900 text-sm">Rs. 3,500</span>
+            </div>
+            <div class="pt-4 flex flex-col md:flex-row md:items-center justify-between gap-4">
+              <div class="flex items-start gap-3.5">
+                <div
+                  class="w-12 h-12 rounded-2xl bg-sky-100 text-sky-600 flex items-center justify-center text-lg font-bold shrink-0">
+                  <i class="fa-solid fa-user-doctor"></i>
+                </div>
+                <div>
+                  <h5 class="font-bold text-slate-900 text-base">Prof. Dr. Tariq Mahmood</h5>
+                  <p class="text-xs text-slate-500">Cardiologist</p>
+                  <p class="text-xs text-slate-400 mt-0.5"><i class="fa-solid fa-location-dot text-sky-500 mr-1"></i>
+                    Shifa International Hospital</p>
+                </div>
+              </div>
+              <div class="bg-slate-50 p-3 rounded-2xl border border-slate-100 text-xs flex flex-col gap-1">
+                <span class="text-slate-400 uppercase tracking-wider font-bold text-[10px]">Date & Consultation
+                  Time</span>
+                <span class="font-semibold text-slate-700"><i class="fa-regular fa-calendar text-sky-600 mr-1"></i>
+                  2026-09-12 at 10:30 AM - 11:00 AM</span>
+                <span class="text-slate-500">Patient: Mansoor Ali</span>
+              </div>
+              <div class="flex items-center gap-2 shrink-0">
+                <button
+                  class="px-3.5 py-2 rounded-xl border border-rose-200 text-rose-600 hover:bg-rose-50 text-xs font-semibold transition-colors cursor-pointer">Cancel</button>
+                <button
+                  class="px-3.5 py-2 rounded-xl bg-sky-50 text-sky-700 hover:bg-sky-100 text-xs font-semibold transition-colors cursor-pointer">Reschedule</button>
+              </div>
+            </div>
+          </div>
+
         </div>
 
       </div>
 
       <!-- TAB 2: ACTIVE HOME NURSING & LIVE VITALS -->
-      <div class="dash-content-pane" id="dash-pane-nurses" style="display: none;">
-        
-        <div class="d-flex justify-content-between align-items-center mb-4">
+      <div class="dash-content-pane" id="dash-pane-nurses" style="display: none;" data-aos="fade-up"
+        data-aos-duration="700" data-aos-mirror="true">
+
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6">
           <div>
-            <h4 class="fw-bold text-dark mb-0">Active Home Care Nursing</h4>
-            <p class="text-xs text-muted">Live care assignment and recorded patient vital stats.</p>
+            <h4 class="font-bold text-slate-900 text-lg md:text-xl mb-0.5">Active Home Care Nursing</h4>
+            <p class="text-xs text-slate-500">Live care assignments and shift tracking.</p>
           </div>
-          <a href="nurses.html" class="btn btn-sm btn-secondary-health">
-            <i class="fa-solid fa-user-plus me-1"></i> Request Additional Nurse
+          <a href="nurses.html"
+            class="inline-flex items-center justify-center gap-1.5 px-4 py-2 bg-teal-600 hover:bg-teal-700 text-white text-xs md:text-sm font-bold rounded-xl shadow-md transition-colors shrink-0">
+            <i class="fa-solid fa-user-plus text-xs"></i> Request Additional Nurse
           </a>
         </div>
 
-        <div id="dashboard-nurses-list">
-          <!-- Dynamically populated via dashboard.js -->
+        <!-- Yahan apna foreach loop laga dein -->
+        <div class="space-y-4">
+
+          <!-- Nurse Card 1: Active on Duty -->
+          <div
+            class="bg-white rounded-3xl border border-slate-200/80 p-5 md:p-6 shadow-sm hover:shadow-md transition-all"
+            data-aos="fade-up" data-aos-duration="600" data-aos-delay="100" data-aos-mirror="true">
+            <div class="flex flex-wrap items-center justify-between gap-4">
+              <div class="flex items-center gap-3.5">
+                <div
+                  class="w-12 h-12 rounded-2xl bg-teal-100 text-teal-600 flex items-center justify-center text-lg font-bold shrink-0">
+                  <i class="fa-solid fa-user-nurse"></i>
+                </div>
+                <div>
+                  <div class="flex items-center gap-2">
+                    <h5 class="font-bold text-slate-900 text-base">Sister Rabia Bibi</h5>
+                    <span
+                      class="inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-bold bg-teal-50 text-teal-700 border border-teal-200">Verified
+                      Pro</span>
+                  </div>
+                  <p class="text-xs text-slate-500">Post-Op Care Specialist &bull; <span
+                      class="font-mono text-slate-600">Shift: 14 Days</span></p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3">
+                <span
+                  class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-teal-50 text-teal-700 border border-teal-200 animate-pulse">
+                  <i class="fa-solid fa-circle text-[8px] text-teal-500"></i> Active on Duty
+                </span>
+                <button
+                  class="px-3.5 py-2 rounded-xl bg-teal-50 text-teal-700 hover:bg-teal-100 text-xs font-semibold transition-colors cursor-pointer">
+                  <i class="fa-solid fa-phone text-xs mr-1"></i> Contact
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Nurse Card 2: Completed Shift -->
+          <div
+            class="bg-white rounded-3xl border border-slate-200/80 p-5 md:p-6 shadow-sm hover:shadow-md transition-all"
+            data-aos="fade-up" data-aos-duration="600" data-aos-delay="200" data-aos-mirror="true">
+            <div class="flex flex-wrap items-center justify-between gap-4">
+              <div class="flex items-center gap-3.5">
+                <div
+                  class="w-12 h-12 rounded-2xl bg-slate-100 text-slate-500 flex items-center justify-center text-lg font-bold shrink-0">
+                  <i class="fa-solid fa-user-nurse"></i>
+                </div>
+                <div>
+                  <h5 class="font-bold text-slate-900 text-base">Nurse Muhammad Akram</h5>
+                  <p class="text-xs text-slate-500">Elderly & Geriatric Care (7-Day Shift) &bull; <span
+                      class="text-slate-400">Completed on Aug 25, 2026</span></p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3">
+                <span
+                  class="px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-600 border border-slate-200">Completed</span>
+                <button
+                  class="px-3.5 py-2 rounded-xl border border-slate-200 text-slate-600 hover:bg-slate-50 text-xs font-semibold transition-colors cursor-pointer">
+                  Care Report
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Nurse Card 3: Scheduled Upcoming Shift -->
+          <div
+            class="bg-white rounded-3xl border border-slate-200/80 p-5 md:p-6 shadow-sm hover:shadow-md transition-all"
+            data-aos="fade-up" data-aos-duration="600" data-aos-delay="300" data-aos-mirror="true">
+            <div class="flex flex-wrap items-center justify-between gap-4">
+              <div class="flex items-center gap-3.5">
+                <div
+                  class="w-12 h-12 rounded-2xl bg-sky-100 text-sky-600 flex items-center justify-center text-lg font-bold shrink-0">
+                  <i class="fa-solid fa-user-nurse"></i>
+                </div>
+                <div>
+                  <h5 class="font-bold text-slate-900 text-base">Sister Farzana Yasmeen</h5>
+                  <p class="text-xs text-slate-500">Wound Dressing & Injection Specialist &bull; <span
+                      class="text-sky-600 font-medium">Starts Sep 15, 2026</span></p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3">
+                <span
+                  class="px-3 py-1 rounded-full text-xs font-semibold bg-sky-50 text-sky-700 border border-sky-200">Scheduled</span>
+                <button
+                  class="px-3.5 py-2 rounded-xl border border-rose-200 text-rose-600 hover:bg-rose-50 text-xs font-semibold transition-colors cursor-pointer">
+                  Cancel
+                </button>
+              </div>
+            </div>
+          </div>
+
         </div>
 
       </div>
 
       <!-- TAB 3: PAYMENT HISTORY & INVOICES -->
-      <div class="dash-content-pane" id="dash-pane-payments" style="display: none;">
-        
-        <div class="d-flex justify-content-between align-items-center mb-4">
+      <div class="dash-content-pane" id="dash-pane-payments" style="display: none;" data-aos="fade-up"
+        data-aos-duration="700" data-aos-mirror="true">
+
+        <div class="flex items-center justify-between mb-6">
           <div>
-            <h4 class="fw-bold text-dark mb-0">Payment History & Digital Invoices</h4>
-            <p class="text-xs text-muted">Itemized receipts for hospital visits and home nursing packages.</p>
+            <h4 class="font-bold text-slate-900 text-lg md:text-xl mb-0.5">Payment History & Digital Invoices</h4>
+            <p class="text-xs text-slate-500">Itemized receipts for hospital visits and home nursing packages.</p>
           </div>
         </div>
 
-        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden mb-4">
-          <div class="table-responsive">
-            <table class="custom-table">
+        <div class="bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden mb-6" data-aos="zoom-in"
+          data-aos-duration="600" data-aos-mirror="true">
+          <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse">
               <thead>
-                <tr>
-                  <th>Invoice ID</th>
-                  <th>Service Description</th>
-                  <th>Facility / Nurse</th>
-                  <th>Date</th>
-                  <th>Amount</th>
-                  <th>Status</th>
-                  <th class="text-end">Receipt</th>
+                <tr
+                  class="bg-slate-50/70 border-b border-slate-200 text-slate-600 text-xs font-bold uppercase tracking-wider">
+                  <th class="py-3.5 px-4">Invoice ID</th>
+                  <th class="py-3.5 px-4">Service Description</th>
+                  <th class="py-3.5 px-4">Facility / Nurse</th>
+                  <th class="py-3.5 px-4">Date</th>
+                  <th class="py-3.5 px-4">Amount</th>
+                  <th class="py-3.5 px-4">Status</th>
+                  <th class="py-3.5 px-4 text-end">Receipt</th>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
-                  <td class="font-mono fw-bold text-sky-700 text-xs">#INV-2026-891</td>
-                  <td>
-                    <div class="fw-bold text-dark">Cardiology Specialist OPD</div>
-                    <div class="text-xs text-muted">Prof. Dr. Tariq Mahmood</div>
+              <tbody class="divide-y divide-slate-100 text-sm">
+                <!-- Row 1 -->
+                <tr class="hover:bg-slate-50/50 transition-colors">
+                  <td class="font-mono font-bold text-sky-700 text-xs py-4 px-4">#INV-2026-891</td>
+                  <td class="py-4 px-4">
+                    <div class="font-bold text-slate-900">Cardiology Specialist OPD</div>
+                    <div class="text-xs text-slate-500">Prof. Dr. Tariq Mahmood</div>
                   </td>
-                  <td>Shifa International H-8</td>
-                  <td class="text-xs text-muted">Aug 20, 2026</td>
-                  <td class="fw-bold text-dark">Rs. 3,500</td>
-                  <td><span class="badge bg-emerald-100 text-emerald-800 border border-emerald-200">Paid (Card)</span></td>
-                  <td class="text-end">
-                    <button class="btn btn-sm btn-outline-secondary py-1 px-2 text-xs" onclick="downloadInvoiceMock('INV-2026-891', 'Rs. 3,500')">
-                      <i class="fa-solid fa-download me-1"></i> PDF
+                  <td class="text-slate-600 py-4 px-4 text-xs md:text-sm">Shifa International H-8</td>
+                  <td class="text-xs text-slate-500 py-4 px-4">Aug 20, 2026</td>
+                  <td class="font-bold text-slate-900 py-4 px-4">Rs. 3,500</td>
+                  <td class="py-4 px-4">
+                    <span
+                      class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">Paid
+                      (Card)</span>
+                  </td>
+                  <td class="text-end py-4 px-4">
+                    <button
+                      class="inline-flex items-center gap-1 py-1.5 px-3 rounded-xl border border-slate-300 text-slate-700 text-xs font-semibold hover:bg-slate-100 transition-colors cursor-pointer shadow-2xs"
+                      onclick="downloadInvoiceMock('INV-2026-891', 'Rs. 3,500')">
+                      <i class="fa-solid fa-download text-[10px]"></i> PDF
                     </button>
                   </td>
                 </tr>
 
-                <tr>
-                  <td class="font-mono fw-bold text-sky-700 text-xs">#INV-2026-784</td>
-                  <td>
-                    <div class="fw-bold text-dark">Home Nursing 14-Day Shift</div>
-                    <div class="text-xs text-muted">Sister Rabia Bibi (Post-Op)</div>
+                <!-- Row 2 -->
+                <tr class="hover:bg-slate-50/50 transition-colors">
+                  <td class="font-mono font-bold text-sky-700 text-xs py-4 px-4">#INV-2026-784</td>
+                  <td class="py-4 px-4">
+                    <div class="font-bold text-slate-900">Home Nursing 14-Day Shift</div>
+                    <div class="text-xs text-slate-500">Sister Rabia Bibi (Post-Op)</div>
                   </td>
-                  <td>Home Care Islamabad F-8</td>
-                  <td class="text-xs text-muted">Aug 28, 2026</td>
-                  <td class="fw-bold text-dark">Rs. 53,200</td>
-                  <td><span class="badge bg-amber-100 text-amber-800 border border-amber-200">Partially Paid (50%)</span></td>
-                  <td class="text-end">
-                    <button class="btn btn-sm btn-outline-secondary py-1 px-2 text-xs" onclick="downloadInvoiceMock('INV-2026-784', 'Rs. 53,200')">
-                      <i class="fa-solid fa-download me-1"></i> PDF
+                  <td class="text-slate-600 py-4 px-4 text-xs md:text-sm">Home Care Islamabad F-8</td>
+                  <td class="text-xs text-slate-500 py-4 px-4">Aug 28, 2026</td>
+                  <td class="font-bold text-slate-900 py-4 px-4">Rs. 53,200</td>
+                  <td class="py-4 px-4">
+                    <span
+                      class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-amber-50 text-amber-700 border border-amber-200">Partially
+                      Paid (50%)</span>
+                  </td>
+                  <td class="text-end py-4 px-4">
+                    <button
+                      class="inline-flex items-center gap-1 py-1.5 px-3 rounded-xl border border-slate-300 text-slate-700 text-xs font-semibold hover:bg-slate-100 transition-colors cursor-pointer shadow-2xs"
+                      onclick="downloadInvoiceMock('INV-2026-784', 'Rs. 53,200')">
+                      <i class="fa-solid fa-download text-[10px]"></i> PDF
                     </button>
                   </td>
                 </tr>
 
-                <tr>
-                  <td class="font-mono fw-bold text-sky-700 text-xs">#INV-2026-642</td>
-                  <td>
-                    <div class="fw-bold text-dark">Gynecology Consultation</div>
-                    <div class="text-xs text-muted">Dr. Ayesha Siddiqa</div>
+                <!-- Row 3 -->
+                <tr class="hover:bg-slate-50/50 transition-colors">
+                  <td class="font-mono font-bold text-sky-700 text-xs py-4 px-4">#INV-2026-621</td>
+                  <td class="py-4 px-4">
+                    <div class="font-bold text-slate-900">Gynecology Consultation</div>
+                    <div class="text-xs text-slate-500">Dr. Ayesha Siddiqa</div>
                   </td>
-                  <td>Maroof International F-10</td>
-                  <td class="text-xs text-muted">Jul 15, 2026</td>
-                  <td class="fw-bold text-dark">Rs. 3,000</td>
-                  <td><span class="badge bg-emerald-100 text-emerald-800 border border-emerald-200">Paid (Cash OPD)</span></td>
-                  <td class="text-end">
-                    <button class="btn btn-sm btn-outline-secondary py-1 px-2 text-xs" onclick="downloadInvoiceMock('INV-2026-642', 'Rs. 3,000')">
-                      <i class="fa-solid fa-download me-1"></i> PDF
+                  <td class="text-slate-600 py-4 px-4 text-xs md:text-sm">Maroof International F-10</td>
+                  <td class="text-xs text-slate-500 py-4 px-4">Sep 01, 2026</td>
+                  <td class="font-bold text-slate-900 py-4 px-4">Rs. 2,000</td>
+                  <td class="py-4 px-4">
+                    <span
+                      class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">Paid
+                      (Cash)</span>
+                  </td>
+                  <td class="text-end py-4 px-4">
+                    <button
+                      class="inline-flex items-center gap-1 py-1.5 px-3 rounded-xl border border-slate-300 text-slate-700 text-xs font-semibold hover:bg-slate-100 transition-colors cursor-pointer shadow-2xs"
+                      onclick="downloadInvoiceMock('INV-2026-621', 'Rs. 2,000')">
+                      <i class="fa-solid fa-download text-[10px]"></i> PDF
                     </button>
                   </td>
                 </tr>
@@ -301,17 +694,73 @@
       </div>
 
       <!-- TAB 4: SAVED FAVORITES -->
-      <div class="dash-content-pane" id="dash-pane-favorites" style="display: none;">
-        
-        <div class="d-flex justify-content-between align-items-center mb-4">
+      <div class="dash-content-pane" id="dash-pane-favorites" style="display: none;" data-aos="fade-up"
+        data-aos-duration="700" data-aos-mirror="true">
+
+        <div class="flex items-center justify-between mb-6">
           <div>
-            <h4 class="fw-bold text-dark mb-0">Saved Doctors & Caregivers</h4>
-            <p class="text-xs text-muted">Quick access to book your preferred specialists again.</p>
+            <h4 class="font-bold text-slate-900 text-lg md:text-xl mb-0.5">Saved Doctors & Caregivers</h4>
+            <p class="text-xs text-slate-500">Quick access to book your preferred specialists again.</p>
           </div>
         </div>
 
-        <div id="dashboard-favorites-list">
-          <!-- Dynamically populated via dashboard.js -->
+        <!-- Yahan apna foreach loop laga dein -->
+        <div class="space-y-4">
+          <!-- Favorite Card 1 -->
+          <div
+            class="bg-white rounded-3xl border border-slate-200/80 p-5 md:p-6 shadow-sm hover:shadow-md transition-all flex items-center justify-between"
+            data-aos="fade-up" data-aos-duration="600" data-aos-mirror="true">
+            <div class="flex items-center gap-3">
+              <div
+                class="w-12 h-12 rounded-2xl bg-rose-100 text-rose-600 flex items-center justify-center text-lg font-bold">
+                <i class="fa-solid fa-user-doctor"></i>
+              </div>
+              <div>
+                <h5 class="font-bold text-slate-900 text-base">Dr. Ayesha Siddiqa</h5>
+                <p class="text-xs text-slate-500">Gynecologist & Obstetrician</p>
+              </div>
+            </div>
+            <button
+              class="px-4 py-2 bg-sky-600 hover:bg-sky-700 text-white text-xs font-bold rounded-xl transition-colors cursor-pointer">Book
+              Again</button>
+          </div>
+
+          <!-- Favorite Card 2 -->
+          <div
+            class="bg-white rounded-3xl border border-slate-200/80 p-5 md:p-6 shadow-sm hover:shadow-md transition-all flex items-center justify-between"
+            data-aos="fade-up" data-aos-duration="600" data-aos-mirror="true">
+            <div class="flex items-center gap-3">
+              <div
+                class="w-12 h-12 rounded-2xl bg-sky-100 text-sky-600 flex items-center justify-center text-lg font-bold">
+                <i class="fa-solid fa-user-doctor"></i>
+              </div>
+              <div>
+                <h5 class="font-bold text-slate-900 text-base">Prof. Dr. Tariq Mahmood</h5>
+                <p class="text-xs text-slate-500">Cardiologist (Shifa International)</p>
+              </div>
+            </div>
+            <button
+              class="px-4 py-2 bg-sky-600 hover:bg-sky-700 text-white text-xs font-bold rounded-xl transition-colors cursor-pointer">Book
+              Again</button>
+          </div>
+
+          <!-- Favorite Card 3 -->
+          <div
+            class="bg-white rounded-3xl border border-slate-200/80 p-5 md:p-6 shadow-sm hover:shadow-md transition-all flex items-center justify-between"
+            data-aos="fade-up" data-aos-duration="600" data-aos-mirror="true">
+            <div class="flex items-center gap-3">
+              <div
+                class="w-12 h-12 rounded-2xl bg-teal-100 text-teal-600 flex items-center justify-center text-lg font-bold">
+                <i class="fa-solid fa-user-nurse"></i>
+              </div>
+              <div>
+                <h5 class="font-bold text-slate-900 text-base">Sister Rabia Bibi</h5>
+                <p class="text-xs text-slate-500">Post-Op & Wound Care Specialist</p>
+              </div>
+            </div>
+            <button
+              class="px-4 py-2 bg-teal-600 hover:bg-teal-700 text-white text-xs font-bold rounded-xl transition-colors cursor-pointer">Re-Hire</button>
+          </div>
         </div>
 
       </div>
@@ -319,53 +768,471 @@
     </div>
   </section>
 
+  <!-- FREQUENTLY ASKED QUESTIONS (FAQs) SECTION -->
+  <section class="py-16 bg-slate-50 border-t border-slate-200" id="faqs" data-aos="fade-up" data-aos-duration="1000">
+    <div class="w-full px-4 sm:px-6 lg:px-12">
+
+      <!-- Section Header -->
+      <div class="text-center max-w-4xl mx-auto mb-10" data-aos="fade-up" data-aos-delay="100">
+        <span
+          class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-teal-50 text-teal-700 border border-teal-200 mb-3 shadow-sm">
+          <i class="fa-solid fa-circle-question"></i> Help & Patient Guidance
+        </span>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">Frequently Asked Questions
+        </h2>
+        <p class="text-slate-600 mt-3 text-sm md:text-base">
+          Find answers about home nursing PNC verification, doctor OPD booking, hospital emergency dispatch,
+          and fee structures in Islamabad & Rawalpindi.
+        </p>
+      </div>
+
+      <!-- FAQ Live Search & Category Filter Controls -->
+      <div class="max-w-5xl mx-auto mb-8 space-y-4" data-aos="fade-up" data-aos-delay="200">
+        <!-- Live Search Input -->
+        <div class="relative">
+          <span class="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none text-slate-400">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </span>
+          <input type="text" id="faq-search-input"
+            class="w-full pl-11 pr-4 py-3.5 bg-white border border-slate-200 rounded-2xl text-sm text-slate-800 placeholder-slate-400 shadow-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all"
+            placeholder="Search FAQs (e.g., 'PNC verification', '12hr vs 24hr', 'Shifa OPD')..." autocomplete="off" />
+        </div>
+
+        <!-- Filter Category Tabs/Pills -->
+        <div class="flex flex-wrap items-center justify-center gap-2" id="faq-category-pills-list">
+          <button
+            class="faq-filter-pill px-4 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-2 bg-teal-600 text-white shadow-sm"
+            data-category="all">
+            <i class="fa-solid fa-list-ul"></i> All Topics
+          </button>
+          <button
+            class="faq-filter-pill px-4 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-2 bg-white text-slate-600 border border-slate-200 hover:bg-slate-100 hover:text-slate-900"
+            data-category="nursing">
+            <i class="fa-solid fa-user-nurse text-teal-600"></i> Home Nursing Care
+          </button>
+          <button
+            class="faq-filter-pill px-4 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-2 bg-white text-slate-600 border border-slate-200 hover:bg-slate-100 hover:text-slate-900"
+            data-category="doctors">
+            <i class="fa-solid fa-user-doctor text-sky-600"></i> Doctor Appointments
+          </button>
+          <button
+            class="faq-filter-pill px-4 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-2 bg-white text-slate-600 border border-slate-200 hover:bg-slate-100 hover:text-slate-900"
+            data-category="hospitals">
+            <i class="fa-solid fa-hospital text-indigo-600"></i> Hospitals & Emergency
+          </button>
+          <button
+            class="faq-filter-pill px-4 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-2 bg-white text-slate-600 border border-slate-200 hover:bg-slate-100 hover:text-slate-900"
+            data-category="billing">
+            <i class="fa-solid fa-credit-card text-emerald-600"></i> Pricing & Safety
+          </button>
+        </div>
+      </div>
+
+      <!-- Accordion FAQ Items -->
+      <div class="max-w-5xl mx-auto space-y-4" id="faqAccordionPortal">
+
+        <!-- FAQ 1: PNC Verification -->
+        <div
+          class="faq-accordion-item bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden transition-all duration-200"
+          data-category="nursing" data-aos="fade-up" data-aos-delay="300">
+          <button
+            class="faq-accordion-btn w-full px-6 py-4 text-left flex items-center justify-between gap-4 focus:outline-none group">
+            <span class="font-bold text-slate-900 text-sm md:text-base flex items-center gap-3">
+              <i class="fa-solid fa-shield-check text-emerald-600 text-lg"></i>
+              How do you verify PNC certification and security backgrounds for home nurses?
+            </span>
+            <i
+              class="fa-solid fa-chevron-down text-slate-400 group-hover:text-teal-600 transition-transform duration-300"></i>
+          </button>
+          <div
+            class="faq-accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-6 text-slate-600 text-sm">
+            <div class="pb-6 pt-2 border-t border-slate-100">
+              <p class="mb-3">Every nurse registered on ShifaCare Plus undergoes a rigorous <strong>3-tier
+                  credentialing protocol</strong> before attending patients:</p>
+              <ul class="list-disc pl-5 space-y-1.5 text-slate-700 mb-3">
+                <li><strong>PNC License Verification:</strong> Real-time cross-check with the Pakistan
+                  Nursing Council registry (BScN / Midwifery registration numbers).</li>
+                <li><strong>Police Background Clearance:</strong> Character and security verification
+                  through Islamabad Capital Police and Punjab Police Citizen Facilitation Centers.
+                </li>
+                <li><strong>Clinical Skills Validation:</strong> Practical testing in cannula insertion,
+                  IV infusion, tracheostomy hygiene, Ryle's tube feeding, and emergency CPR.</li>
+              </ul>
+              <p class="text-xs text-slate-500 mb-0">Families can inspect the caregiver's original PNC
+                registration card and digital profile badge upon arrival at their home.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 2: 12h vs 24h shifts -->
+        <div
+          class="faq-accordion-item bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden transition-all duration-200"
+          data-category="nursing" data-aos="fade-up" data-aos-delay="350">
+          <button
+            class="faq-accordion-btn w-full px-6 py-4 text-left flex items-center justify-between gap-4 focus:outline-none group">
+            <span class="font-bold text-slate-900 text-sm md:text-base flex items-center gap-3">
+              <i class="fa-solid fa-clock text-teal-600 text-lg"></i>
+              What is the difference between 12-hour shifts and 24-hour live-in home nursing?
+            </span>
+            <i
+              class="fa-solid fa-chevron-down text-slate-400 group-hover:text-teal-600 transition-transform duration-300"></i>
+          </button>
+          <div
+            class="faq-accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-6 text-slate-600 text-sm">
+            <div class="pb-6 pt-2 border-t border-slate-100">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3">
+                <div class="p-3.5 bg-teal-50/60 rounded-xl border border-teal-200">
+                  <div class="font-bold text-teal-900 text-sm mb-1 flex items-center gap-1.5">
+                    <i class="fa-solid fa-sun text-amber-500"></i> 12-Hour Shifts (Day/Night)
+                  </div>
+                  <p class="text-xs text-slate-600 mb-0">Shift timings: 8:00 AM – 8:00 PM or 8:00 PM –
+                    8:00 AM. Ideal for post-op surgical recovery, wound management, or night-shift
+                    vitals monitoring.</p>
+                </div>
+                <div class="p-3.5 bg-sky-50/60 rounded-xl border border-sky-200">
+                  <div class="font-bold text-sky-900 text-sm mb-1 flex items-center gap-1.5">
+                    <i class="fa-solid fa-house-medical text-sky-600"></i> 24-Hour Live-In Nursing
+                  </div>
+                  <p class="text-xs text-slate-600 mb-0">Around-the-clock dedicated clinical support
+                    with scheduled rotation. Best suited for stroke rehabilitation, coma, and
+                    ventilator support.</p>
+                </div>
+              </div>
+              <p class="text-xs text-slate-500 mb-0">Both male and female nursing staff are available
+                according to family cultural preferences.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 3: Doctor OPD Booking -->
+        <div
+          class="faq-accordion-item bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden transition-all duration-200"
+          data-category="doctors" data-aos="fade-up" data-aos-delay="400">
+          <button
+            class="faq-accordion-btn w-full px-6 py-4 text-left flex items-center justify-between gap-4 focus:outline-none group">
+            <span class="font-bold text-slate-900 text-sm md:text-base flex items-center gap-3">
+              <i class="fa-solid fa-calendar-check text-sky-600 text-lg"></i>
+              How do I book confirmed appointments with specialists at Shifa, PIMS, or Maroof?
+            </span>
+            <i
+              class="fa-solid fa-chevron-down text-slate-400 group-hover:text-teal-600 transition-transform duration-300"></i>
+          </button>
+          <div
+            class="faq-accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-6 text-slate-600 text-sm">
+            <div class="pb-6 pt-2 border-t border-slate-100">
+              <p class="mb-2">Booking takes less than 60 seconds with our integrated 6-step appointment
+                wizard:</p>
+              <ol class="list-decimal pl-5 space-y-1.5 text-slate-700 text-sm mb-3">
+                <li>Select your specialist (Cardiology, Gynaecology, Pediatrics, Orthopedic, etc.).</li>
+                <li>Choose your preferred hospital OPD facility (e.g., Shifa International H-8, Maroof
+                  F-10, etc.).</li>
+                <li>Pick your desired consultation date and time slot.</li>
+                <li>Enter patient information and reason for visit.</li>
+                <li>Confirm booking to receive an instant confirmed token number and SMS map link.</li>
+              </ol>
+              <p class="text-xs text-slate-500 mb-0">No waiting in long hospital queues — you can directly
+                show your digital token at the clinic reception desk.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 4: Cancellation & Rescheduling -->
+        <div
+          class="faq-accordion-item bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden transition-all duration-200"
+          data-category="doctors" data-aos="fade-up" data-aos-delay="450">
+          <button
+            class="faq-accordion-btn w-full px-6 py-4 text-left flex items-center justify-between gap-4 focus:outline-none group">
+            <span class="font-bold text-slate-900 text-sm md:text-base flex items-center gap-3">
+              <i class="fa-solid fa-arrows-rotate text-indigo-600 text-lg"></i>
+              Can I reschedule or cancel a doctor appointment or nursing booking?
+            </span>
+            <i
+              class="fa-solid fa-chevron-down text-slate-400 group-hover:text-teal-600 transition-transform duration-300"></i>
+          </button>
+          <div
+            class="faq-accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-6 text-slate-600 text-sm">
+            <div class="pb-6 pt-2 border-t border-slate-100">
+              <p class="text-slate-700 mb-2">
+                Yes, absolutely. You can manage, reschedule, or cancel any consultation or home nurse
+                booking with one click from your <strong><a href="dashboard-patient.html"
+                    class="text-sky-600 font-semibold underline">Patient Dashboard</a></strong>.
+              </p>
+              <p class="text-xs text-slate-500 mb-0">
+                Doctor consultations can be rescheduled up to 2 hours before the slot without penalty.
+                For nursing shifts, we request at least 4 hours' notice.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 5: Pricing & Payment Methods -->
+        <div
+          class="faq-accordion-item bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden transition-all duration-200"
+          data-category="billing" data-aos="fade-up" data-aos-delay="500">
+          <button
+            class="faq-accordion-btn w-full px-6 py-4 text-left flex items-center justify-between gap-4 focus:outline-none group">
+            <span class="font-bold text-slate-900 text-sm md:text-base flex items-center gap-3">
+              <i class="fa-solid fa-money-bill-wave text-emerald-600 text-lg"></i>
+              What are the pricing rates for home nurses and what payment methods are accepted?
+            </span>
+            <i
+              class="fa-solid fa-chevron-down text-slate-400 group-hover:text-teal-600 transition-transform duration-300"></i>
+          </button>
+          <div
+            class="faq-accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-6 text-slate-600 text-sm">
+            <div class="pb-6 pt-2 border-t border-slate-100">
+              <p class="text-slate-700 mb-3">Pricing is transparent with no hidden agency markups. Rates
+                are set based on shift duration and patient clinical complexity:</p>
+
+              <div class="overflow-x-auto mb-3 border border-slate-200 rounded-xl">
+                <table class="w-full text-left border-collapse text-xs">
+                  <thead class="bg-slate-100 text-slate-700 uppercase">
+                    <tr>
+                      <th class="p-3">Care Level</th>
+                      <th class="p-3">12-Hour Shift</th>
+                      <th class="p-3">24-Hour Live-In</th>
+                      <th class="p-3">Included Services</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-slate-200">
+                    <tr class="hover:bg-slate-50">
+                      <td class="p-3 font-semibold text-slate-800">Basic Elderly Care</td>
+                      <td class="p-3">Rs. 3,500 – 4,000</td>
+                      <td class="p-3">Rs. 6,500 – 7,000</td>
+                      <td class="p-3 text-slate-500">Vitals, oral medication, hygiene</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50">
+                      <td class="p-3 font-semibold text-slate-800">Post-Op & Wound Care</td>
+                      <td class="p-3">Rs. 4,000 – 4,800</td>
+                      <td class="p-3">Rs. 7,500 – 8,500</td>
+                      <td class="p-3 text-slate-500">Sterile dressings, IV cannula</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50">
+                      <td class="p-3 font-semibold text-slate-800">ICU / Ventilator / Trach</td>
+                      <td class="p-3">Rs. 5,000 – 6,000</td>
+                      <td class="p-3">Rs. 9,500 – 11,000</td>
+                      <td class="p-3 text-slate-500">Suctioning, bi-pap monitoring</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="text-xs text-slate-500 mb-0">Accepted modes: <strong>JazzCash, EasyPaisa, IBFT,
+                  Visa/Mastercard</strong>, or Cash-on-Arrival.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- No FAQ Results Found Message -->
+      <div id="no-faq-results"
+        class="hidden text-center py-12 bg-white rounded-2xl border border-slate-200 shadow-sm max-w-5xl mx-auto mt-4">
+        <i class="fa-solid fa-circle-question text-slate-300 text-4xl mb-3"></i>
+        <h5 class="font-bold text-slate-800 text-lg">No matching questions found</h5>
+        <p class="text-slate-500 text-sm max-w-md mx-auto mb-4">We couldn't find a question matching your search
+          term. Feel free to contact our 24/7 care desk directly!</p>
+        <a href="tel:0519280000"
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold bg-teal-600 text-white shadow hover:bg-teal-700 transition-colors">
+          <i class="fa-solid fa-phone"></i> Call 051-9280000
+        </a>
+      </div>
+
+      <!-- FAQ Contact & Support Card -->
+      <div class="max-w-5xl mx-auto mt-8 px-4 sm:px-0" data-aos="fade-up" data-aos-delay="600">
+        <div
+          class="bg-gradient-to-r from-teal-950 via-teal-900 to-slate-900 rounded-3xl p-6 sm:p-8 md:p-10 text-white shadow-xl relative overflow-hidden border border-teal-800/40">
+
+          <!-- Decorative Background Glow Effect -->
+          <div class="absolute -right-10 -bottom-10 w-64 h-64 bg-teal-500/10 rounded-full blur-3xl pointer-events-none">
+          </div>
+
+          <div
+            class="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 lg:gap-8">
+
+            <!-- Left Content Area -->
+            <div class="space-y-2 max-w-xl">
+              <span
+                class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold tracking-wide bg-teal-500/20 text-teal-300 border border-teal-500/30 shadow-inner">
+                <i class="fa-solid fa-headset text-teal-400"></i> 24/7 PATIENT CARE DESK
+              </span>
+              <h4 class="text-xl sm:text-2xl md:text-3xl font-extrabold tracking-tight text-white">
+                Have a Question Not Answered Here?
+              </h4>
+              <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                Our care coordinators in Islamabad are available around the clock to help match the
+                right nurse or doctor for your family.
+              </p>
+            </div>
+
+            <!-- Right Action Buttons Area -->
+            <div class="flex flex-row sm:flex-row items-center gap-3.5 w-full lg:w-auto shrink-0">
+              <!-- Call Button -->
+              <a href="tel:0519280000"
+                class="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2.5 px-5 py-3.5 rounded-2xl bg-white text-slate-900 font-bold text-xs sm:text-sm shadow-md hover:bg-teal-50 hover:text-teal-950 hover:scale-[1.02] active:scale-[0.98] transition-all text-nowrap group">
+                <i class="fa-solid fa-phone text-teal-600 group-hover:text-teal-800 text-base transition-colors"></i>
+                051-9280000
+              </a>
+
+              <!-- Portal Button -->
+              <a href="dashboard-patient.html"
+                class="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2.5 px-5 py-3.5 rounded-2xl bg-teal-600 text-white font-bold text-xs sm:text-sm shadow-md hover:bg-teal-700 hover:text-white hover:shadow-teal-900/50 hover:scale-[1.02] active:scale-[0.98] transition-all text-nowrap">
+                <i class="fa-solid fa-clipboard-user text-base"></i> Ask in Portal
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
   <!-- FOOTER -->
-  <footer class="portal-footer" id="main-portal-footer">
-    <div class="container">
-      <div class="row g-4">
-        <div class="col-lg-4">
-          <div class="d-flex align-items-center gap-2 mb-3">
-            <div class="brand-icon-box" style="width: 36px; height: 36px; font-size: 1rem;">
+  <footer class="bg-slate-950 border-t border-slate-800 text-slate-400 py-12 md:py-16" id="main-portal-footer">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 w-full">
+
+      <!-- Top Grid Columns -->
+      <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-12 gap-6 lg:gap-8 pb-12 border-b border-slate-800/80">
+
+        <!-- Brand Column (Span 4 on Desktop, Full Width on Mobile) -->
+        <div class="col-span-2 lg:col-span-4 space-y-4">
+          <div class="flex items-center gap-2.5">
+            <div class="w-9 h-9 rounded-xl bg-teal-600 text-white flex items-center justify-center text-base shadow-md">
               <i class="fa-solid fa-heart-pulse"></i>
             </div>
-            <span class="text-xl font-bold text-white">ShifaCare <span class="text-sky-400">Plus</span></span>
+            <span class="text-xl font-bold text-white tracking-tight">Medi <span
+                class="text-teal-400">Care</span></span>
           </div>
-          <p class="text-sm text-slate-400 leading-relaxed mb-3">
-            Patient Portal for managing home health visits, consultations, and medical records in Islamabad & Rawalpindi.
+          <p class="text-sm text-slate-400 leading-relaxed max-w-sm">
+            Connecting families with certified home nurses, licensed PMDC doctors, and leading hospital
+            facilities across Islamabad and Rawalpindi.
           </p>
+          <div class="text-xs text-slate-400 flex items-center gap-2 pt-1">
+            <i class="fa-solid fa-location-dot text-teal-400"></i>
+            <span>Blue Area, Jinnah Avenue, Islamabad, Pakistan</span>
+          </div>
         </div>
-        <div class="col-6 col-lg-2">
-          <div class="footer-title">Patient Services</div>
-          <ul class="footer-links">
-            <li><a href="doctors.html">Doctor Directory</a></li>
-            <li><a href="nurses.html">Home Nursing</a></li>
-            <li><a href="hospitals.html">Hospital Beds</a></li>
+
+        <!-- Home Nursing Links (Span 2) -->
+        <div class="col-span-1 sm:col-span-1 lg:col-span-2 space-y-3">
+          <h4 class="text-white font-bold text-sm tracking-wide uppercase">Home Nursing</h4>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="nurses.html?service=elderly" class="hover:text-teal-400 transition-colors">Elderly
+                Care</a></li>
+            <li><a href="nurses.html?service=post-op" class="hover:text-teal-400 transition-colors">Post-Op
+                Recovery</a></li>
+            <li><a href="nurses.html?service=stroke" class="hover:text-teal-400 transition-colors">Stroke
+                Rehabilitation</a></li>
+            <li><a href="nurses.html?service=neonatal" class="hover:text-teal-400 transition-colors">Mother
+                & Baby Care</a></li>
+            <li><a href="nurses.html?shift=24h" class="hover:text-teal-400 transition-colors">24/7 Live-In
+                Nurses</a></li>
           </ul>
         </div>
-        <div class="col-6 col-lg-2">
-          <div class="footer-title">Support</div>
-          <ul class="footer-links">
-            <li><a href="tel:1122">Emergency (1122)</a></li>
-            <li><a href="tel:0519280000">Care Desk (051-9280000)</a></li>
+
+        <!-- Medical Specialists Links (Span 2) -->
+        <div class="col-span-1 sm:col-span-1 lg:col-span-2 space-y-3">
+          <h4 class="text-white font-bold text-sm tracking-wide uppercase">Medical Specialists</h4>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="doctors.html?specialty=Cardiologist"
+                class="hover:text-teal-400 transition-colors">Cardiologists</a></li>
+            <li><a href="doctors.html?specialty=Gynecologist"
+                class="hover:text-teal-400 transition-colors">Gynecologists</a></li>
+            <li><a href="doctors.html?specialty=Pediatrician"
+                class="hover:text-teal-400 transition-colors">Pediatricians</a></li>
+            <li><a href="doctors.html?specialty=Neurologist"
+                class="hover:text-teal-400 transition-colors">Neurologists</a></li>
+            <li><a href="doctors.html?specialty=Orthopedic" class="hover:text-teal-400 transition-colors">Orthopedic
+                Surgeons</a></li>
           </ul>
         </div>
-        <div class="col-6 col-lg-4 text-lg-end">
-          <div class="footer-title">Security & Confidentiality</div>
-          <p class="text-xs text-slate-400">All medical records and vitals are encrypted with role-based caregiver access.</p>
+
+        <!-- Top Hospitals Links (Span 2) -->
+        <div class="col-span-1 sm:col-span-1 lg:col-span-2 space-y-3">
+          <h4 class="text-white font-bold text-sm tracking-wide uppercase">Top Hospitals</h4>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="hospitals.html?id=shifa" class="hover:text-teal-400 transition-colors">Shifa
+                International H-8</a></li>
+            <li><a href="hospitals.html?id=pims" class="hover:text-teal-400 transition-colors">PIMS
+                Islamabad G-8</a></li>
+            <li><a href="hospitals.html?id=maroof" class="hover:text-teal-400 transition-colors">Maroof
+                Hospital F-10</a></li>
+            <li><a href="hospitals.html?id=holy-family" class="hover:text-teal-400 transition-colors">Holy
+                Family Rawalpindi</a></li>
+            <li><a href="hospitals.html?id=cmh" class="hover:text-teal-400 transition-colors">CMH
+                Rawalpindi</a></li>
+          </ul>
+        </div>
+
+        <!-- Patient Portal Links (Span 2) -->
+        <div class="col-span-1 sm:col-span-1 lg:col-span-2 space-y-3">
+          <h4 class="text-white font-bold text-sm tracking-wide uppercase">Patient Portal</h4>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="dashboard-patient.html?tab=appointments" class="hover:text-teal-400 transition-colors">My
+                Appointments</a></li>
+            <li><a href="dashboard-patient.html?tab=nurses" class="hover:text-teal-400 transition-colors">Active
+                Caregivers</a></li>
+            <li><a href="dashboard-patient.html?tab=vitals" class="hover:text-teal-400 transition-colors">Patient Vitals
+                Chart</a></li>
+            <li><a href="dashboard-patient.html?tab=payments" class="hover:text-teal-400 transition-colors">Payment
+                Invoices</a></li>
+            <li><a href="dashboard-patient.html?tab=favorites" class="hover:text-teal-400 transition-colors">Saved
+                Doctors</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="pt-8 flex flex-col sm:flex-row flex-wrap justify-between items-center gap-4 text-xs text-slate-500">
+        <div>
+          © 2026 ShifaCare Plus - Twin Cities Healthcare & Home Nursing Portal. All Rights Reserved.
+        </div>
+        <div class="flex flex-wrap items-center gap-4">
+          <span class="text-slate-400 flex items-center gap-1.5">
+            <i class="fa-solid fa-shield-check text-emerald-400"></i> PNC & PMDC Certified
+          </span>
+          <span class="text-slate-400 flex items-center gap-1.5">
+            <i class="fa-solid fa-lock text-sky-400"></i> 256-bit HIPAA Standard Privacy
+          </span>
         </div>
       </div>
-      <div class="footer-bottom text-center text-slate-500">
-        © 2026 ShifaCare Plus - Twin Cities Healthcare Portal.
-      </div>
+
     </div>
   </footer>
 
   <!-- Notification Toast Container -->
   <div id="toast-notification-container"></div>
 
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- JavaScript Scripts -->
+  <!-- CDN Dependencies -->
+  <!-- Tailwind CSS Play CDN (Configured for custom styles and animations) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0284c7',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- AOS Library JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,  // Animation speed (milliseconds)
+      once: false,    // Yeh FALSE karne se element scroll out hone par reset ho jaye ga aur bar bar animate hoga!
+      offset: 100,    // Kitne pixels scroll hone par trigger ho
+    });
+  </script>
+
+  <!-- Dedicated Scripts -->
   <script src="/assets/js/main.js"></script>
   <script src="/assets/js/dashboard.js"></script>
 </body>
+
 </html>
