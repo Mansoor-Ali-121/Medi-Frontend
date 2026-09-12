@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Healthcare Services & Home Nursing Portal | Islamabad & Rawalpindi</title>
+    <meta name="description"
+        content="Connecting patients and families with verified hospitals, leading doctors, and qualified home-care nurses in Islamabad and Rawalpindi." />
+    <meta property="og:title" content="Healthcare Services & Home Nursing Portal" />
+    <meta property="og:description"
+        content="Find verified doctors, certified home nursing care, and 24/7 hospitals in Islamabad & Rawalpindi." />
+
+    <!-- FontAwesome 6 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <!-- AOS Library CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Dedicated Stylesheets -->
+    <link rel="stylesheet" href="/assets/css/global.css" />
+    <link rel="stylesheet" href="/assets/css/login.css" />
+</head>
+
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-sky-500 selection:text-white">
+
+    <!-- TOP EMERGENCY RESPONSE & UTILITY BAR -->
+    <div class="top-emergency-bar bg-slate-900 text-slate-200 border-b border-slate-800"
+        id="top-emergency-announcement-bar" data-aos="fade-down" data-aos-duration="800">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between items-center flex-wrap gap-2 py-1.5">
+            <div class="flex items-center flex-wrap gap-2 text-xs">
+                <a href="tel:1122"
+                    class="badge-emergency inline-flex items-center px-2.5 py-1 rounded-full text-white bg-red-600 hover:bg-red-700 font-semibold no-underline transition-colors">
+                    <i class="fa-solid fa-truck-medical mr-1.5"></i> 24/7 HELPLINE 1122
+                </a>
+                <span class="text-slate-500 hidden sm:inline">|</span>
+                <span class="text-slate-300 text-xs">
+                    Twin Cities EMS: <a href="tel:1122" class="text-white font-bold hover:underline">1122</a>
+                    <span class="hidden md:inline">| Bed Info &amp; Dispatch: <a href="tel:0519280000"
+                            class="text-white font-bold hover:underline">051-9280000</a></span>
+                </span>
+            </div>
+            <div class="flex items-center gap-3 text-xs">
+                <span class="hidden lg:inline text-emerald-400 font-medium">
+                    <i class="fa-solid fa-circle-check mr-1"></i> 100% PMDC &amp; PNC Certified
+                </span>
+                <span class="text-slate-500 hidden lg:inline">|</span>
+                <a href="hospitals.html" class="text-slate-300 hover:text-white hidden md:inline transition-colors">
+                    <i class="fa-solid fa-hospital-user mr-1 text-indigo-400"></i> Emergency ERs
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- STICKY MAIN NAVBAR -->
+    <header
+        class="portal-navbar-wrapper sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm"
+        data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100">
+        <div class="portal-nav-container max-w-7xl mx-auto px-4 py-3 flex justify-between items-center relative">
+
+            <!-- Brand Logo -->
+            <a class="portal-brand flex items-center gap-3 no-underline" href="index.html">
+                <div
+                    class="brand-icon-box w-10 h-10 bg-sky-600 text-white flex items-center justify-center rounded-lg shadow-sm shrink-0">
+                    <i class="fas fa-heartbeat"></i>
+                </div>
+                <div class="brand-text-container flex flex-col">
+                    <span class="font-extrabold text-lg text-slate-900 leading-tight">Medi <span
+                            class="text-emerald-600">Care</span></span>
+                    <span class="text-[0.65rem] font-bold text-teal-600 tracking-wider uppercase">Your Health, Our
+                        Priority</span>
+                </div>
+            </a>
+
+            <!-- Mobile & Tablet Hamburger Button (Visible up to 1024px) -->
+            <button
+                class="portal-mobile-toggle lg:hidden text-slate-700 hover:text-sky-600 p-2 focus:outline-none cursor-pointer z-50"
+                id="manualMenuBtn" aria-label="Toggle Navigation">
+                <i class="fas fa-bars text-xl" id="menuIcon"></i>
+            </button>
+
+            <!-- Navigation Links Wrapper (Hidden on mobile/tablet by default, shown on lg+) -->
+            <div class="portal-nav-links-wrapper hidden lg:flex items-center gap-6 xl:gap-8 absolute lg:relative top-full left-0 right-0 bg-white shadow-xl lg:shadow-none border-b lg:border-none border-slate-100 p-5 lg:p-0 flex-col lg:flex-row transition-all"
+                id="manualNavContent">
+
+                <ul
+                    class="portal-nav-links flex flex-col lg:flex-row items-start lg:items-center gap-3 lg:gap-2 m-0 p-0 list-none w-full lg:w-auto">
+                    <li class="w-full lg:w-auto">
+                        <a class="nav-link-custom active font-semibold text-sky-600 bg-sky-50 px-3.5 py-2.5 rounded-md flex items-center gap-2 no-underline transition-colors w-full"
+                            href="index.html">
+                            <i class="fas fa-home w-5 text-center"></i> Home
+                        </a>
+                    </li>
+                    <li class="w-full lg:w-auto">
+                        <a class="nav-link-custom font-semibold text-slate-700 hover:text-sky-600 hover:bg-slate-50 px-3.5 py-2.5 rounded-md flex items-center gap-2 no-underline transition-colors w-full"
+                            href="nurse.html">
+                            <i class="fas fa-user-nurse w-5 text-center"></i> Home Nursing
+                        </a>
+                    </li>
+                    <li class="w-full lg:w-auto">
+                        <a class="nav-link-custom font-semibold text-slate-700 hover:text-sky-600 hover:bg-slate-50 px-3.5 py-2.5 rounded-md flex items-center gap-2 no-underline transition-colors w-full"
+                            href="hopitals.html">
+                            <i class="fas fa-hospital w-5 text-center"></i> Hospitals
+                        </a>
+                    </li>
+                    <li class="w-full lg:w-auto">
+                        <a class="nav-link-custom font-semibold text-slate-700 hover:text-sky-600 hover:bg-slate-50 px-3.5 py-2.5 rounded-md flex items-center gap-2 no-underline transition-colors w-full"
+                            href="doctors.html">
+                            <i class="fas fa-user-md w-5 text-center"></i> Doctors
+                        </a>
+                    </li>
+                </ul>
+
+                <div
+                    class="flex flex-col lg:flex-row items-stretch lg:items-center gap-4 w-full lg:w-auto mt-4 lg:mt-0 pt-4 lg:pt-0 border-t lg:border-t-0 border-slate-100">
+
+                    <a href="patient-portal.html"
+                        class="btn-primary-health bg-sky-600 hover:bg-sky-700 text-white px-4 py-2.5 rounded-lg font-semibold text-sm no-underline flex items-center justify-center gap-1.5 shadow-sm transition-all shrink-0">
+                        <i class="fas fa-user-circle"></i> Patient Portal
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </header>
+
+    <!-- MAIN HERO CONTENT -->
+
+    <main class="relative z-10 flex-1 flex items-center justify-center px-4 py-8 sm:py-12">
+        <div class="max-w-6xl w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+
+            <!-- LEFT SHOWCASE COLUMN (Desktop Only) -->
+            <div class="hidden lg:block lg:col-span-6 space-y-6 auth-showcase-container pr-4" data-aos="fade-right"
+                data-aos-duration="1000" data-aos-delay="100">
+
+                <!-- Trust Badge -->
+                <div class="auth-pill-tag">
+                    <i class="fa-solid fa-shield-halved text-cyan-400 animate-pulse"></i>
+                    <span>Intelligent Clinical Health System</span>
+                </div>
+
+                <!-- Main Heading -->
+                <h1 class="text-4xl xl:text-5xl font-black text-white tracking-tight leading-tight">
+                    Next-Generation
+                    <br />
+                    <span
+                        class="bg-gradient-to-r from-cyan-400 via-teal-300 to-emerald-400 bg-clip-text text-transparent">
+                        Healthcare &amp; Home Care
+                    </span>
+                </h1>
+
+                <p class="text-slate-300 text-sm leading-relaxed max-w-lg">
+                    Coordinate verified home bedside nursing, schedule specialist hospital consultations, and track
+                    consolidated family medical vitals seamlessly in one unified platform.
+                </p>
+
+                <!-- 3D HOLOGRAPHIC INTERACTIVE MICRO-WIDGETS -->
+                <div class="space-y-3.5 pt-2">
+                    <!-- Widget 1: Real-Time Cardiac Telemetry -->
+                    <div class="holo-widget-card holo-float-1 flex items-center justify-between">
+                        <div class="flex items-center gap-3.5">
+                            <div
+                                class="w-10 h-10 rounded-xl bg-cyan-500/20 border border-cyan-400/30 flex items-center justify-center text-cyan-400 text-base shadow-inner">
+                                <i class="fa-solid fa-wave-square"></i>
+                            </div>
+                            <div>
+                                <div class="flex items-center gap-2">
+                                    <span class="text-sm font-extrabold text-white">72 BPM</span>
+                                    <span
+                                        class="text-4xs px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 font-bold uppercase tracking-wider">
+                                        Live Telemetry
+                                    </span>
+                                </div>
+                                <div class="text-3xs text-slate-400 font-medium">Normal Sinus Rhythm • Synchronized
+                                </div>
+                            </div>
+                        </div>
+                        <div class="soundwave-container" aria-hidden="true">
+                            <div class="soundwave-bar"></div>
+                            <div class="soundwave-bar"></div>
+                            <div class="soundwave-bar"></div>
+                            <div class="soundwave-bar"></div>
+                            <div class="soundwave-bar"></div>
+                        </div>
+                    </div>
+
+                    <!-- Widget 2: Rapid Caregiver Dispatch -->
+                    <div class="holo-widget-card holo-float-2 flex items-center justify-between">
+                        <div class="flex items-center gap-3.5">
+                            <div class="radar-ping-wrapper">
+                                <div class="radar-ping-ring"></div>
+                                <div class="radar-ping-ring"></div>
+                                <div
+                                    class="w-9 h-9 rounded-xl bg-teal-500/20 border border-teal-400/30 flex items-center justify-center text-teal-400 text-base relative z-10">
+                                    <i class="fa-solid fa-user-nurse"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="text-sm font-extrabold text-white">Under 15 Mins Dispatch</div>
+                                <div class="text-3xs text-slate-400 font-medium">Verified PNC Registered Caregivers on
+                                    Standby</div>
+                            </div>
+                        </div>
+                        <span
+                            class="text-xs font-black text-teal-400 bg-teal-500/10 px-2.5 py-1 rounded-lg border border-teal-500/20">
+                            24/7 Ready
+                        </span>
+                    </div>
+
+                    <!-- Widget 3: Data Security Seal -->
+                    <div class="holo-widget-card holo-float-3 flex items-center justify-between">
+                        <div class="flex items-center gap-3.5">
+                            <div
+                                class="w-10 h-10 rounded-xl bg-violet-500/20 border border-violet-400/30 flex items-center justify-center text-violet-400 text-base shadow-inner">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+                            <div>
+                                <div class="text-sm font-extrabold text-white">HIPAA &amp; PMDC Compliant</div>
+                                <div class="text-3xs text-slate-400 font-medium">256-Bit Military Grade End-to-End
+                                    Cryptography</div>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-lock text-slate-500 text-sm"></i>
+                    </div>
+                </div>
+
+                <!-- Trust Proof Metrics -->
+                <div class="flex items-center gap-6 pt-3 text-xs text-slate-300">
+                    <div class="flex items-center gap-2">
+                        <div class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></div>
+                        <span class="font-bold text-white">99.98%</span> Uptime Care SLA
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-star text-amber-400"></i>
+                        <span class="font-bold text-white">4.9/5</span> Patient Satisfaction
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- RIGHT FORM CARD WITH ANIMATED BORDER BEAM -->
+            <div class="lg:col-span-6 w-full max-w-lg mx-auto" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="">
+                <div class="border-beam-wrapper">
+                    <div class="auth-glass-card">
+                        <!-- Form Header -->
+                        <div class="mb-6">
+                            <h2 class="text-2xl font-black text-white tracking-tight mb-1">
+                                Sign In to Portal
+                            </h2>
+                            <p class="text-xs text-slate-400 mb-0">
+                                Welcome back! Access your medical care dashboard.
+                            </p>
+                        </div>
+
+                        <!-- Login Method Tab Switcher (Email vs SMS) -->
+                        <div class="auth-nav-tabs" role="tablist">
+                            <button type="button" class="auth-nav-tab active" data-login-method="email" role="tab"
+                                aria-selected="true">
+                                <i class="fa-regular fa-envelope me-1.5"></i> Email Address
+                            </button>
+                            <button type="button" class="auth-nav-tab" data-login-method="phone" role="tab"
+                                aria-selected="false">
+                                <i class="fa-solid fa-mobile-screen me-1.5"></i> Mobile Phone (SMS)
+                            </button>
+                        </div>
+
+                        <!-- Main Login Form -->
+                        <form id="auth-login-form" class="space-y-4">
+                            <!-- EMAIL LOGIN SECTION -->
+                            <div id="login-email-section" class="space-y-3.5">
+                                <div>
+                                    <label for="login-email"
+                                        class="block text-2xs font-bold text-slate-300 uppercase tracking-wider mb-1.5">
+                                        Email Address *
+                                    </label>
+                                    <div class="auth-input-group">
+                                        <input type="email" id="login-email" class="auth-input"
+                                            placeholder="e.g. usman@gmail.com" value="usman.patient@shifacare.pk"
+                                            required />
+                                        <i class="fa-regular fa-envelope auth-input-icon"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between items-center mb-1.5">
+                                        <label for="login-password"
+                                            class="block text-2xs font-bold text-slate-300 uppercase tracking-wider">
+                                            Password * </label>
+                                        <a href="#"
+                                            class="text-3xs font-bold text-cyan-400 hover:text-cyan-300 transition"
+                                            data-open-modal="forgot-password"> Forgot Password? </a>
+                                    </div>
+                                    <div class="auth-input-group">
+                                        <input type="password" id="login-password" class="auth-input pr-10"
+                                            placeholder="Enter your password" value="PatientCare2026!" required />
+                                        <i class="fa-solid fa-lock auth-input-icon"></i>
+                                        <button type="button" class="password-toggle-btn" data-target="login-password"
+                                            aria-label="Toggle password visibility">
+                                            <i class="fa-regular fa-eye"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- PHONE OTP SECTION (Hidden by default) -->
+                            <div id="login-phone-section" class="space-y-3.5 hidden">
+                                <div>
+                                    <label for="login-phone-number"
+                                        class="block text-2xs font-bold text-slate-300 uppercase tracking-wider mb-1.5">
+                                        Mobile Phone Number
+                                    </label>
+                                    <div class="flex gap-2">
+                                        <div
+                                            class="w-16 shrink-0 flex items-center justify-center bg-slate-800/80 border border-white/10 rounded-xl text-xs font-bold text-slate-300">
+                                            +92
+                                        </div>
+                                        <div class="auth-input-group flex-1">
+                                            <input type="tel" id="login-phone-number" class="auth-input pl-10"
+                                                placeholder="300 1234567" maxlength="11" />
+                                            <i class="fa-solid fa-phone auth-input-icon"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="flex justify-end">
+                                    <button type="button" id="btn-send-otp"
+                                        class="py-1.5 px-3 rounded-xl border border-cyan-500/40 hover:bg-cyan-500/10 text-cyan-400 text-2xs font-bold transition flex items-center gap-1.5">
+                                        <i class="fa-solid fa-paper-plane"></i> Send OTP Code
+                                    </button>
+                                </div>
+                                <div id="otp-code-wrapper" class="hidden space-y-1.5">
+                                    <label for="login-otp-code"
+                                        class="block text-2xs font-bold text-slate-300 uppercase tracking-wider">
+                                        4-Digit Verification Code
+                                    </label>
+                                    <div class="auth-input-group">
+                                        <input type="text" id="login-otp-code"
+                                            class="auth-input text-center font-mono tracking-widest text-lg font-bold"
+                                            placeholder="• • • •" maxlength="4" />
+                                        <i class="fa-solid fa-shield-halved auth-input-icon"></i>
+                                    </div>
+                                    <div class="flex justify-between text-3xs text-slate-400 font-semibold px-1">
+                                        <span>SMS Gateway Simulation</span>
+                                        <span id="otp-countdown" class="text-cyan-400 font-bold"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Remember Me & Cryptography Badge -->
+                            <div class="flex items-center justify-between pt-1">
+                                <label class="flex items-center gap-2 cursor-pointer select-none">
+                                    <input type="checkbox" id="remember-me" checked
+                                        class="rounded border-slate-700 bg-slate-800 text-cyan-500 focus:ring-cyan-400 w-4 h-4 cursor-pointer" />
+                                    <span class="text-xs text-slate-300 font-medium">Keep me signed in</span>
+                                </label>
+                                <span class="text-3xs text-emerald-400 font-bold flex items-center gap-1">
+                                    <i class="fa-solid fa-lock"></i> 256-Bit Encrypted
+                                </span>
+                            </div>
+
+                            <!-- Primary Submit Button -->
+                            <button type="submit" id="btn-submit-login" class="auth-btn-primary mt-2">
+                                <span>Sign In to ShifaCare</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </form>
+
+                        <!-- Divider -->
+                        <div class="relative my-5 text-center">
+                            <div class="absolute inset-0 flex items-center">
+                                <div class="w-full border-t border-white/10"></div>
+                            </div>
+                            <span
+                                class="relative bg-slate-900/90 px-3 text-3xs uppercase font-black tracking-widest text-slate-400">
+                                Or Continue With
+                            </span>
+                        </div>
+
+                        <!-- Official Google Single Sign-On Button -->
+                        <div class="mb-5">
+                            <button type="button" class="auth-google-btn" id="btn-google-login">
+                                <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path fill="#4285F4"
+                                        d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z" />
+                                    <path fill="#34A853"
+                                        d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24z" />
+                                    <path fill="#FBBC05"
+                                        d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 9.97 0 12s.45 3.82 1.25 5.42l4.03-3.15z" />
+                                    <path fill="#EA4335"
+                                        d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z" />
+                                </svg>
+                                <span>Continue with Google</span>
+                            </button>
+                        </div>
+
+                        <!-- Switch to Register Link -->
+                        <div class="text-center pt-3 border-t border-white/10">
+                            <p class="text-xs text-slate-300 mb-0">
+                                Don't have an account yet?
+                                <a href="register.html"
+                                    class="font-bold text-cyan-400 hover:text-cyan-300 hover:underline inline-flex items-center gap-1 ml-1">
+                                    Create an Account <i class="fa-solid fa-chevron-right text-3xs"></i>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FORGOT PASSWORD MODAL -->
+    <div id="forgot-password-modal" class="auth-modal-overlay" role="dialog" aria-modal="true"
+        aria-labelledby="forgot-modal-title">
+
+        <!-- Yeh canvas element hona lazmi hai -->
+        <canvas id="auth-ambient-canvas"></canvas>
+
+        <div class="auth-modal-dialog">
+
+            <div class="flex items-center justify-between mb-4">
+
+                <div
+                    class="w-10 h-10 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-lg border border-cyan-500/30">
+
+                    <i class="fa-solid fa-key"></i>
+
+                </div>
+
+                <button type="button"
+                    class="w-8 h-8 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-300 flex items-center justify-center transition cursor-pointer"
+                    data-close-modal="forgot-password" aria-label="Close modal">
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                </button>
+
+            </div>
+
+
+
+            <h3 id="forgot-modal-title" class="text-lg font-black text-white mb-1">Reset Your Password</h3>
+
+            <p class="text-xs text-slate-300 mb-4 leading-relaxed">
+
+                Enter your registered email address or mobile phone. We will dispatch an instant password reset token or
+
+                SMS verification link.
+
+            </p>
+
+
+
+            <form id="forgot-password-form" class="space-y-4">
+
+                <div>
+
+                    <label for="forgot-email-input"
+                        class="block text-2xs font-bold text-slate-300 uppercase tracking-wider mb-1.5">
+
+                        Registered Email or Phone
+
+                    </label>
+
+                    <div class="auth-input-group">
+
+                        <input type="text" id="forgot-email-input" class="auth-input"
+                            placeholder="e.g. usman@gmail.com or 03001234567" required />
+
+                        <i class="fa-solid fa-envelope auth-input-icon"></i>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="flex gap-2 pt-2">
+
+                    <button type="button"
+                        class="flex-1 py-2.5 px-4 rounded-xl border border-white/20 hover:bg-white/5 text-slate-300 font-bold text-xs transition cursor-pointer"
+                        data-close-modal="forgot-password">
+
+                        Cancel
+
+                    </button>
+
+                    <button type="submit"
+                        class="flex-1 py-2.5 px-4 rounded-xl bg-cyan-600 hover:bg-cyan-500 text-white font-bold text-xs transition shadow-lg shadow-cyan-600/30 cursor-pointer">
+
+                        Send Instructions
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 border-t border-slate-800 text-slate-400 py-12 md:py-16" id="main-portal-footer">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 w-full">
+
+            <!-- Top Grid Columns -->
+            <div
+                class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-12 gap-6 lg:gap-8 pb-12 border-b border-slate-800/80">
+
+                <!-- Brand Column (Span 4 on Desktop, Full Width on Mobile) -->
+                <div class="col-span-2 lg:col-span-4 space-y-4">
+                    <div class="flex items-center gap-2.5">
+                        <div
+                            class="w-9 h-9 rounded-xl bg-teal-600 text-white flex items-center justify-center text-base shadow-md">
+                            <i class="fa-solid fa-heart-pulse"></i>
+                        </div>
+                        <span class="text-xl font-bold text-white tracking-tight">Medi <span
+                                class="text-teal-400">Care</span></span>
+                    </div>
+                    <p class="text-sm text-slate-400 leading-relaxed max-w-sm">
+                        Connecting families with certified home nurses, licensed PMDC doctors, and leading hospital
+                        facilities across Islamabad and Rawalpindi.
+                    </p>
+                    <div class="text-xs text-slate-400 flex items-center gap-2 pt-1">
+                        <i class="fa-solid fa-location-dot text-teal-400"></i>
+                        <span>Blue Area, Jinnah Avenue, Islamabad, Pakistan</span>
+                    </div>
+                </div>
+
+                <!-- Home Nursing Links (Span 2) -->
+                <div class="col-span-1 sm:col-span-1 lg:col-span-2 space-y-3">
+                    <h4 class="text-white font-bold text-sm tracking-wide uppercase">Home Nursing</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="nurses.html?service=elderly" class="hover:text-teal-400 transition-colors">Elderly
+                                Care</a></li>
+                        <li><a href="nurses.html?service=post-op" class="hover:text-teal-400 transition-colors">Post-Op
+                                Recovery</a></li>
+                        <li><a href="nurses.html?service=stroke" class="hover:text-teal-400 transition-colors">Stroke
+                                Rehabilitation</a></li>
+                        <li><a href="nurses.html?service=neonatal" class="hover:text-teal-400 transition-colors">Mother
+                                & Baby Care</a></li>
+                        <li><a href="nurses.html?shift=24h" class="hover:text-teal-400 transition-colors">24/7 Live-In
+                                Nurses</a></li>
+                    </ul>
+                </div>
+
+                <!-- Medical Specialists Links (Span 2) -->
+                <div class="col-span-1 sm:col-span-1 lg:col-span-2 space-y-3">
+                    <h4 class="text-white font-bold text-sm tracking-wide uppercase">Medical Specialists</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="doctors.html?specialty=Cardiologist"
+                                class="hover:text-teal-400 transition-colors">Cardiologists</a></li>
+                        <li><a href="doctors.html?specialty=Gynecologist"
+                                class="hover:text-teal-400 transition-colors">Gynecologists</a></li>
+                        <li><a href="doctors.html?specialty=Pediatrician"
+                                class="hover:text-teal-400 transition-colors">Pediatricians</a></li>
+                        <li><a href="doctors.html?specialty=Neurologist"
+                                class="hover:text-teal-400 transition-colors">Neurologists</a></li>
+                        <li><a href="doctors.html?specialty=Orthopedic"
+                                class="hover:text-teal-400 transition-colors">Orthopedic Surgeons</a></li>
+                    </ul>
+                </div>
+
+                <!-- Top Hospitals Links (Span 2) -->
+                <div class="col-span-1 sm:col-span-1 lg:col-span-2 space-y-3">
+                    <h4 class="text-white font-bold text-sm tracking-wide uppercase">Top Hospitals</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="hospitals.html?id=shifa" class="hover:text-teal-400 transition-colors">Shifa
+                                International H-8</a></li>
+                        <li><a href="hospitals.html?id=pims" class="hover:text-teal-400 transition-colors">PIMS
+                                Islamabad G-8</a></li>
+                        <li><a href="hospitals.html?id=maroof" class="hover:text-teal-400 transition-colors">Maroof
+                                Hospital F-10</a></li>
+                        <li><a href="hospitals.html?id=holy-family" class="hover:text-teal-400 transition-colors">Holy
+                                Family Rawalpindi</a></li>
+                        <li><a href="hospitals.html?id=cmh" class="hover:text-teal-400 transition-colors">CMH
+                                Rawalpindi</a></li>
+                    </ul>
+                </div>
+
+                <!-- Patient Portal Links (Span 2) -->
+                <div class="col-span-1 sm:col-span-1 lg:col-span-2 space-y-3">
+                    <h4 class="text-white font-bold text-sm tracking-wide uppercase">Patient Portal</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="dashboard-patient.html?tab=appointments"
+                                class="hover:text-teal-400 transition-colors">My Appointments</a></li>
+                        <li><a href="dashboard-patient.html?tab=nurses"
+                                class="hover:text-teal-400 transition-colors">Active Caregivers</a></li>
+                        <li><a href="dashboard-patient.html?tab=vitals"
+                                class="hover:text-teal-400 transition-colors">Patient Vitals Chart</a></li>
+                        <li><a href="dashboard-patient.html?tab=payments"
+                                class="hover:text-teal-400 transition-colors">Payment Invoices</a></li>
+                        <li><a href="dashboard-patient.html?tab=favorites"
+                                class="hover:text-teal-400 transition-colors">Saved Doctors</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Footer Bottom Bar -->
+            <div
+                class="pt-8 flex flex-col sm:flex-row flex-wrap justify-between items-center gap-4 text-xs text-slate-500">
+                <div>
+                    © 2026 ShifaCare Plus - Twin Cities Healthcare & Home Nursing Portal. All Rights Reserved.
+                </div>
+                <div class="flex flex-wrap items-center gap-4">
+                    <span class="text-slate-400 flex items-center gap-1.5">
+                        <i class="fa-solid fa-shield-check text-emerald-400"></i> PNC & PMDC Certified
+                    </span>
+                    <span class="text-slate-400 flex items-center gap-1.5">
+                        <i class="fa-solid fa-lock text-sky-400"></i> 256-bit HIPAA Standard Privacy
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Notification Toast Container -->
+    <div id="toast-notification-container"></div>
+
+    <!-- JavaScript Scripts -->
+    <!-- CDN Dependencies -->
+    <!-- Tailwind CSS Play CDN (Configured for custom styles and animations) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0284c7',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- AOS Library JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,  // Animation speed (milliseconds)
+            once: false,    // Yeh FALSE karne se element scroll out hone par reset ho jaye ga aur bar bar animate hoga!
+            offset: 100,    // Kitne pixels scroll hone par trigger ho
+        });
+    </script>
+
+    <!-- Dedicated Scripts -->
+    <script src="/assets/js/login.js"></script>
+</body>
+
+</html>
