@@ -1,0 +1,62 @@
+/* ==========================================================================
+   PURE TAILWIND COMPATIBLE LEGAL STYLES (legal.css)
+   Privacy Policy & Terms and Conditions for ShifaCare Plus Portal
+   ZERO BOOTSTRAP DEPENDENCIES
+   ========================================================================== */
+
+.legal-toc-body {
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 #f8fafc;
+}
+
+.legal-toc-body::-webkit-scrollbar {
+  width: 5px;
+}
+.legal-toc-body::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+/* Print Optimization */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-size: 11pt !important;
+  }
+  .no-print,
+  #top-emergency-announcement-bar,
+  header,
+  #mobileNavMenu,
+  #legal-toc-sidebar,
+  .legal-search-wrapper,
+  .legal-actions-bar,
+  footer,
+  #toast-notification-container,
+  button,
+  a[href^="#"] {
+    display: none !important;
+  }
+  .legal-hero-header {
+    background: none !important;
+    color: #000000 !important;
+    padding: 0 0 20px !important;
+    border-bottom: 2px solid #000000 !important;
+  }
+  .legal-hero-header h1,
+  .legal-hero-header p,
+  .legal-hero-header span {
+    color: #000000 !important;
+  }
+  .legal-content-card {
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
+  .legal-section {
+    page-break-inside: avoid;
+    border-bottom: 1px solid #e2e8f0 !important;
+    padding: 16px 0 !important;
+  }
+}
+

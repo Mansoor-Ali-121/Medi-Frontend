@@ -1,0 +1,1367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Healthcare Services & Home Nursing Portal | Islamabad & Rawalpindi</title>
+    <meta name="description"
+        content="Connecting patients and families with verified hospitals, leading doctors, and qualified home-care nurses in Islamabad and Rawalpindi." />
+    <meta property="og:title" content="Healthcare Services & Home Nursing Portal" />
+    <meta property="og:description"
+        content="Find verified doctors, certified home nursing care, and 24/7 hospitals in Islamabad & Rawalpindi." />
+
+    <!-- FontAwesome 6 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <!-- AOS Library CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Dedicated Stylesheets -->
+    <link rel="stylesheet" href="/assets/css/global.css" />
+    <link rel="stylesheet" href="/assets/css/legal.css" />
+</head>
+
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-sky-500 selection:text-white">
+
+    <!-- TOP EMERGENCY RESPONSE & UTILITY BAR -->
+    <div class="top-emergency-bar bg-slate-900 text-slate-200 border-b border-slate-800"
+        id="top-emergency-announcement-bar" data-aos="fade-down" data-aos-duration="800">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between items-center flex-wrap gap-2 py-1.5">
+            <div class="flex items-center flex-wrap gap-2 text-xs">
+                <a href="tel:1122"
+                    class="badge-emergency inline-flex items-center px-2.5 py-1 rounded-full text-white bg-red-600 hover:bg-red-700 font-semibold no-underline transition-colors">
+                    <i class="fa-solid fa-truck-medical mr-1.5"></i> 24/7 HELPLINE 1122
+                </a>
+                <span class="text-slate-500 hidden sm:inline">|</span>
+                <span class="text-slate-300 text-xs">
+                    Twin Cities EMS: <a href="tel:1122" class="text-white font-bold hover:underline">1122</a>
+                    <span class="hidden md:inline">| Bed Info &amp; Dispatch: <a href="tel:0519280000"
+                            class="text-white font-bold hover:underline">051-9280000</a></span>
+                </span>
+            </div>
+            <div class="flex items-center gap-3 text-xs">
+                <span class="hidden lg:inline text-emerald-400 font-medium">
+                    <i class="fa-solid fa-circle-check mr-1"></i> 100% PMDC &amp; PNC Certified
+                </span>
+                <span class="text-slate-500 hidden lg:inline">|</span>
+                <a href="hospitals.html" class="text-slate-300 hover:text-white hidden md:inline transition-colors">
+                    <i class="fa-solid fa-hospital-user mr-1 text-indigo-400"></i> Emergency ERs
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- STICKY MAIN NAVBAR -->
+    <header
+        class="portal-navbar-wrapper sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm"
+        data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100">
+        <div class="portal-nav-container max-w-7xl mx-auto px-4 py-3 flex justify-between items-center relative">
+
+            <!-- Brand Logo -->
+            <a class="portal-brand flex items-center gap-3 no-underline" href="index.html">
+                <div
+                    class="brand-icon-box w-10 h-10 bg-sky-600 text-white flex items-center justify-center rounded-lg shadow-sm shrink-0">
+                    <i class="fas fa-heartbeat"></i>
+                </div>
+                <div class="brand-text-container flex flex-col">
+                    <span class="font-extrabold text-lg text-slate-900 leading-tight">Medi <span
+                            class="text-emerald-600">Care</span></span>
+                    <span class="text-[0.65rem] font-bold text-teal-600 tracking-wider uppercase">Your Health, Our
+                        Priority</span>
+                </div>
+            </a>
+
+            <!-- Mobile & Tablet Hamburger Button (Visible up to 1024px) -->
+            <button
+                class="portal-mobile-toggle lg:hidden text-slate-700 hover:text-sky-600 p-2 focus:outline-none cursor-pointer z-50"
+                id="manualMenuBtn" aria-label="Toggle Navigation">
+                <i class="fas fa-bars text-xl" id="menuIcon"></i>
+            </button>
+
+            <!-- Navigation Links Wrapper (Hidden on mobile/tablet by default, shown on lg+) -->
+            <div class="portal-nav-links-wrapper hidden lg:flex items-center gap-6 xl:gap-8 absolute lg:relative top-full left-0 right-0 bg-white shadow-xl lg:shadow-none border-b lg:border-none border-slate-100 p-5 lg:p-0 flex-col lg:flex-row transition-all"
+                id="manualNavContent">
+
+                <ul
+                    class="portal-nav-links flex flex-col lg:flex-row items-start lg:items-center gap-3 lg:gap-2 m-0 p-0 list-none w-full lg:w-auto">
+                    <li class="w-full lg:w-auto">
+                        <a class="nav-link-custom active font-semibold text-sky-600 bg-sky-50 px-3.5 py-2.5 rounded-md flex items-center gap-2 no-underline transition-colors w-full"
+                            href="index.html">
+                            <i class="fas fa-home w-5 text-center"></i> Home
+                        </a>
+                    </li>
+                    <li class="w-full lg:w-auto">
+                        <a class="nav-link-custom font-semibold text-slate-700 hover:text-sky-600 hover:bg-slate-50 px-3.5 py-2.5 rounded-md flex items-center gap-2 no-underline transition-colors w-full"
+                            href="nurse.html">
+                            <i class="fas fa-user-nurse w-5 text-center"></i> Home Nursing
+                        </a>
+                    </li>
+                    <li class="w-full lg:w-auto">
+                        <a class="nav-link-custom font-semibold text-slate-700 hover:text-sky-600 hover:bg-slate-50 px-3.5 py-2.5 rounded-md flex items-center gap-2 no-underline transition-colors w-full"
+                            href="hopitals.html">
+                            <i class="fas fa-hospital w-5 text-center"></i> Hospitals
+                        </a>
+                    </li>
+                    <li class="w-full lg:w-auto">
+                        <a class="nav-link-custom font-semibold text-slate-700 hover:text-sky-600 hover:bg-slate-50 px-3.5 py-2.5 rounded-md flex items-center gap-2 no-underline transition-colors w-full"
+                            href="doctors.html">
+                            <i class="fas fa-user-md w-5 text-center"></i> Doctors
+                        </a>
+                    </li>
+                    <!-- Login  -->
+                    <li class="w-full lg:w-auto">
+                        <a class="nav-link-custom font-semibold text-slate-700 hover:text-sky-600 hover:bg-slate-50 px-3.5 py-2.5 rounded-md flex items-center gap-2 no-underline transition-colors w-full"
+                            href="login.html">
+                            <i class="fas fa-user-md w-5 text-center"></i> Login
+                        </a>
+                    </li>
+                </ul>
+
+                <div
+                    class="flex flex-col lg:flex-row items-stretch lg:items-center gap-4 w-full lg:w-auto mt-4 lg:mt-0 pt-4 lg:pt-0 border-t lg:border-t-0 border-slate-100">
+                    <a href="patient-portal.html"
+                        class="btn-primary-health bg-sky-600 hover:bg-sky-700 text-white px-4 py-2.5 rounded-lg font-semibold text-sm no-underline flex items-center justify-center gap-1.5 shadow-sm transition-all shrink-0">
+                        <i class="fas fa-user-circle"></i> Patient Portal
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- HERO SECTION (PURE TAILWIND) -->
+    <section
+        class="bg-gradient-to-br from-slate-950 via-slate-900 to-sky-950 text-white py-14 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <!-- Decorative background elements -->
+        <div class="absolute -right-20 -top-20 w-96 h-96 bg-sky-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -left-20 -bottom-20 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl pointer-events-none">
+        </div>
+
+        <div class="max-w-7xl mx-auto relative z-10">
+
+            <!-- Breadcrumb -->
+            <nav class="flex items-center gap-2 text-xs text-sky-300/80 mb-4" aria-label="Breadcrumb">
+                <a href="index.html" class="hover:text-white transition-colors">Home</a>
+                <i class="fa-solid fa-chevron-right text-[10px] text-slate-500"></i>
+                <span class="text-slate-400">Legal Governance</span>
+                <i class="fa-solid fa-chevron-right text-[10px] text-slate-500"></i>
+                <span class="text-white font-semibold">Terms &amp; Conditions</span>
+            </nav>
+
+            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-6">
+                <div class="max-w-3xl space-y-3">
+
+                    <!-- Badges -->
+                    <div class="flex flex-wrap items-center gap-2.5">
+                        <span
+                            class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-sky-500/20 text-sky-300 border border-sky-400/30">
+                            <i class="fa-solid fa-file-signature"></i> Legally Binding Agreement
+                        </span>
+                        <span
+                            class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-400/30">
+                            <i class="fa-solid fa-check"></i> Effective Date: September 2026
+                        </span>
+                        <span
+                            class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-white/10 text-slate-300 border border-white/15">
+                            <i class="fa-solid fa-building-columns"></i> ICT Islamabad Jurisdiction
+                        </span>
+                    </div>
+
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
+                        Terms &amp; Conditions of Healthcare Service
+                    </h1>
+
+                    <p class="text-sm sm:text-base text-slate-300 leading-relaxed">
+                        Please read these terms carefully before scheduling doctor consultations, booking certified home
+                        nurses, or coordinating hospital services across Islamabad and Rawalpindi.
+                    </p>
+                </div>
+
+                <!-- Hero Actions -->
+                <div class="flex flex-wrap items-center gap-3 no-print">
+                    <button type="button"
+                        class="btn-print-legal inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white text-xs font-bold border border-white/20 transition-colors shadow-sm">
+                        <i class="fa-solid fa-print"></i> Print Copy
+                    </button>
+                    <a href="privacy.html"
+                        class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-sky-600 hover:bg-sky-500 text-white text-xs font-bold transition-colors shadow-lg shadow-sky-600/30">
+                        <i class="fa-solid fa-shield-halved"></i> View Privacy Policy
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUICK SUMMARY CARDS (PURE TAILWIND) -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 relative z-20 no-print">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+
+            <div
+                class="bg-white border border-slate-200/80 rounded-2xl p-5 shadow-sm hover:shadow-md hover:border-red-300 transition-all flex items-start gap-3.5">
+                <div
+                    class="w-11 h-11 rounded-xl bg-red-50 text-red-600 flex items-center justify-center text-lg shrink-0">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                </div>
+                <div>
+                    <h2 class="text-xs font-bold text-slate-900 uppercase tracking-wider">Emergency 1122 Notice</h2>
+                    <p class="text-xs text-slate-500 mt-1 leading-snug">Portal is not for sudden heart attacks or acute
+                        trauma. Immediately call 1122.</p>
+                </div>
+            </div>
+
+            <div
+                class="bg-white border border-slate-200/80 rounded-2xl p-5 shadow-sm hover:shadow-md hover:border-teal-300 transition-all flex items-start gap-3.5">
+                <div
+                    class="w-11 h-11 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center text-lg shrink-0">
+                    <i class="fa-solid fa-user-nurse"></i>
+                </div>
+                <div>
+                    <h2 class="text-xs font-bold text-slate-900 uppercase tracking-wider">Verified PNC Staff</h2>
+                    <p class="text-xs text-slate-500 mt-1 leading-snug">All home nurses undergo police background
+                        verification &amp; license validation.</p>
+                </div>
+            </div>
+
+            <div
+                class="bg-white border border-slate-200/80 rounded-2xl p-5 shadow-sm hover:shadow-md hover:border-amber-300 transition-all flex items-start gap-3.5">
+                <div
+                    class="w-11 h-11 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center text-lg shrink-0">
+                    <i class="fa-solid fa-prescription"></i>
+                </div>
+                <div>
+                    <h2 class="text-xs font-bold text-slate-900 uppercase tracking-wider">Written Prescription Rule</h2>
+                    <p class="text-xs text-slate-500 mt-1 leading-snug">Nurses cannot administer injectables without a
+                        written doctor prescription.</p>
+                </div>
+            </div>
+
+            <div
+                class="bg-white border border-slate-200/80 rounded-2xl p-5 shadow-sm hover:shadow-md hover:border-emerald-300 transition-all flex items-start gap-3.5">
+                <div
+                    class="w-11 h-11 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-lg shrink-0">
+                    <i class="fa-solid fa-receipt"></i>
+                </div>
+                <div>
+                    <h2 class="text-xs font-bold text-slate-900 uppercase tracking-wider">Transparent Refunds</h2>
+                    <p class="text-xs text-slate-500 mt-1 leading-snug">100% refund for cancellations made with more
+                        than 4 hours notice.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- MAIN TWO-COLUMN CONTENT AREA (PURE TAILWIND) -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+
+        <!-- Interactive Search Bar -->
+        <div
+            class="bg-white p-3.5 rounded-2xl border border-slate-200 shadow-sm flex flex-col sm:flex-row items-center gap-3 mb-8 no-print">
+            <div class="relative flex-1 w-full">
+                <i
+                    class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-sm"></i>
+                <input type="text" id="legalSearchInput"
+                    placeholder="Search terms (e.g., 'cancellation', 'nurse conduct', 'refund', 'emergency', 'prescription')..."
+                    class="w-full pl-10 pr-10 py-2 text-sm bg-slate-50 hover:bg-slate-100/80 focus:bg-white rounded-xl border border-slate-200 focus:border-sky-500 focus:outline-none transition-colors" />
+                <button type="button" id="legalSearchClear"
+                    class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 text-xs hidden">
+                    <i class="fa-solid fa-circle-xmark"></i>
+                </button>
+            </div>
+            <div class="flex items-center justify-between w-full sm:w-auto gap-3 text-xs text-slate-500">
+                <span id="legalSearchResultsCount" class="font-medium text-sky-600"></span>
+                <span class="hidden md:inline text-slate-400">14 Legal Clauses</span>
+            </div>
+        </div>
+
+        <!-- Layout Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+            <!-- LEFT SIDEBAR: Table of Contents (Pure Tailwind Sticky) -->
+            <aside class="lg:col-span-4 xl:col-span-3 no-print relative lg:sticky lg:top-28 self-start"
+                id="legal-toc-sidebar">
+                <div
+                    class="sticky top-24 bg-white border border-slate-200 rounded-2xl shadow-sm p-4 max-h-[calc(100vh-7rem)] flex flex-col">
+
+                    <div class="pb-3 mb-2 border-b border-slate-100 flex items-center justify-between">
+                        <span class="text-xs font-bold text-slate-900 uppercase tracking-wider flex items-center gap-2">
+                            <i class="fa-solid fa-list-ol text-sky-600"></i> Table of Contents
+                        </span>
+                        <span class="text-[10px] bg-slate-100 text-slate-600 font-bold px-2 py-0.5 rounded-full">14
+                            Clauses</span>
+                    </div>
+
+                    <!-- TOC Scroll Body -->
+                    <div class="legal-toc-body overflow-y-auto space-y-1 pr-1 text-xs">
+                        <a href="#term-1"
+                            class="legal-toc-link flex items-center gap-2.5 p-2 rounded-xl text-slate-600 hover:bg-slate-50 transition-colors border-l-4 border-transparent">
+                            <span
+                                class="w-5 h-5 rounded-md bg-slate-100 text-slate-700 flex items-center justify-center font-bold text-[10px] shrink-0">1</span>
+                            <span class="leading-tight">Agreement &amp; Eligibility</span>
+                        </a>
+                        <a href="#term-2"
+                            class="legal-toc-link flex items-center gap-2.5 p-2 rounded-xl text-slate-600 hover:bg-slate-50 transition-colors border-l-4 border-transparent">
+                            <span
+                                class="w-5 h-5 rounded-md bg-slate-100 text-slate-700 flex items-center justify-center font-bold text-[10px] shrink-0">2</span>
+                            <span class="leading-tight">Scope of Platform Role</span>
+                        </a>
+                        <a href="#term-3"
+                            class="legal-toc-link flex items-center gap-2.5 p-2 rounded-xl text-slate-600 hover:bg-slate-50 transition-colors border-l-4 border-transparent">
+                            <span
+                                class="w-5 h-5 rounded-md bg-slate-100 text-slate-700 flex items-center justify-center font-bold text-[10px] shrink-0">3</span>
+                            <span class="leading-tight text-red-600 font-medium">Emergency Disclaimer (1122)</span>
+                        </a>
+                        <a href="#term-4"
+                            class="legal-toc-link flex items-center gap-2.5 p-2 rounded-xl text-slate-600 hover:bg-slate-50 transition-colors border-l-4 border-transparent">
+                            <span
+                                class="w-5 h-5 rounded-md bg-slate-100 text-slate-700 flex items-center justify-center font-bold text-[10px] shrink-0">4</span>
+                            <span class="leading-tight">Doctor Appointments</span>
+                        </a>
+                        <a href="#term-5"
+                            class="legal-toc-link flex items-center gap-2.5 p-2 rounded-xl text-slate-600 hover:bg-slate-50 transition-colors border-l-4 border-transparent">
+                            <span
+                                class="w-5 h-5 rounded-md bg-slate-100 text-slate-700 flex items-center justify-center font-bold text-[10px] shrink-0">5</span>
+                            <span class="leading-tight">Home Nursing Directives</span>
+                        </a>
+                        <a href="#term-6"
+                            class="legal-toc-link flex items-center gap-2.5 p-2 rounded-xl text-slate-600 hover:bg-slate-50 transition-colors border-l-4 border-transparent">
+                            <span
+                                class="w-5 h-5 rounded-md bg-slate-100 text-slate-700 flex items-center justify-center font-bold text-[10px] shrink-0">6</span>
+                            <span class="leading-tight">Prescription Medications</span>
+                        </a>
+                        <a href="#term-7"
+                            class="legal-toc-link flex items-center gap-2.5 p-2 rounded-xl text-slate-600 hover:bg-slate-50 transition-colors border-l-4 border-transparent">
+                            <span
+                                class="w-5 h-5 rounded-md bg-slate-100 text-slate-700 flex items-center justify-center font-bold text-[10px] shrink-0">7</span>
+                            <span class="leading-tight">Household Safety Conduct</span>
+                        </a>
+                        <a href="#term-8"
+                            class="legal-toc-link flex items-center gap-2.5 p-2 rounded-xl text-slate-600 hover:bg-slate-50 transition-colors border-l-4 border-transparent">
+                            <span
+                                class="w-5 h-5 rounded-md bg-slate-100 text-slate-700 flex items-center justify-center font-bold text-[10px] shrink-0">8</span>
+                            <span class="leading-tight">Pricing &amp; Shift Deposits</span>
+                        </a>
+                        <a href="#term-9"
+                            class="legal-toc-link flex items-center gap-2.5 p-2 rounded-xl text-slate-600 hover:bg-slate-50 transition-colors border-l-4 border-transparent">
+                            <span
+                                class="w-5 h-5 rounded-md bg-slate-100 text-slate-700 flex items-center justify-center font-bold text-[10px] shrink-0">9</span>
+                            <span class="leading-tight text-emerald-600 font-medium">Cancellation &amp; Refunds</span>
+                        </a>
+                        <a href="#term-10"
+                            class="legal-toc-link flex items-center gap-2.5 p-2 rounded-xl text-slate-600 hover:bg-slate-50 transition-colors border-l-4 border-transparent">
+                            <span
+                                class="w-5 h-5 rounded-md bg-slate-100 text-slate-700 flex items-center justify-center font-bold text-[10px] shrink-0">10</span>
+                            <span class="leading-tight">Account Responsibilities</span>
+                        </a>
+                        <a href="#term-11"
+                            class="legal-toc-link flex items-center gap-2.5 p-2 rounded-xl text-slate-600 hover:bg-slate-50 transition-colors border-l-4 border-transparent">
+                            <span
+                                class="w-5 h-5 rounded-md bg-slate-100 text-slate-700 flex items-center justify-center font-bold text-[10px] shrink-0">11</span>
+                            <span class="leading-tight">Telehealth Guidance</span>
+                        </a>
+                        <a href="#term-12"
+                            class="legal-toc-link flex items-center gap-2.5 p-2 rounded-xl text-slate-600 hover:bg-slate-50 transition-colors border-l-4 border-transparent">
+                            <span
+                                class="w-5 h-5 rounded-md bg-slate-100 text-slate-700 flex items-center justify-center font-bold text-[10px] shrink-0">12</span>
+                            <span class="leading-tight">Limitation of Liability</span>
+                        </a>
+                        <a href="#term-13"
+                            class="legal-toc-link flex items-center gap-2.5 p-2 rounded-xl text-slate-600 hover:bg-slate-50 transition-colors border-l-4 border-transparent">
+                            <span
+                                class="w-5 h-5 rounded-md bg-slate-100 text-slate-700 flex items-center justify-center font-bold text-[10px] shrink-0">13</span>
+                            <span class="leading-tight">Service Termination</span>
+                        </a>
+                        <a href="#term-14"
+                            class="legal-toc-link flex items-center gap-2.5 p-2 rounded-xl text-slate-600 hover:bg-slate-50 transition-colors border-l-4 border-transparent">
+                            <span
+                                class="w-5 h-5 rounded-md bg-slate-100 text-slate-700 flex items-center justify-center font-bold text-[10px] shrink-0">14</span>
+                            <span class="leading-tight">Governing Law (ICT)</span>
+                        </a>
+                    </div>
+
+                    <!-- Bottom Contact Widget inside TOC -->
+                    <div class="mt-3 pt-3 border-t border-slate-100 bg-slate-50 p-3 rounded-xl">
+                        <div class="text-[11px] font-bold text-slate-800 flex items-center gap-1.5">
+                            <i class="fa-solid fa-headset text-sky-600"></i> Clinical Operations Desk
+                        </div>
+                        <p class="text-[11px] text-slate-500 mt-1 leading-tight">Assistance with dispute resolution or
+                            shift scheduling:</p>
+                        <a href="tel:0519280000" class="text-xs font-bold text-sky-600 hover:underline block mt-1.5">
+                            051-9280000
+                        </a>
+                        <div class="text-[10px] text-slate-400 mt-0.5">Islamabad Operations Center (24/7)</div>
+                    </div>
+
+                </div>
+            </aside>
+
+            <!-- RIGHT COLUMN: Detailed Terms Clauses (Pure Tailwind) -->
+            <article class="lg:col-span-8 xl:col-span-9 space-y-8">
+
+                <div class="bg-white border border-slate-200 rounded-3xl p-6 sm:p-10 shadow-sm space-y-12">
+
+                    <!-- Clause 1 -->
+                    <section id="term-1" class="legal-section scroll-mt-28 space-y-4">
+                        <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+                            <div class="flex items-center gap-3">
+                                <span
+                                    class="w-8 h-8 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center font-bold text-sm">01</span>
+                                <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight">
+                                    Agreement to Terms &amp; Eligibility
+                                </h2>
+                            </div>
+                            <button type="button"
+                                class="legal-copy-btn px-2.5 py-1 rounded-lg border border-slate-200 text-xs font-medium text-slate-500 hover:text-sky-600 hover:border-sky-300 transition-all flex items-center gap-1"
+                                data-section="term-1">
+                                <i class="fa-regular fa-copy"></i>
+                                <span class="hidden sm:inline">Copy Link</span>
+                            </button>
+                        </div>
+
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            These Terms and Conditions ("Terms") constitute a legally binding agreement between you
+                            ("User", "Patient", or "Family Representative") and <strong>ShifaCare Plus</strong>
+                            ("Platform", "we", "us"). By registering an account, booking outpatient consultations, or
+                            contracting home nursing staff, you affirm that you are at least 18 years of age, hold legal
+                            capacity under the laws of the Islamic Republic of Pakistan, and reside within our service
+                            boundary (Islamabad Capital Territory and Rawalpindi Division).
+                        </p>
+                    </section>
+
+                    <!-- Clause 2 -->
+                    <section id="term-2" class="legal-section scroll-mt-28 space-y-4">
+                        <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+                            <div class="flex items-center gap-3">
+                                <span
+                                    class="w-8 h-8 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center font-bold text-sm">02</span>
+                                <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight">
+                                    Scope of Platform Role
+                                </h2>
+                            </div>
+                            <button type="button"
+                                class="legal-copy-btn px-2.5 py-1 rounded-lg border border-slate-200 text-xs font-medium text-slate-500 hover:text-sky-600 hover:border-sky-300 transition-all flex items-center gap-1"
+                                data-section="term-2">
+                                <i class="fa-regular fa-copy"></i>
+                                <span class="hidden sm:inline">Copy Link</span>
+                            </button>
+                        </div>
+
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            ShifaCare Plus is a digital healthcare coordination platform. We verify and connect patients
+                            with independent Pakistan Medical and Dental Council (PMDC) registered physicians and
+                            Pakistan Nursing Council (PNC) certified home nurses.
+                        </p>
+
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            While we rigorously vet qualifications, valid credentials, and criminal background records,
+                            the actual medical treatment, diagnosis, surgical interventions, and direct clinical
+                            decisions are made solely by the treating licensed healthcare professionals in their
+                            independent professional capacity.
+                        </p>
+                    </section>
+
+                    <!-- Clause 3 (Emergency Disclaimer) -->
+                    <section id="term-3" class="legal-section scroll-mt-28 space-y-4">
+                        <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+                            <div class="flex items-center gap-3">
+                                <span
+                                    class="w-8 h-8 rounded-xl bg-red-100 text-red-700 flex items-center justify-center font-bold text-sm">03</span>
+                                <h2 class="text-xl sm:text-2xl font-extrabold text-red-600 tracking-tight">
+                                    Emergency Medical Disclaimer (Call 1122)
+                                </h2>
+                            </div>
+                            <button type="button"
+                                class="legal-copy-btn px-2.5 py-1 rounded-lg border border-slate-200 text-xs font-medium text-slate-500 hover:text-sky-600 hover:border-sky-300 transition-all flex items-center gap-1"
+                                data-section="term-3">
+                                <i class="fa-regular fa-copy"></i>
+                                <span class="hidden sm:inline">Copy Link</span>
+                            </button>
+                        </div>
+
+                        <div class="bg-red-50 border-2 border-red-300 text-red-950 rounded-2xl p-5 space-y-3">
+                            <div class="flex items-center gap-2.5 font-bold text-red-700 text-base">
+                                <i class="fa-solid fa-triangle-exclamation text-xl"></i>
+                                <span>CRITICAL NOTICE: NOT A PRIMARY EMERGENCY AMBULANCE DESK</span>
+                            </div>
+                            <p class="text-xs sm:text-sm leading-relaxed text-red-900">
+                                IF YOU OR A FAMILY MEMBER ARE EXPERIENCING A SEVERE, LIFE-THREATENING MEDICAL
+                                CRISIS—INCLUDING CRUSHING CHEST PAIN, SUSPECTED STROKE OR PARALYSIS, UNCONTROLLED
+                                ARTERIAL BLEEDING, SEVERE BREATHLESSNESS, OR MULTI-TRAUMA INJURIES—<strong>DO NOT RELY
+                                    ON THIS PORTAL OR WAIT FOR A HOME NURSE SHIFT</strong>.
+                            </p>
+                            <div class="pt-2 flex flex-wrap items-center gap-3">
+                                <a href="tel:1122"
+                                    class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-red-600 hover:bg-red-700 text-white font-bold text-xs shadow-md transition-colors">
+                                    <i class="fa-solid fa-phone"></i> IMMEDIATELY CALL 1122
+                                </a>
+                                <span class="text-xs text-red-800 font-semibold">Or proceed immediately to the nearest
+                                    Emergency ER: PIMS, Shifa International, or Holy Family Hospital.</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Clause 4 -->
+                    <section id="term-4" class="legal-section scroll-mt-28 space-y-4">
+                        <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+                            <div class="flex items-center gap-3">
+                                <span
+                                    class="w-8 h-8 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center font-bold text-sm">04</span>
+                                <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight">
+                                    Outpatient Doctor Appointments &amp; Hospital Clinics
+                                </h2>
+                            </div>
+                            <button type="button"
+                                class="legal-copy-btn px-2.5 py-1 rounded-lg border border-slate-200 text-xs font-medium text-slate-500 hover:text-sky-600 hover:border-sky-300 transition-all flex items-center gap-1"
+                                data-section="term-4">
+                                <i class="fa-regular fa-copy"></i>
+                                <span class="hidden sm:inline">Copy Link</span>
+                            </button>
+                        </div>
+
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            When scheduling outpatient clinic slots with medical specialists:
+                        </p>
+
+                        <ul class="space-y-2 text-xs sm:text-sm text-slate-600 list-disc list-inside">
+                            <li>Patients must arrive at the designated clinic (e.g. Shifa International, Maroof, or PIMS
+                                OPD) at least 15 minutes prior to their booked consultation time.</li>
+                            <li>Emergency triage procedures at partner hospitals may cause unforeseen schedule delays
+                                when doctors are called into critical emergency operations.</li>
+                            <li>Patients must present prior lab reports, imaging films, and medication boxes to ensure
+                                comprehensive clinical assessment.</li>
+                        </ul>
+                    </section>
+
+                    <!-- Clause 5 -->
+                    <section id="term-5" class="legal-section scroll-mt-28 space-y-4">
+                        <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+                            <div class="flex items-center gap-3">
+                                <span
+                                    class="w-8 h-8 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center font-bold text-sm">05</span>
+                                <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight">
+                                    Home Nursing Care Directives &amp; Shift Protocols
+                                </h2>
+                            </div>
+                            <button type="button"
+                                class="legal-copy-btn px-2.5 py-1 rounded-lg border border-slate-200 text-xs font-medium text-slate-500 hover:text-sky-600 hover:border-sky-300 transition-all flex items-center gap-1"
+                                data-section="term-5">
+                                <i class="fa-regular fa-copy"></i>
+                                <span class="hidden sm:inline">Copy Link</span>
+                            </button>
+                        </div>
+
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Home nursing engagements are classified into standardized professional shift formats:
+                        </p>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
+                            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+                                <div class="font-bold text-slate-900 text-sm">12-Hour Day Shift</div>
+                                <div class="text-sky-600 font-semibold mt-0.5">08:00 AM – 08:00 PM</div>
+                                <p class="text-slate-500 mt-2 leading-relaxed">Focused on medication schedule, wound
+                                    management, post-op mobility, and daily patient hygiene.</p>
+                            </div>
+                            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+                                <div class="font-bold text-slate-900 text-sm">12-Hour Night Shift</div>
+                                <div class="text-indigo-600 font-semibold mt-0.5">08:00 PM – 08:00 AM</div>
+                                <p class="text-slate-500 mt-2 leading-relaxed">Continuous nocturnal vitals monitoring,
+                                    oxygen therapy management, catheter drainage, and fall prevention.</p>
+                            </div>
+                            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+                                <div class="font-bold text-slate-900 text-sm">24/7 Live-In Resident</div>
+                                <div class="text-teal-600 font-semibold mt-0.5">Round-the-Clock Rotation</div>
+                                <p class="text-slate-500 mt-2 leading-relaxed">Dedicated full-time palliative or
+                                    intensive geriatric care with mandatory scheduled rest intervals.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Clause 6 -->
+                    <section id="term-6" class="legal-section scroll-mt-28 space-y-4">
+                        <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+                            <div class="flex items-center gap-3">
+                                <span
+                                    class="w-8 h-8 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center font-bold text-sm">06</span>
+                                <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight">
+                                    Prescription &amp; Injectable Medication Safety
+                                </h2>
+                            </div>
+                            <button type="button"
+                                class="legal-copy-btn px-2.5 py-1 rounded-lg border border-slate-200 text-xs font-medium text-slate-500 hover:text-sky-600 hover:border-sky-300 transition-all flex items-center gap-1"
+                                data-section="term-6">
+                                <i class="fa-regular fa-copy"></i>
+                                <span class="hidden sm:inline">Copy Link</span>
+                            </button>
+                        </div>
+
+                        <div
+                            class="bg-amber-50 border border-amber-200 text-amber-950 rounded-2xl p-4 sm:p-5 flex gap-3.5 items-start text-xs sm:text-sm leading-relaxed">
+                            <i class="fa-solid fa-pills text-amber-600 text-lg mt-0.5 shrink-0"></i>
+                            <div>
+                                <strong class="block font-bold mb-1">PNC Mandatory Medication Requirement:</strong>
+                                Attending nurses are legally prohibited under Pakistan Nursing Council regulations from
+                                administering intravenous (IV) or intramuscular (IM) injectables, controlled narcotics,
+                                or chemotherapy drugs without a stamped, dated, written prescription issued by a
+                                PMDC-licensed physician. Families must supply sealed original pharmaceuticals purchased
+                                from registered pharmacies.
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Clause 7 -->
+                    <section id="term-7" class="legal-section scroll-mt-28 space-y-4">
+                        <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+                            <div class="flex items-center gap-3">
+                                <span
+                                    class="w-8 h-8 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center font-bold text-sm">07</span>
+                                <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight">
+                                    Safe Home Working Environment &amp; Family Conduct
+                                </h2>
+                            </div>
+                            <button type="button"
+                                class="legal-copy-btn px-2.5 py-1 rounded-lg border border-slate-200 text-xs font-medium text-slate-500 hover:text-sky-600 hover:border-sky-300 transition-all flex items-center gap-1"
+                                data-section="term-7">
+                                <i class="fa-regular fa-copy"></i>
+                                <span class="hidden sm:inline">Copy Link</span>
+                            </button>
+                        </div>
+
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Families contracting home care nursing must ensure a secure, respectful, and dignified
+                            environment:
+                        </p>
+
+                        <ul class="space-y-2 text-xs sm:text-sm text-slate-600 list-disc list-inside">
+                            <li><strong>Zero Harassment Policy:</strong> Any verbal abuse, physical intimidation, or
+                                harassment towards female or male nursing staff results in immediate termination of
+                                service, forfeiture of deposits, and reporting to ICT Police.</li>
+                            <li><strong>Sanitary Accommodation:</strong> For 24/7 resident nurses, families must provide
+                                a private, clean resting room with bathroom facilities and hygienic meals.</li>
+                            <li><strong>Domestic Scope Limitation:</strong> Nurses are clinical healthcare
+                                practitioners; they must not be assigned general household domestic cleaning, cooking,
+                                or non-medical family chores.</li>
+                        </ul>
+                    </section>
+
+                    <!-- Clause 8 -->
+                    <section id="term-8" class="legal-section scroll-mt-28 space-y-4">
+                        <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+                            <div class="flex items-center gap-3">
+                                <span
+                                    class="w-8 h-8 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center font-bold text-sm">08</span>
+                                <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight">
+                                    Pricing, Payment Transparency &amp; Shift Deposits
+                                </h2>
+                            </div>
+                            <button type="button"
+                                class="legal-copy-btn px-2.5 py-1 rounded-lg border border-slate-200 text-xs font-medium text-slate-500 hover:text-sky-600 hover:border-sky-300 transition-all flex items-center gap-1"
+                                data-section="term-8">
+                                <i class="fa-regular fa-copy"></i>
+                                <span class="hidden sm:inline">Copy Link</span>
+                            </button>
+                        </div>
+
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            All consultation fees and nurse shift rates are displayed transparently prior to
+                            confirmation. For multi-day home care (7, 14, or 30 days), an advance escrow deposit is
+                            required to secure qualified nursing staff. Official digital invoices are generated in your
+                            dashboard for corporate insurance claims.
+                        </p>
+                    </section>
+
+                    <!-- Clause 9 (Cancellation & Refund Schedule) -->
+                    <section id="term-9" class="legal-section scroll-mt-28 space-y-4">
+                        <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+                            <div class="flex items-center gap-3">
+                                <span
+                                    class="w-8 h-8 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-sm">09</span>
+                                <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight">
+                                    Cancellation, Rescheduling &amp; Refund Schedule
+                                </h2>
+                            </div>
+                            <button type="button"
+                                class="legal-copy-btn px-2.5 py-1 rounded-lg border border-slate-200 text-xs font-medium text-slate-500 hover:text-sky-600 hover:border-sky-300 transition-all flex items-center gap-1"
+                                data-section="term-9">
+                                <i class="fa-regular fa-copy"></i>
+                                <span class="hidden sm:inline">Copy Link</span>
+                            </button>
+                        </div>
+
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            To balance patient flexibility with fair compensation for healthcare staff who reserve
+                            dedicated time slots, we uphold the following structured cancellation framework:
+                        </p>
+
+                        <div class="overflow-x-auto rounded-2xl border border-slate-200">
+                            <table class="w-full text-left text-xs sm:text-sm">
+                                <thead class="bg-slate-50 text-slate-700 font-bold border-b border-slate-200">
+                                    <tr>
+                                        <th class="p-3.5">Service Type</th>
+                                        <th class="p-3.5">Notice Window</th>
+                                        <th class="p-3.5">Refund Percentage</th>
+                                        <th class="p-3.5">Rescheduling Policy</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-slate-100 text-slate-600">
+                                    <tr class="hover:bg-slate-50/50">
+                                        <td class="p-3.5 font-semibold text-slate-900">Hospital Doctor OPD Appointment
+                                        </td>
+                                        <td class="p-3.5">&gt; 4 hours before slot</td>
+                                        <td class="p-3.5 text-emerald-600 font-bold">100% Full Refund</td>
+                                        <td class="p-3.5">Free 1-time date change</td>
+                                    </tr>
+                                    <tr class="hover:bg-slate-50/50">
+                                        <td class="p-3.5 font-semibold text-slate-900">Hospital Doctor OPD Appointment
+                                        </td>
+                                        <td class="p-3.5">&lt; 4 hours or No-Show</td>
+                                        <td class="p-3.5 text-red-500 font-semibold">50% Retained for Clinic Slot</td>
+                                        <td class="p-3.5">Subject to doctor approval</td>
+                                    </tr>
+                                    <tr class="hover:bg-slate-50/50">
+                                        <td class="p-3.5 font-semibold text-slate-900">Home Nursing 12h/24h Shift</td>
+                                        <td class="p-3.5">&gt; 12 hours before shift start</td>
+                                        <td class="p-3.5 text-emerald-600 font-bold">100% Refund (or credit)</td>
+                                        <td class="p-3.5">Rescheduled without penalty</td>
+                                    </tr>
+                                    <tr class="hover:bg-slate-50/50">
+                                        <td class="p-3.5 font-semibold text-slate-900">Home Nursing 12h/24h Shift</td>
+                                        <td class="p-3.5">Nurse already dispatched / on-site</td>
+                                        <td class="p-3.5 text-slate-700">1st Shift Fee charged; balance refunded</td>
+                                        <td class="p-3.5">Transportation fee applied</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <p class="text-xs text-slate-500 italic">
+                            * Approved refunds are credited back to the original funding source (JazzCash, EasyPaisa, or
+                            Credit Card) within 3–5 banking days.
+                        </p>
+                    </section>
+
+                    <!-- Clause 10 -->
+                    <section id="term-10" class="legal-section scroll-mt-28 space-y-4">
+                        <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+                            <div class="flex items-center gap-3">
+                                <span
+                                    class="w-8 h-8 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center font-bold text-sm">10</span>
+                                <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight">
+                                    User Account Security &amp; Patient Responsibilities
+                                </h2>
+                            </div>
+                            <button type="button"
+                                class="legal-copy-btn px-2.5 py-1 rounded-lg border border-slate-200 text-xs font-medium text-slate-500 hover:text-sky-600 hover:border-sky-300 transition-all flex items-center gap-1"
+                                data-section="term-10">
+                                <i class="fa-regular fa-copy"></i>
+                                <span class="hidden sm:inline">Copy Link</span>
+                            </button>
+                        </div>
+
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Users are responsible for safeguarding their login credentials and OTP passwords. You must
+                            provide truthful medical histories, known allergies, and active address locations.
+                            Concealment of communicable infections or psychiatric instability that may endanger clinical
+                            caregivers is a material breach of this contract.
+                        </p>
+                    </section>
+
+                    <!-- Clause 11 -->
+                    <section id="term-11" class="legal-section scroll-mt-28 space-y-4">
+                        <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+                            <div class="flex items-center gap-3">
+                                <span
+                                    class="w-8 h-8 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center font-bold text-sm">11</span>
+                                <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight">
+                                    Telehealth &amp; Remote Guidance Limitations
+                                </h2>
+                            </div>
+                            <button type="button"
+                                class="legal-copy-btn px-2.5 py-1 rounded-lg border border-slate-200 text-xs font-medium text-slate-500 hover:text-sky-600 hover:border-sky-300 transition-all flex items-center gap-1"
+                                data-section="term-11">
+                                <i class="fa-regular fa-copy"></i>
+                                <span class="hidden sm:inline">Copy Link</span>
+                            </button>
+                        </div>
+
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Remote video and audio consultations provided via the portal are intended for initial
+                            triage, follow-up evaluations, and non-emergent medical advice. Telehealth does not
+                            substitute for a physical hands-on clinical examination where auscultation, palpation, or
+                            urgent diagnostic imaging is required.
+                        </p>
+                    </section>
+
+                    <!-- Clause 12 -->
+                    <section id="term-12" class="legal-section scroll-mt-28 space-y-4">
+                        <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+                            <div class="flex items-center gap-3">
+                                <span
+                                    class="w-8 h-8 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center font-bold text-sm">12</span>
+                                <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight">
+                                    Limitation of Clinical Liability &amp; Indemnification
+                                </h2>
+                            </div>
+                            <button type="button"
+                                class="legal-copy-btn px-2.5 py-1 rounded-lg border border-slate-200 text-xs font-medium text-slate-500 hover:text-sky-600 hover:border-sky-300 transition-all flex items-center gap-1"
+                                data-section="term-12">
+                                <i class="fa-regular fa-copy"></i>
+                                <span class="hidden sm:inline">Copy Link</span>
+                            </button>
+                        </div>
+
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            To the maximum extent permitted by the laws of Pakistan, ShifaCare Plus shall not be held
+                            liable for indirect, incidental, or consequential damages resulting from technical
+                            interruptions, network downtime, or third-party hospital scheduling delays. Independent
+                            physicians and nurses maintain their own professional indemnity and are solely answerable
+                            for their direct clinical acts under PMDC and PNC statutes.
+                        </p>
+                    </section>
+
+                    <!-- Clause 13 -->
+                    <section id="term-13" class="legal-section scroll-mt-28 space-y-4">
+                        <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+                            <div class="flex items-center gap-3">
+                                <span
+                                    class="w-8 h-8 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center font-bold text-sm">13</span>
+                                <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight">
+                                    Service Termination &amp; Account Deactivation
+                                </h2>
+                            </div>
+                            <button type="button"
+                                class="legal-copy-btn px-2.5 py-1 rounded-lg border border-slate-200 text-xs font-medium text-slate-500 hover:text-sky-600 hover:border-sky-300 transition-all flex items-center gap-1"
+                                data-section="term-13">
+                                <i class="fa-regular fa-copy"></i>
+                                <span class="hidden sm:inline">Copy Link</span>
+                            </button>
+                        </div>
+
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            We reserve the right to suspend or permanently deactivate accounts for fraudulent bookings,
+                            threatening staff conduct, non-payment of completed nurse shifts, or misuse of emergency
+                            notification systems. Patients may terminate their account at any time via the portal
+                            settings.
+                        </p>
+                    </section>
+
+                    <!-- Clause 14 -->
+                    <section id="term-14" class="legal-section scroll-mt-28 space-y-4">
+                        <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+                            <div class="flex items-center gap-3">
+                                <span
+                                    class="w-8 h-8 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center font-bold text-sm">14</span>
+                                <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight">
+                                    Governing Law, Islamabad Jurisdiction &amp; Disputes
+                                </h2>
+                            </div>
+                            <button type="button"
+                                class="legal-copy-btn px-2.5 py-1 rounded-lg border border-slate-200 text-xs font-medium text-slate-500 hover:text-sky-600 hover:border-sky-300 transition-all flex items-center gap-1"
+                                data-section="term-14">
+                                <i class="fa-regular fa-copy"></i>
+                                <span class="hidden sm:inline">Copy Link</span>
+                            </button>
+                        </div>
+
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            These Terms shall be interpreted and governed in accordance with the substantive laws of
+                            Pakistan. Any dispute arising out of or related to portal services shall first be submitted
+                            to good-faith mediation through our Islamabad Operations Center. If unresolved within 30
+                            days, disputes shall be subject to the exclusive jurisdiction of the competent courts in
+                            Islamabad Capital Territory (ICT).
+                        </p>
+
+                        <div class="bg-slate-50 border border-slate-200 rounded-2xl p-5 text-xs sm:text-sm space-y-2">
+                            <div class="font-bold text-slate-900">Legal Compliance &amp; Regulatory Inquiries:</div>
+                            <div class="text-slate-600">
+                                ShifaCare Plus Legal Department, Executive Tower, Blue Area, Jinnah Avenue, Islamabad,
+                                Pakistan.<br />
+                                Direct Email: <a href="mailto:legal@shifacare.pk"
+                                    class="text-sky-600 hover:underline font-semibold">legal@shifacare.pk</a> |
+                                Operations Desk: 051-9280000
+                            </div>
+                        </div>
+
+                    </section>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </main>
+
+    <!-- FREQUENTLY ASKED QUESTIONS (FAQs) SECTION -->
+    <section class="py-16 bg-slate-50 border-t border-slate-200" id="faqs" data-aos="fade-up" data-aos-duration="1000">
+        <div class="w-full px-4 sm:px-6 lg:px-12">
+
+            <!-- Section Header -->
+            <div class="text-center max-w-4xl mx-auto mb-10" data-aos="fade-up" data-aos-delay="100">
+                <span
+                    class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-teal-50 text-teal-700 border border-teal-200 mb-3 shadow-sm">
+                    <i class="fa-solid fa-circle-question"></i> Help & Patient Guidance
+                </span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">Frequently Asked Questions
+                </h2>
+                <p class="text-slate-600 mt-3 text-sm md:text-base">
+                    Find answers about home nursing PNC verification, doctor OPD booking, hospital emergency dispatch,
+                    and fee structures in Islamabad & Rawalpindi.
+                </p>
+            </div>
+
+            <!-- FAQ Live Search & Category Filter Controls -->
+            <div class="max-w-5xl mx-auto mb-8 space-y-4" data-aos="fade-up" data-aos-delay="200">
+                <!-- Live Search Input -->
+                <div class="relative">
+                    <span class="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none text-slate-400">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </span>
+                    <input type="text" id="faq-search-input"
+                        class="w-full pl-11 pr-4 py-3.5 bg-white border border-slate-200 rounded-2xl text-sm text-slate-800 placeholder-slate-400 shadow-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all"
+                        placeholder="Search FAQs (e.g., 'PNC verification', '12hr vs 24hr', 'Shifa OPD')..."
+                        autocomplete="off" />
+                </div>
+
+                <!-- Filter Category Tabs/Pills -->
+                <div class="flex flex-wrap items-center justify-center gap-2" id="faq-category-pills-list">
+                    <button
+                        class="faq-filter-pill px-4 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-2 bg-teal-600 text-white shadow-sm"
+                        data-category="all">
+                        <i class="fa-solid fa-list-ul"></i> All Topics
+                    </button>
+                    <button
+                        class="faq-filter-pill px-4 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-2 bg-white text-slate-600 border border-slate-200 hover:bg-slate-100 hover:text-slate-900"
+                        data-category="nursing">
+                        <i class="fa-solid fa-user-nurse text-teal-600"></i> Home Nursing Care
+                    </button>
+                    <button
+                        class="faq-filter-pill px-4 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-2 bg-white text-slate-600 border border-slate-200 hover:bg-slate-100 hover:text-slate-900"
+                        data-category="doctors">
+                        <i class="fa-solid fa-user-doctor text-sky-600"></i> Doctor Appointments
+                    </button>
+                    <button
+                        class="faq-filter-pill px-4 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-2 bg-white text-slate-600 border border-slate-200 hover:bg-slate-100 hover:text-slate-900"
+                        data-category="hospitals">
+                        <i class="fa-solid fa-hospital text-indigo-600"></i> Hospitals & Emergency
+                    </button>
+                    <button
+                        class="faq-filter-pill px-4 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-2 bg-white text-slate-600 border border-slate-200 hover:bg-slate-100 hover:text-slate-900"
+                        data-category="billing">
+                        <i class="fa-solid fa-credit-card text-emerald-600"></i> Pricing & Safety
+                    </button>
+                </div>
+            </div>
+
+            <!-- Accordion FAQ Items -->
+            <div class="max-w-5xl mx-auto space-y-4" id="faqAccordionPortal">
+
+                <!-- FAQ 1: PNC Verification -->
+                <div class="faq-accordion-item bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden transition-all duration-200"
+                    data-category="nursing" data-aos="fade-up" data-aos-delay="300">
+                    <button
+                        class="faq-accordion-btn w-full px-6 py-4 text-left flex items-center justify-between gap-4 focus:outline-none group">
+                        <span class="font-bold text-slate-900 text-sm md:text-base flex items-center gap-3">
+                            <i class="fa-solid fa-shield-check text-emerald-600 text-lg"></i>
+                            How do you verify PNC certification and security backgrounds for home nurses?
+                        </span>
+                        <i
+                            class="fa-solid fa-chevron-down text-slate-400 group-hover:text-teal-600 transition-transform duration-300"></i>
+                    </button>
+                    <div
+                        class="faq-accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-6 text-slate-600 text-sm">
+                        <div class="pb-6 pt-2 border-t border-slate-100">
+                            <p class="mb-3">Every nurse registered on ShifaCare Plus undergoes a rigorous <strong>3-tier
+                                    credentialing protocol</strong> before attending patients:</p>
+                            <ul class="list-disc pl-5 space-y-1.5 text-slate-700 mb-3">
+                                <li><strong>PNC License Verification:</strong> Real-time cross-check with the Pakistan
+                                    Nursing Council registry (BScN / Midwifery registration numbers).</li>
+                                <li><strong>Police Background Clearance:</strong> Character and security verification
+                                    through Islamabad Capital Police and Punjab Police Citizen Facilitation Centers.
+                                </li>
+                                <li><strong>Clinical Skills Validation:</strong> Practical testing in cannula insertion,
+                                    IV infusion, tracheostomy hygiene, Ryle's tube feeding, and emergency CPR.</li>
+                            </ul>
+                            <p class="text-xs text-slate-500 mb-0">Families can inspect the caregiver's original PNC
+                                registration card and digital profile badge upon arrival at their home.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 2: 12h vs 24h shifts -->
+                <div class="faq-accordion-item bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden transition-all duration-200"
+                    data-category="nursing" data-aos="fade-up" data-aos-delay="350">
+                    <button
+                        class="faq-accordion-btn w-full px-6 py-4 text-left flex items-center justify-between gap-4 focus:outline-none group">
+                        <span class="font-bold text-slate-900 text-sm md:text-base flex items-center gap-3">
+                            <i class="fa-solid fa-clock text-teal-600 text-lg"></i>
+                            What is the difference between 12-hour shifts and 24-hour live-in home nursing?
+                        </span>
+                        <i
+                            class="fa-solid fa-chevron-down text-slate-400 group-hover:text-teal-600 transition-transform duration-300"></i>
+                    </button>
+                    <div
+                        class="faq-accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-6 text-slate-600 text-sm">
+                        <div class="pb-6 pt-2 border-t border-slate-100">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3">
+                                <div class="p-3.5 bg-teal-50/60 rounded-xl border border-teal-200">
+                                    <div class="font-bold text-teal-900 text-sm mb-1 flex items-center gap-1.5">
+                                        <i class="fa-solid fa-sun text-amber-500"></i> 12-Hour Shifts (Day/Night)
+                                    </div>
+                                    <p class="text-xs text-slate-600 mb-0">Shift timings: 8:00 AM – 8:00 PM or 8:00 PM –
+                                        8:00 AM. Ideal for post-op surgical recovery, wound management, or night-shift
+                                        vitals monitoring.</p>
+                                </div>
+                                <div class="p-3.5 bg-sky-50/60 rounded-xl border border-sky-200">
+                                    <div class="font-bold text-sky-900 text-sm mb-1 flex items-center gap-1.5">
+                                        <i class="fa-solid fa-house-medical text-sky-600"></i> 24-Hour Live-In Nursing
+                                    </div>
+                                    <p class="text-xs text-slate-600 mb-0">Around-the-clock dedicated clinical support
+                                        with scheduled rotation. Best suited for stroke rehabilitation, coma, and
+                                        ventilator support.</p>
+                                </div>
+                            </div>
+                            <p class="text-xs text-slate-500 mb-0">Both male and female nursing staff are available
+                                according to family cultural preferences.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 3: Doctor OPD Booking -->
+                <div class="faq-accordion-item bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden transition-all duration-200"
+                    data-category="doctors" data-aos="fade-up" data-aos-delay="400">
+                    <button
+                        class="faq-accordion-btn w-full px-6 py-4 text-left flex items-center justify-between gap-4 focus:outline-none group">
+                        <span class="font-bold text-slate-900 text-sm md:text-base flex items-center gap-3">
+                            <i class="fa-solid fa-calendar-check text-sky-600 text-lg"></i>
+                            How do I book confirmed appointments with specialists at Shifa, PIMS, or Maroof?
+                        </span>
+                        <i
+                            class="fa-solid fa-chevron-down text-slate-400 group-hover:text-teal-600 transition-transform duration-300"></i>
+                    </button>
+                    <div
+                        class="faq-accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-6 text-slate-600 text-sm">
+                        <div class="pb-6 pt-2 border-t border-slate-100">
+                            <p class="mb-2">Booking takes less than 60 seconds with our integrated 6-step appointment
+                                wizard:</p>
+                            <ol class="list-decimal pl-5 space-y-1.5 text-slate-700 text-sm mb-3">
+                                <li>Select your specialist (Cardiology, Gynaecology, Pediatrics, Orthopedic, etc.).</li>
+                                <li>Choose your preferred hospital OPD facility (e.g., Shifa International H-8, Maroof
+                                    F-10, etc.).</li>
+                                <li>Pick your desired consultation date and time slot.</li>
+                                <li>Enter patient information and reason for visit.</li>
+                                <li>Confirm booking to receive an instant confirmed token number and SMS map link.</li>
+                            </ol>
+                            <p class="text-xs text-slate-500 mb-0">No waiting in long hospital queues — you can directly
+                                show your digital token at the clinic reception desk.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 4: Cancellation & Rescheduling -->
+                <div class="faq-accordion-item bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden transition-all duration-200"
+                    data-category="doctors" data-aos="fade-up" data-aos-delay="450">
+                    <button
+                        class="faq-accordion-btn w-full px-6 py-4 text-left flex items-center justify-between gap-4 focus:outline-none group">
+                        <span class="font-bold text-slate-900 text-sm md:text-base flex items-center gap-3">
+                            <i class="fa-solid fa-arrows-rotate text-indigo-600 text-lg"></i>
+                            Can I reschedule or cancel a doctor appointment or nursing booking?
+                        </span>
+                        <i
+                            class="fa-solid fa-chevron-down text-slate-400 group-hover:text-teal-600 transition-transform duration-300"></i>
+                    </button>
+                    <div
+                        class="faq-accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-6 text-slate-600 text-sm">
+                        <div class="pb-6 pt-2 border-t border-slate-100">
+                            <p class="text-slate-700 mb-2">
+                                Yes, absolutely. You can manage, reschedule, or cancel any consultation or home nurse
+                                booking with one click from your <strong><a href="dashboard-patient.html"
+                                        class="text-sky-600 font-semibold underline">Patient Dashboard</a></strong>.
+                            </p>
+                            <p class="text-xs text-slate-500 mb-0">
+                                Doctor consultations can be rescheduled up to 2 hours before the slot without penalty.
+                                For nursing shifts, we request at least 4 hours' notice.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 5: Pricing & Payment Methods -->
+                <div class="faq-accordion-item bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden transition-all duration-200"
+                    data-category="billing" data-aos="fade-up" data-aos-delay="500">
+                    <button
+                        class="faq-accordion-btn w-full px-6 py-4 text-left flex items-center justify-between gap-4 focus:outline-none group">
+                        <span class="font-bold text-slate-900 text-sm md:text-base flex items-center gap-3">
+                            <i class="fa-solid fa-money-bill-wave text-emerald-600 text-lg"></i>
+                            What are the pricing rates for home nurses and what payment methods are accepted?
+                        </span>
+                        <i
+                            class="fa-solid fa-chevron-down text-slate-400 group-hover:text-teal-600 transition-transform duration-300"></i>
+                    </button>
+                    <div
+                        class="faq-accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-6 text-slate-600 text-sm">
+                        <div class="pb-6 pt-2 border-t border-slate-100">
+                            <p class="text-slate-700 mb-3">Pricing is transparent with no hidden agency markups. Rates
+                                are set based on shift duration and patient clinical complexity:</p>
+
+                            <div class="overflow-x-auto mb-3 border border-slate-200 rounded-xl">
+                                <table class="w-full text-left border-collapse text-xs">
+                                    <thead class="bg-slate-100 text-slate-700 uppercase">
+                                        <tr>
+                                            <th class="p-3">Care Level</th>
+                                            <th class="p-3">12-Hour Shift</th>
+                                            <th class="p-3">24-Hour Live-In</th>
+                                            <th class="p-3">Included Services</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-slate-200">
+                                        <tr class="hover:bg-slate-50">
+                                            <td class="p-3 font-semibold text-slate-800">Basic Elderly Care</td>
+                                            <td class="p-3">Rs. 3,500 – 4,000</td>
+                                            <td class="p-3">Rs. 6,500 – 7,000</td>
+                                            <td class="p-3 text-slate-500">Vitals, oral medication, hygiene</td>
+                                        </tr>
+                                        <tr class="hover:bg-slate-50">
+                                            <td class="p-3 font-semibold text-slate-800">Post-Op & Wound Care</td>
+                                            <td class="p-3">Rs. 4,000 – 4,800</td>
+                                            <td class="p-3">Rs. 7,500 – 8,500</td>
+                                            <td class="p-3 text-slate-500">Sterile dressings, IV cannula</td>
+                                        </tr>
+                                        <tr class="hover:bg-slate-50">
+                                            <td class="p-3 font-semibold text-slate-800">ICU / Ventilator / Trach</td>
+                                            <td class="p-3">Rs. 5,000 – 6,000</td>
+                                            <td class="p-3">Rs. 9,500 – 11,000</td>
+                                            <td class="p-3 text-slate-500">Suctioning, bi-pap monitoring</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p class="text-xs text-slate-500 mb-0">Accepted modes: <strong>JazzCash, EasyPaisa, IBFT,
+                                    Visa/Mastercard</strong>, or Cash-on-Arrival.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- No FAQ Results Found Message -->
+            <div id="no-faq-results"
+                class="hidden text-center py-12 bg-white rounded-2xl border border-slate-200 shadow-sm max-w-5xl mx-auto mt-4">
+                <i class="fa-solid fa-circle-question text-slate-300 text-4xl mb-3"></i>
+                <h5 class="font-bold text-slate-800 text-lg">No matching questions found</h5>
+                <p class="text-slate-500 text-sm max-w-md mx-auto mb-4">We couldn't find a question matching your search
+                    term. Feel free to contact our 24/7 care desk directly!</p>
+                <a href="tel:0519280000"
+                    class="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold bg-teal-600 text-white shadow hover:bg-teal-700 transition-colors">
+                    <i class="fa-solid fa-phone"></i> Call 051-9280000
+                </a>
+            </div>
+
+            <!-- FAQ Contact & Support Card -->
+            <div class="max-w-5xl mx-auto mt-8 px-4 sm:px-0" data-aos="fade-up" data-aos-delay="600">
+                <div
+                    class="bg-gradient-to-r from-teal-950 via-teal-900 to-slate-900 rounded-3xl p-6 sm:p-8 md:p-10 text-white shadow-xl relative overflow-hidden border border-teal-800/40">
+
+                    <!-- Decorative Background Glow Effect -->
+                    <div
+                        class="absolute -right-10 -bottom-10 w-64 h-64 bg-teal-500/10 rounded-full blur-3xl pointer-events-none">
+                    </div>
+
+                    <div
+                        class="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 lg:gap-8">
+
+                        <!-- Left Content Area -->
+                        <div class="space-y-2 max-w-xl">
+                            <span
+                                class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold tracking-wide bg-teal-500/20 text-teal-300 border border-teal-500/30 shadow-inner">
+                                <i class="fa-solid fa-headset text-teal-400"></i> 24/7 PATIENT CARE DESK
+                            </span>
+                            <h4 class="text-xl sm:text-2xl md:text-3xl font-extrabold tracking-tight text-white">
+                                Have a Question Not Answered Here?
+                            </h4>
+                            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                                Our care coordinators in Islamabad are available around the clock to help match the
+                                right nurse or doctor for your family.
+                            </p>
+                        </div>
+
+                        <!-- Right Action Buttons Area -->
+                        <div class="flex flex-row sm:flex-row items-center gap-3.5 w-full lg:w-auto shrink-0">
+                            <!-- Call Button -->
+                            <a href="tel:0519280000"
+                                class="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2.5 px-5 py-3.5 rounded-2xl bg-white text-slate-900 font-bold text-xs sm:text-sm shadow-md hover:bg-teal-50 hover:text-teal-950 hover:scale-[1.02] active:scale-[0.98] transition-all text-nowrap group">
+                                <i
+                                    class="fa-solid fa-phone text-teal-600 group-hover:text-teal-800 text-base transition-colors"></i>
+                                051-9280000
+                            </a>
+
+                            <!-- Portal Button -->
+                            <a href="dashboard-patient.html"
+                                class="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2.5 px-5 py-3.5 rounded-2xl bg-teal-600 text-white font-bold text-xs sm:text-sm shadow-md hover:bg-teal-700 hover:text-white hover:shadow-teal-900/50 hover:scale-[1.02] active:scale-[0.98] transition-all text-nowrap">
+                                <i class="fa-solid fa-clipboard-user text-base"></i> Ask in Portal
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 border-t border-slate-800 text-slate-400 py-12 md:py-16" id="main-portal-footer">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 w-full">
+
+            <!-- Top Grid Columns -->
+            <div
+                class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-12 gap-6 lg:gap-8 pb-12 border-b border-slate-800/80">
+
+                <!-- Brand Column (Span 4 on Desktop, Full Width on Mobile) -->
+                <div class="col-span-2 lg:col-span-4 space-y-4">
+                    <div class="flex items-center gap-2.5">
+                        <div
+                            class="w-9 h-9 rounded-xl bg-teal-600 text-white flex items-center justify-center text-base shadow-md">
+                            <i class="fa-solid fa-heart-pulse"></i>
+                        </div>
+                        <span class="text-xl font-bold text-white tracking-tight">Medi <span
+                                class="text-teal-400">Care</span></span>
+                    </div>
+                    <p class="text-sm text-slate-400 leading-relaxed max-w-sm">
+                        Connecting families with certified home nurses, licensed PMDC doctors, and leading hospital
+                        facilities across Islamabad and Rawalpindi.
+                    </p>
+                    <div class="text-xs text-slate-400 flex items-center gap-2 pt-1">
+                        <i class="fa-solid fa-location-dot text-teal-400"></i>
+                        <span>Blue Area, Jinnah Avenue, Islamabad, Pakistan</span>
+                    </div>
+                </div>
+
+                <!-- Home Nursing Links (Span 2) -->
+                <div class="col-span-1 sm:col-span-1 lg:col-span-2 space-y-3">
+                    <h4 class="text-white font-bold text-sm tracking-wide uppercase">Home Nursing</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="nurses.html?service=elderly" class="hover:text-teal-400 transition-colors">Elderly
+                                Care</a></li>
+                        <li><a href="nurses.html?service=post-op" class="hover:text-teal-400 transition-colors">Post-Op
+                                Recovery</a></li>
+                        <li><a href="nurses.html?service=stroke" class="hover:text-teal-400 transition-colors">Stroke
+                                Rehabilitation</a></li>
+                        <li><a href="nurses.html?service=neonatal" class="hover:text-teal-400 transition-colors">Mother
+                                & Baby Care</a></li>
+                        <li><a href="nurses.html?shift=24h" class="hover:text-teal-400 transition-colors">24/7 Live-In
+                                Nurses</a></li>
+                    </ul>
+                </div>
+
+                <!-- Medical Specialists Links (Span 2) -->
+                <div class="col-span-1 sm:col-span-1 lg:col-span-2 space-y-3">
+                    <h4 class="text-white font-bold text-sm tracking-wide uppercase">Medical Specialists</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="doctors.html?specialty=Cardiologist"
+                                class="hover:text-teal-400 transition-colors">Cardiologists</a></li>
+                        <li><a href="doctors.html?specialty=Gynecologist"
+                                class="hover:text-teal-400 transition-colors">Gynecologists</a></li>
+                        <li><a href="doctors.html?specialty=Pediatrician"
+                                class="hover:text-teal-400 transition-colors">Pediatricians</a></li>
+                        <li><a href="doctors.html?specialty=Neurologist"
+                                class="hover:text-teal-400 transition-colors">Neurologists</a></li>
+                        <li><a href="doctors.html?specialty=Orthopedic"
+                                class="hover:text-teal-400 transition-colors">Orthopedic
+                                Surgeons</a></li>
+                    </ul>
+                </div>
+
+                <!-- Top Hospitals Links (Span 2) -->
+                <div class="col-span-1 sm:col-span-1 lg:col-span-2 space-y-3">
+                    <h4 class="text-white font-bold text-sm tracking-wide uppercase">Top Hospitals</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="hospitals.html?id=shifa" class="hover:text-teal-400 transition-colors">Shifa
+                                International H-8</a></li>
+                        <li><a href="hospitals.html?id=pims" class="hover:text-teal-400 transition-colors">PIMS
+                                Islamabad G-8</a></li>
+                        <li><a href="hospitals.html?id=maroof" class="hover:text-teal-400 transition-colors">Maroof
+                                Hospital F-10</a></li>
+                        <li><a href="hospitals.html?id=holy-family" class="hover:text-teal-400 transition-colors">Holy
+                                Family Rawalpindi</a></li>
+                        <li><a href="hospitals.html?id=cmh" class="hover:text-teal-400 transition-colors">CMH
+                                Rawalpindi</a></li>
+                    </ul>
+                </div>
+
+                <!-- Patient Portal Links (Span 2) -->
+                <div class="col-span-1 sm:col-span-1 lg:col-span-2 space-y-3">
+                    <h4 class="text-white font-bold text-sm tracking-wide uppercase">Patient Portal</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="dashboard-patient.html?tab=appointments"
+                                class="hover:text-teal-400 transition-colors">My
+                                Appointments</a></li>
+                        <li><a href="dashboard-patient.html?tab=nurses"
+                                class="hover:text-teal-400 transition-colors">Active
+                                Caregivers</a></li>
+                        <li><a href="dashboard-patient.html?tab=vitals"
+                                class="hover:text-teal-400 transition-colors">Patient Vitals
+                                Chart</a></li>
+                        <li><a href="dashboard-patient.html?tab=payments"
+                                class="hover:text-teal-400 transition-colors">Payment
+                                Invoices</a></li>
+                        <li><a href="dashboard-patient.html?tab=favorites"
+                                class="hover:text-teal-400 transition-colors">Saved
+                                Doctors</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Footer Bottom Bar -->
+            <div
+                class="pt-8 flex flex-col sm:flex-row flex-wrap justify-between items-center gap-4 text-xs text-slate-500">
+                <div>
+                    © 2026 ShifaCare Plus - Twin Cities Healthcare & Home Nursing Portal. All Rights Reserved.
+                </div>
+                <div class="flex flex-wrap items-center gap-4">
+                    <span class="text-slate-400 flex items-center gap-1.5">
+                        <i class="fa-solid fa-shield-check text-emerald-400"></i> PNC & PMDC Certified
+                    </span>
+                    <span class="text-slate-400 flex items-center gap-1.5">
+                        <i class="fa-solid fa-lock text-sky-400"></i> 256-bit HIPAA Standard Privacy
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Notification Toast Container -->
+    <div id="toast-notification-container"></div>
+
+    <!-- JavaScript Scripts -->
+    <!-- CDN Dependencies -->
+    <!-- Tailwind CSS Play CDN (Configured for custom styles and animations) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0284c7',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- AOS Library JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,  // Animation speed (milliseconds)
+            once: false,    // Yeh FALSE karne se element scroll out hone par reset ho jaye ga aur bar bar animate hoga!
+            offset: 100,    // Kitne pixels scroll hone par trigger ho
+        });
+    </script>
+
+    <!-- Dedicated Scripts -->
+    <script src="/assets/js/legal.js"></script>
+</body>
+
+</html>
