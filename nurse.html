@@ -131,28 +131,37 @@
 
     <!-- NURSES HERO sidebar -->
     <!-- NURSES HERO HEADER -->
-    <section class="nurses-hero-header py-12 md:py-16 relative overflow-hidden" id="nurses-header-section"
+    <section class="relative py-16 md:py-20 nurses-hero-header text-white overflow-hidden" id="nurses-header-section"
         data-aos="fade-in">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div
+            class="absolute inset-0 opacity-10 bg-[radial-gradient(#14b8a6_1px,transparent_1px)] [background-size:16px_16px]">
+        </div>
 
-            <!-- Breadcrumb Navigation -->
-            <nav aria-label="breadcrumb" class="mb-4" data-aos="fade-down" data-aos-duration="600">
-                <ol class="flex items-center gap-2 text-xs text-teal-200">
-                    <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
-                    <li><span class="text-teal-300">/</span></li>
-                    <li class="text-white font-medium" aria-current="page">Home Nursing Services</li>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
+            <!-- Breadcrumb -->
+            <nav class="mb-4 text-xs sm:text-sm text-teal-200 font-medium" aria-label="Breadcrumb" data-aos="fade-down"
+                data-aos-duration="600">
+                <ol class="flex items-center gap-2">
+                    <li>
+                        <a href="index.html" class="hover:text-white transition-colors flex items-center gap-1">
+                            <i class="fa-solid fa-house text-xs"></i> Home
+                        </a>
+                    </li>
+                    <li><i class="fa-solid fa-chevron-right text-[10px] text-teal-400"></i></li>
+                    <li class="text-white font-semibold" aria-current="page">Home Nursing Services</li>
                 </ol>
             </nav>
 
-            <!-- Main Content Flex Wrapper (Added lg:items-center for perfect vertical alignment) -->
+            <!-- Main Content Flex Wrapper -->
             <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
 
                 <!-- Left Title & Description -->
                 <div class="max-w-3xl" data-aos="fade-right" data-aos-duration="800">
-                    <h1 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight mb-2">
+                    <h1
+                        class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-3 leading-tight">
                         PNC Certified Home Nursing Care
                     </h1>
-                    <p class="text-teal-100/90 text-sm md:text-base leading-relaxed mb-0">
+                    <p class="text-slate-300 text-sm md:text-base leading-relaxed mb-0">
                         Find vetted, compassionate male and female registered nurses for 12-hour shifts or 24/7 live-in
                         support across Islamabad sectors and Rawalpindi.
                     </p>
@@ -161,7 +170,7 @@
                 <!-- Right Verified Badge Box -->
                 <div class="lg:text-right" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
                     <div
-                        class="inline-flex items-center gap-2.5 bg-teal-950/60 border border-teal-500/30 px-3.5 py-2.5 rounded-xl text-teal-100 text-xs font-semibold shadow-sm backdrop-blur-md">
+                        class="inline-flex items-center gap-2.5 bg-teal-950/60 border border-teal-500/30 px-4 py-3 rounded-2xl text-teal-100 text-xs font-semibold shadow-sm backdrop-blur-md">
                         <i class="fa-solid fa-shield-halved text-emerald-400 text-base"></i>
                         <span>Police Background Checked & PNC Verified</span>
                     </div>

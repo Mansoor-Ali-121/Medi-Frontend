@@ -131,39 +131,43 @@
   </header>
 
   <!-- HERO SECTION (PURE TAILWIND) -->
-  <section
-    class="bg-gradient-to-br from-slate-950 via-slate-900 to-sky-950 text-white py-14 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+  <section class="relative py-16 md:py-20 privacy-hero-header text-white overflow-hidden">
     <!-- Decorative background elements -->
+    <div
+      class="absolute inset-0 opacity-10 bg-[radial-gradient(#38bdf8_1px,transparent_1px)] [background-size:16px_16px]">
+    </div>
     <div class="absolute -right-20 -top-20 w-96 h-96 bg-sky-500/10 rounded-full blur-3xl pointer-events-none"></div>
     <div class="absolute -left-20 -bottom-20 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
-    <div class="max-w-7xl mx-auto relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
 
       <!-- Breadcrumb -->
-      <nav class="flex items-center gap-2 text-xs text-sky-300/80 mb-4" aria-label="Breadcrumb">
-        <a href="index.html" class="hover:text-white transition-colors">Home</a>
-        <i class="fa-solid fa-chevron-right text-[10px] text-slate-500"></i>
-        <span class="text-slate-400">Legal Governance</span>
-        <i class="fa-solid fa-chevron-right text-[10px] text-slate-500"></i>
+      <nav class="flex items-center gap-2 text-xs sm:text-sm text-teal-200 font-medium mb-4" aria-label="Breadcrumb">
+        <a href="index.html" class="hover:text-white transition-colors flex items-center gap-1">
+          <i class="fa-solid fa-house text-xs"></i> Home
+        </a>
+        <i class="fa-solid fa-chevron-right text-[10px] text-teal-300"></i>
+        <span class="text-teal-100/80">Legal Governance</span>
+        <i class="fa-solid fa-chevron-right text-[10px] text-teal-300"></i>
         <span class="text-white font-semibold">Privacy Policy</span>
       </nav>
 
       <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-6">
         <div class="max-w-3xl space-y-3">
 
-          <!-- Badges -->
+          <!-- Badges (High Contrast Update) -->
           <div class="flex flex-wrap items-center gap-2.5">
             <span
-              class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-sky-500/20 text-sky-300 border border-sky-400/30">
-              <i class="fa-solid fa-shield-halved"></i> Patient Privacy Standards
+              class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold bg-teal-900/80 text-teal-200 border border-teal-400/50 shadow-sm">
+              <i class="fa-solid fa-shield-halved text-teal-300"></i> Patient Privacy Standards
             </span>
             <span
-              class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-400/30">
-              <i class="fa-solid fa-check"></i> Last Updated: September 2026
+              class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-emerald-950/80 text-emerald-200 border border-emerald-400/50 shadow-sm">
+              <i class="fa-solid fa-check text-emerald-300"></i> Last Updated: September 2026
             </span>
             <span
-              class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-white/10 text-slate-300 border border-white/15">
-              <i class="fa-solid fa-scale-balanced"></i> PMDC &amp; PECA Compliant
+              class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-slate-900/80 text-slate-200 border border-slate-400/40 shadow-sm">
+              <i class="fa-solid fa-scale-balanced text-sky-300"></i> PMDC &amp; PECA Compliant
             </span>
           </div>
 
@@ -171,7 +175,7 @@
             Patient Privacy &amp; Clinical Data Policy
           </h1>
 
-          <p class="text-sm sm:text-base text-slate-300 leading-relaxed">
+          <p class="text-sm sm:text-base text-teal-50/90 leading-relaxed">
             Protecting your confidential medical records, diagnostic test results, home nursing logs, and personal
             health identifiers across Islamabad and Rawalpindi.
           </p>
@@ -184,7 +188,7 @@
             <i class="fa-solid fa-print"></i> Print Official Copy
           </button>
           <a href="terms.html"
-            class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-sky-600 hover:bg-sky-500 text-white text-xs font-bold transition-colors shadow-lg shadow-sky-600/30">
+            class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-teal-600 hover:bg-teal-500 text-white text-xs font-bold transition-colors shadow-lg shadow-teal-900/40 hover:text-black">
             <i class="fa-solid fa-file-contract"></i> View Terms of Service
           </a>
         </div>
@@ -192,7 +196,7 @@
     </div>
   </section>
 
- <!-- QUICK HIGHLIGHTS METRIC CARDS (PURE TAILWIND) -->
+  <!-- QUICK HIGHLIGHTS METRIC CARDS (PURE TAILWIND) -->
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 relative z-20 no-print">
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
 

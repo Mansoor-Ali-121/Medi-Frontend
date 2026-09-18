@@ -12,6 +12,7 @@
 .legal-toc-body::-webkit-scrollbar {
   width: 5px;
 }
+
 .legal-toc-body::-webkit-scrollbar-thumb {
   background: #cbd5e1;
   border-radius: 4px;
@@ -24,6 +25,7 @@
     color: #000000 !important;
     font-size: 11pt !important;
   }
+
   .no-print,
   #top-emergency-announcement-bar,
   header,
@@ -37,22 +39,26 @@
   a[href^="#"] {
     display: none !important;
   }
+
   .legal-hero-header {
     background: none !important;
     color: #000000 !important;
     padding: 0 0 20px !important;
     border-bottom: 2px solid #000000 !important;
   }
+
   .legal-hero-header h1,
   .legal-hero-header p,
   .legal-hero-header span {
     color: #000000 !important;
   }
+
   .legal-content-card {
     border: none !important;
     box-shadow: none !important;
     padding: 0 !important;
   }
+
   .legal-section {
     page-break-inside: avoid;
     border-bottom: 1px solid #e2e8f0 !important;
@@ -60,3 +66,14 @@
   }
 }
 
+/* Privacy Policy Hero Background */
+.privacy-hero-header {
+  background: linear-gradient(to right, #0d9488, #0f766e, #155e75);
+
+}
+
+/* Terms & Conditions Hero Background */
+.terms-hero-header {
+  background: linear-gradient(to right, #0d9488, #0f766e, #155e75);
+
+}
