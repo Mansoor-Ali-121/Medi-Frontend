@@ -24,7 +24,7 @@
 
     <!-- TOP EMERGENCY RESPONSE & UTILITY BAR -->
     <div class="top-emergency-bar bg-slate-900 text-slate-200 border-b border-slate-800"
-        id="top-emergency-announcement-bar" data-aos="fade-down" data-aos-duration="800">
+        id="top-emergency-announcement-bar">
         <div class="max-w-7xl mx-auto px-4 flex justify-between items-center flex-wrap gap-2 py-1.5">
             <div class="flex items-center flex-wrap gap-2 text-xs">
                 <a href="tel:1122"
@@ -52,8 +52,7 @@
 
     <!-- STICKY MAIN NAVBAR -->
     <header
-        class="portal-navbar-wrapper sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm"
-        data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100">
+        class="portal-navbar-wrapper sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm">
         <div class="portal-nav-container max-w-7xl mx-auto px-4 py-3 flex justify-between items-center relative">
 
             <!-- Brand Logo -->
@@ -128,352 +127,524 @@
         </div>
     </header>
 
-    <!-- CITY HERO SECTION -->
-    <section class="relative py-16 md:py-24 bg-slate-950 text-white overflow-hidden">
-        <!-- Background Image with Tag -->
-        <div class="absolute inset-0 w-full h-full overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?q=80&w=1920&auto=format&fit=crop"
-                alt="Lahore Healthcare" class="w-full h-full object-cover object-center scale-105">
+    <!-- HOSPITAL DETAIL HERO SECTION (Matching City Page Style) -->
+    <section class="relative bg-slate-900 text-white py-20 overflow-hidden">
+        <!-- Background Image with Dark Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?auto=format&fit=crop&q=80&w=1600"
+                alt="Hospital Background" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-slate-950/80"></div>
         </div>
 
-        <!-- Dark Overlay taake text clearly readable rahay -->
-        <div class="absolute inset-0 bg-slate-950/80 backdrop-blur-[2px]"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Breadcrumb Navigation -->
+            <nav class="flex items-center gap-2 text-xs text-slate-300 mb-6">
+                <a href="index.html" class="hover:text-white transition-all">Home</a>
+                <i class="fa-solid fa-chevron-right text-[10px] text-slate-400"></i>
+                <a href="hospitals.html" class="hover:text-white transition-all">Hospitals</a>
+                <i class="fa-solid fa-chevron-right text-[10px] text-slate-400"></i>
+                <span class="text-teal-400 font-semibold">Hospital Details</span>
+            </nav>
 
-        <div
-            class="absolute top-0 right-0 -mt-12 -mr-12 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl pointer-events-none">
-        </div>
-
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
-            <div class="max-w-3xl space-y-6" data-aos="fade-up">
-                <span
-                    class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-teal-500/20 text-teal-300 border border-teal-500/30 shadow-sm">
-                    <i class="fa-solid fa-location-dot"></i> Lahore Healthcare Hub
-                </span>
-                <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white leading-tight">
-                    Certified Home Nursing & Hospital OPD Booking in <span class="text-teal-400">Lahore</span>
-                </h1>
-                <p class="text-slate-300 text-base md:text-lg leading-relaxed">
-                    Connecting families across Gulberg, DHA, Bahria Town, and Johar Town with verified PNC home nurses,
-                    expert PMDC specialists, and priority hospital admissions.
-                </p>
-                <div class="flex flex-wrap items-center gap-4 pt-4">
-                    <a href="nurses.html"
-                        class="px-6 py-3.5 rounded-2xl bg-teal-600 text-white font-bold text-sm shadow-lg shadow-teal-900/50 hover:bg-teal-700 transition-all flex items-center gap-2">
-                        <i class="fa-solid fa-user-nurse"></i> Book Home Nurse
-                    </a>
-                    <a href="doctors.html"
-                        class="px-6 py-3.5 rounded-2xl bg-white/10 border border-white/20 text-white font-bold text-sm hover:bg-white/20 transition-all flex items-center gap-2">
-                        <i class="fa-solid fa-calendar-check"></i> Find Specialist Doctor
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-  <!-- FEATURED LOCAL HOSPITALS IN CITY -->
-    <section class="py-16 bg-white border-b border-slate-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12" data-aos="fade-up">
-                <div>
-                    <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900">Top Partner Hospitals in Lahore</h2>
-                    <p class="text-slate-600 text-sm mt-2">Get instant digital OPD tokens and verified specialist schedules
-                        for top medical centers.</p>
-                </div>
-                <div class="mt-4 md:mt-0">
-                    <a href="hospitals.html"
-                        class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-800 font-bold text-xs hover:bg-slate-100 transition-all shadow-sm">
-                        View All Hospitals <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6" data-aos="fade-up" data-aos-delay="200">
-                <!-- Hospital Card 1 -->
-                <div
-                    class="bg-slate-50 border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all">
-                    <div
-                        class="w-12 h-12 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center text-xl mb-4 font-bold border border-teal-100">
-                        <i class="fa-solid fa-hospital"></i>
-                    </div>
-                    <h3 class="font-bold text-lg text-slate-900 mb-1">Shaukat Khanum Hospital</h3>
-                    <p class="text-xs text-teal-600 font-semibold mb-3"><i class="fa-solid fa-location-dot"></i> Johar
-                        Town, Lahore</p>
-                    <p class="text-xs text-slate-600 mb-4">Specialized oncology care, emergency services, and
-                        multi-disciplinary clinical consultations.</p>
-                    <a href="hospitals.html?id=shaukat-khanum"
-                        class="text-xs font-bold text-teal-600 hover:text-teal-700 flex items-center gap-1">
-                        Book OPD Token <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                    </a>
-                </div>
-
-                <!-- Hospital Card 2 -->
-                <div
-                    class="bg-slate-50 border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all">
-                    <div
-                        class="w-12 h-12 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center text-xl mb-4 font-bold border border-sky-100">
-                        <i class="fa-solid fa-hospital"></i>
-                    </div>
-                    <h3 class="font-bold text-lg text-slate-900 mb-1">Services Hospital Lahore</h3>
-                    <p class="text-xs text-sky-600 font-semibold mb-3"><i class="fa-solid fa-location-dot"></i> Jail
-                        Road, Lahore</p>
-                    <p class="text-xs text-slate-600 mb-4">Comprehensive tertiary care facility offering advanced
-                        surgical and medical departments.</p>
-                    <a href="hospitals.html?id=services-lahore"
-                        class="text-xs font-bold text-sky-600 hover:text-sky-700 flex items-center gap-1">
-                        Book OPD Token <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                    </a>
-                </div>
-
-                <!-- Hospital Card 3 -->
-                <div
-                    class="bg-slate-50 border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all">
-                    <div
-                        class="w-12 h-12 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-xl mb-4 font-bold border border-indigo-100">
-                        <i class="fa-solid fa-hospital"></i>
-                    </div>
-                    <h3 class="font-bold text-lg text-slate-900 mb-1">Hameed Latif Hospital</h3>
-                    <p class="text-xs text-indigo-600 font-semibold mb-3"><i class="fa-solid fa-location-dot"></i>
-                        Ferozepur Road, Lahore</p>
-                    <p class="text-xs text-slate-600 mb-4">Renowned for maternal care, pediatrics, advanced diagnostics,
-                        and 24/7 emergency care.</p>
-                    <a href="hospitals.html?id=hameed-latif"
-                        class="text-xs font-bold text-indigo-600 hover:text-indigo-700 flex items-center gap-1">
-                        Book OPD Token <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FEATURED DOCTORS IN CITY -->
-    <section class="py-16 bg-slate-50 border-b border-slate-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12" data-aos="fade-up">
-                <div>
+            <div class="max-w-3xl">
+                <!-- Badges -->
+                <div class="flex flex-wrap items-center gap-2 mb-4">
                     <span
-                        class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-teal-50 text-teal-700 border border-teal-200 mb-3 shadow-sm">
-                        <i class="fa-solid fa-user-doctor"></i> PMDC Verified Specialists
+                        class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-teal-500/20 text-teal-300 border border-teal-500/30 backdrop-blur-sm">
+                        <i class="fa-solid fa-shield-check"></i> JCI Accredited
                     </span>
-                    <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900">Top Specialist Doctors in Lahore</h2>
-                    <p class="text-slate-600 text-sm mt-2">Book instant consultations and clinic OPD tokens with leading
-                        specialists.</p>
+                    <span
+                        class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30 backdrop-blur-sm">
+                        <i class="fa-solid fa-star"></i> 4.7 (3,820 Reviews)
+                    </span>
                 </div>
-                <div class="mt-4 md:mt-0">
-                    <a href="doctors.html"
-                        class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-800 font-bold text-xs hover:bg-slate-100 transition-all shadow-sm">
-                        View All Doctors <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                    </a>
+
+                <!-- Hospital Name -->
+                <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight mb-4 text-white">
+                    Shifa International Hospital
+                </h1>
+
+                <!-- Location -->
+                <p class="text-sm md:text-base text-slate-300 mb-4 flex items-center gap-2 font-medium">
+                    <i class="fa-solid fa-location-dot text-teal-400"></i> Pitras Bukhari Rd, Sector H-8/4, Islamabad
+                </p>
+
+                <!-- Description -->
+                <p class="text-xs md:text-sm text-slate-300 mb-8 leading-relaxed">
+                    State-of-the-art tertiary care medical facility offering advanced diagnostics, specialized oncology
+                    care, emergency services, and multi-disciplinary clinical consultations.
+                </p>
+
+                <!-- Quick Stats -->
+                <div class="flex flex-wrap gap-4">
+                    <div class="bg-white/10 backdrop-blur-md border border-white/10 px-4 py-2.5 rounded-2xl text-xs">
+                        <span class="block text-slate-400 text-[10px] uppercase font-bold tracking-wider">Total
+                            Beds</span>
+                        <strong class="text-white text-sm font-extrabold">550+ Beds</strong>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-md border border-white/10 px-4 py-2.5 rounded-2xl text-xs">
+                        <span class="block text-slate-400 text-[10px] uppercase font-bold tracking-wider">ICU
+                            Status</span>
+                        <strong class="text-emerald-400 text-sm font-extrabold flex items-center gap-1.5">
+                            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Available (24/7)
+                        </strong>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-md border border-white/10 px-4 py-2.5 rounded-2xl text-xs">
+                        <span
+                            class="block text-slate-400 text-[10px] uppercase font-bold tracking-wider">Emergency</span>
+                        <strong class="text-rose-400 text-sm font-extrabold">Active 24/7</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DOCTORS & SPECIALISTS SECTION (Matching Provided Card Design) -->
+    <section class="py-16 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Section Header & Filter Buttons -->
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 gap-6">
+                <div>
+                    <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900">Available Specialists</h2>
+                    <p class="text-xs md:text-sm text-slate-500 mt-1">Select a department category to filter verified
+                        doctors instantly.</p>
+                </div>
+
+                <!-- Category Filter Buttons -->
+                <div class="flex flex-wrap gap-2 bg-white p-1.5 rounded-2xl border border-slate-200 shadow-sm">
+                    <button onclick="filterCategory('all', event)"
+                        class="filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-teal-600 text-white shadow-sm transition-all">All
+                        Specialists</button>
+                    <button onclick="filterCategory('Cardiology', event)"
+                        class="filter-btn px-4 py-2 rounded-xl text-xs font-bold text-slate-600 hover:bg-slate-100 transition-all">Cardiology</button>
+                    <button onclick="filterCategory('Neurology', event)"
+                        class="filter-btn px-4 py-2 rounded-xl text-xs font-bold text-slate-600 hover:bg-slate-100 transition-all">Neurology</button>
+                    <button onclick="filterCategory('Oncology', event)"
+                        class="filter-btn px-4 py-2 rounded-xl text-xs font-bold text-slate-600 hover:bg-slate-100 transition-all">Oncology</button>
+                    <button onclick="filterCategory('Pediatrics', event)"
+                        class="filter-btn px-4 py-2 rounded-xl text-xs font-bold text-slate-600 hover:bg-slate-100 transition-all">Pediatrics</button>
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6" data-aos="fade-up" data-aos-delay="200">
+            <!-- Doctors Grid -->
+            <div id="doctors-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
                 <!-- Doctor Card 1 -->
-                <div
-                    class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                <div class="doctor-card bg-white border border-slate-200/80 rounded-3xl p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between"
+                    data-category="Cardiology">
                     <div>
-                        <div class="flex items-center gap-4 mb-4">
-                            <div
-                                class="w-14 h-14 rounded-2xl bg-teal-100 text-teal-700 font-bold flex items-center justify-center text-xl overflow-hidden shadow-inner">
-                                <i class="fa-solid fa-user-doctor"></i>
+                        <!-- Top Row: Image & Fee/Rating -->
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="relative">
+                                <div class="w-16 h-16 rounded-2xl overflow-hidden shadow-inner border border-slate-100">
+                                    <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=200"
+                                        alt="Dr. Ahmed Bilal" class="w-full h-full object-cover">
+                                </div>
+                                <span
+                                    class="absolute -bottom-1 -right-1 bg-emerald-500 text-white text-[9px] w-4 h-4 rounded-full flex items-center justify-center border-2 border-white"><i
+                                        class="fa-solid fa-check text-[8px]"></i></span>
                             </div>
-                            <div>
-                                <h3 class="font-bold text-base text-slate-900">Dr. Ahmed Bilal</h3>
-                                <p class="text-xs text-teal-600 font-semibold">Consultant Cardiologist</p>
-                                <p class="text-[11px] text-slate-400">MBBS, FCPS (Cardiology)</p>
+                            <div class="text-right">
+                                <span
+                                    class="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">Fee</span>
+                                <strong class="text-slate-900 text-sm font-extrabold">Rs. 2,500</strong>
+                                <div
+                                    class="flex items-center gap-1 text-[11px] font-bold text-amber-500 mt-0.5 justify-end">
+                                    <i class="fa-solid fa-star text-[10px]"></i> 4.9 <span
+                                        class="text-slate-400 font-normal text-[10px]">(120)</span>
+                                </div>
                             </div>
                         </div>
-                        <ul class="space-y-2 text-xs text-slate-600 mb-6 border-t border-slate-100 pt-3">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-teal-600"></i>
-                                Gulberg III, Lahore</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-clock text-teal-600"></i> Mon -
-                                Sat (4:00 PM - 8:00 PM)</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-star text-amber-400"></i> <strong
-                                    class="text-slate-800">4.9</strong> (120+ Reviews)</li>
-                        </ul>
+
+                        <!-- Doctor Info -->
+                        <h3 class="font-extrabold text-base text-slate-900 hover:text-teal-600 transition-colors">Dr.
+                            Ahmed Bilal</h3>
+                        <p class="text-xs text-teal-600 font-bold mt-0.5">Consultant Cardiologist</p>
+                        <p class="text-[11px] text-slate-400 font-medium mt-0.5">MBBS, FCPS • 12 Yrs Exp</p>
+
+                        <!-- Hospital & Timing Info -->
+                        <div class="mt-4 pt-4 border-t border-slate-100 space-y-1.5 text-xs text-slate-600">
+                            <p class="flex items-center gap-2 truncate font-medium">
+                                <i class="fa-solid fa-hospital text-teal-600 w-4"></i> National Hospital
+                            </p>
+                            <p class="flex items-center gap-2 font-medium text-slate-500">
+                                <i class="fa-solid fa-clock text-teal-600 w-4"></i> Mon-Sat (4PM)
+                            </p>
+                        </div>
                     </div>
-                    <a href="doctor-profile.html?id=ahmed-bilal"
-                        class="w-full py-2.5 rounded-xl bg-teal-50 text-teal-700 font-bold text-xs hover:bg-teal-600 hover:text-white transition-all text-center block">
-                        Book Appointment
-                    </a>
+
+                    <!-- Action Buttons -->
+                    <div class="mt-6 pt-4 border-t border-slate-100 space-y-2">
+                        <a href="book-appointment.html?doctor=Dr.%20Ahmed%20Bilal"
+                            class="w-full py-2.5 rounded-xl bg-teal-600 text-white font-bold text-xs hover:bg-teal-700 transition-all text-center block shadow-sm shadow-teal-600/20 hover:text-white">
+                            Book Appointment
+                        </a>
+                        <a href="doctor-profile.html?doctor=Dr.%20Ahmed%20Bilal"
+                            class="w-full py-2 rounded-xl bg-slate-50 text-slate-600 font-bold text-xs hover:bg-slate-100 transition-all text-center block border border-slate-200">
+                            Profile
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Doctor Card 2 -->
-                <div
-                    class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                <div class="doctor-card bg-white border border-slate-200/80 rounded-3xl p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between"
+                    data-category="Neurology">
                     <div>
-                        <div class="flex items-center gap-4 mb-4">
-                            <div
-                                class="w-14 h-14 rounded-2xl bg-sky-100 text-sky-700 font-bold flex items-center justify-center text-xl overflow-hidden shadow-inner">
-                                <i class="fa-solid fa-user-doctor"></i>
+                        <!-- Top Row: Image & Fee/Rating -->
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="relative">
+                                <div class="w-16 h-16 rounded-2xl overflow-hidden shadow-inner border border-slate-100">
+                                    <img src="https://images.unsplash.com/photo-1594824813572-2d93e15f4e37?auto=format&fit=crop&q=80&w=200"
+                                        alt="Dr. Ayesha Siddique" class="w-full h-full object-cover">
+                                </div>
+                                <span
+                                    class="absolute -bottom-1 -right-1 bg-emerald-500 text-white text-[9px] w-4 h-4 rounded-full flex items-center justify-center border-2 border-white"><i
+                                        class="fa-solid fa-check text-[8px]"></i></span>
                             </div>
-                            <div>
-                                <h3 class="font-bold text-base text-slate-900">Dr. Ayesha Siddique</h3>
-                                <p class="text-xs text-sky-600 font-semibold">Senior Gynecologist</p>
-                                <p class="text-[11px] text-slate-400">MBBS, MRCOG (UK)</p>
+                            <div class="text-right">
+                                <span
+                                    class="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">Fee</span>
+                                <strong class="text-slate-900 text-sm font-extrabold">Rs. 3,000</strong>
+                                <div
+                                    class="flex items-center gap-1 text-[11px] font-bold text-amber-500 mt-0.5 justify-end">
+                                    <i class="fa-solid fa-star text-[10px]"></i> 4.95 <span
+                                        class="text-slate-400 font-normal text-[10px]">(185)</span>
+                                </div>
                             </div>
                         </div>
-                        <ul class="space-y-2 text-xs text-slate-600 mb-6 border-t border-slate-100 pt-3">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-sky-600"></i>
-                                DHA Phase 5, Lahore</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-clock text-sky-600"></i> Mon - Fri
-                                (10:00 AM - 2:00 PM)</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-star text-amber-400"></i> <strong
-                                    class="text-slate-800">4.95</strong> (180+ Reviews)</li>
-                        </ul>
+
+                        <!-- Doctor Info -->
+                        <h3 class="font-extrabold text-base text-slate-900 hover:text-teal-600 transition-colors">Dr.
+                            Ayesha Siddique</h3>
+                        <p class="text-xs text-teal-600 font-bold mt-0.5">Senior Gynecologist</p>
+                        <p class="text-[11px] text-slate-400 font-medium mt-0.5">MBBS, MRCOG • 15 Yrs Exp</p>
+
+                        <!-- Hospital & Timing Info -->
+                        <div class="mt-4 pt-4 border-t border-slate-100 space-y-1.5 text-xs text-slate-600">
+                            <p class="flex items-center gap-2 truncate font-medium">
+                                <i class="fa-solid fa-hospital text-teal-600 w-4"></i> Hameed Latif Hospital
+                            </p>
+                            <p class="flex items-center gap-2 font-medium text-slate-500">
+                                <i class="fa-solid fa-clock text-teal-600 w-4"></i> Mon-Fri (10AM)
+                            </p>
+                        </div>
                     </div>
-                    <a href="doctor-profile.html?id=ayesha-siddique"
-                        class="w-full py-2.5 rounded-xl bg-sky-50 text-sky-700 font-bold text-xs hover:bg-sky-600 hover:text-white transition-all text-center block">
-                        Book Appointment
-                    </a>
+
+                    <!-- Action Buttons -->
+                    <div class="mt-6 pt-4 border-t border-slate-100 space-y-2">
+                        <a href="book-appointment.html?doctor=Dr.%20Ayesha%20Siddique"
+                            class="w-full py-2.5 rounded-xl bg-teal-600 text-white font-bold text-xs hover:bg-teal-700 transition-all text-center block shadow-sm shadow-teal-600/20 hover:text-white">
+                            Book Appointment
+                        </a>
+                        <a href="doctor-profile.html?doctor=Dr.%20Ayesha%20Siddique"
+                            class="w-full py-2 rounded-xl bg-slate-50 text-slate-600 font-bold text-xs hover:bg-slate-100 transition-all text-center block border border-slate-200">
+                            Profile
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Doctor Card 3 -->
-                <div
-                    class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                <div class="doctor-card bg-white border border-slate-200/80 rounded-3xl p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between"
+                    data-category="Oncology">
                     <div>
-                        <div class="flex items-center gap-4 mb-4">
-                            <div
-                                class="w-14 h-14 rounded-2xl bg-indigo-100 text-indigo-700 font-bold flex items-center justify-center text-xl overflow-hidden shadow-inner">
-                                <i class="fa-solid fa-user-doctor"></i>
+                        <!-- Top Row: Image & Fee/Rating -->
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="relative">
+                                <div class="w-16 h-16 rounded-2xl overflow-hidden shadow-inner border border-slate-100">
+                                    <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&q=80&w=200"
+                                        alt="Dr. Usman Tariq" class="w-full h-full object-cover">
+                                </div>
+                                <span
+                                    class="absolute -bottom-1 -right-1 bg-emerald-500 text-white text-[9px] w-4 h-4 rounded-full flex items-center justify-center border-2 border-white"><i
+                                        class="fa-solid fa-check text-[8px]"></i></span>
                             </div>
-                            <div>
-                                <h3 class="font-bold text-base text-slate-900">Dr. Usman Tariq</h3>
-                                <p class="text-xs text-indigo-600 font-semibold">Consultant Orthopedic Surgeon</p>
-                                <p class="text-[11px] text-slate-400">MBBS, MS (Ortho)</p>
+                            <div class="text-right">
+                                <span
+                                    class="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">Fee</span>
+                                <strong class="text-slate-900 text-sm font-extrabold">Rs. 2,000</strong>
+                                <div
+                                    class="flex items-center gap-1 text-[11px] font-bold text-amber-500 mt-0.5 justify-end">
+                                    <i class="fa-solid fa-star text-[10px]"></i> 4.85 <span
+                                        class="text-slate-400 font-normal text-[10px]">(95)</span>
+                                </div>
                             </div>
                         </div>
-                        <ul class="space-y-2 text-xs text-slate-600 mb-6 border-t border-slate-100 pt-3">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-indigo-600"></i>
-                                Johar Town, Lahore</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-clock text-indigo-600"></i> Tue -
-                                Sun (5:00 PM - 9:00 PM)</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-star text-amber-400"></i> <strong
-                                    class="text-slate-800">4.85</strong> (95+ Reviews)</li>
-                        </ul>
+
+                        <!-- Doctor Info -->
+                        <h3 class="font-extrabold text-base text-slate-900 hover:text-teal-600 transition-colors">Dr.
+                            Usman Tariq</h3>
+                        <p class="text-xs text-teal-600 font-bold mt-0.5">Orthopedic Surgeon</p>
+                        <p class="text-[11px] text-slate-400 font-medium mt-0.5">MBBS, MS • 10 Yrs Exp</p>
+
+                        <!-- Hospital & Timing Info -->
+                        <div class="mt-4 pt-4 border-t border-slate-100 space-y-1.5 text-xs text-slate-600">
+                            <p class="flex items-center gap-2 truncate font-medium">
+                                <i class="fa-solid fa-hospital text-teal-600 w-4"></i> Farooq Hospital
+                            </p>
+                            <p class="flex items-center gap-2 font-medium text-slate-500">
+                                <i class="fa-solid fa-clock text-teal-600 w-4"></i> Tue-Sun (5PM)
+                            </p>
+                        </div>
                     </div>
-                    <a href="doctor-profile.html?id=usman-tariq"
-                        class="w-full py-2.5 rounded-xl bg-indigo-50 text-indigo-700 font-bold text-xs hover:bg-indigo-600 hover:text-white transition-all text-center block">
-                        Book Appointment
-                    </a>
+
+                    <!-- Action Buttons -->
+                    <div class="mt-6 pt-4 border-t border-slate-100 space-y-2">
+                        <a href="book-appointment.html?doctor=Dr.%20Usman%20Tariq"
+                            class="w-full py-2.5 rounded-xl bg-teal-600 text-white font-bold text-xs hover:bg-teal-700 transition-all text-center block shadow-sm shadow-teal-600/20 hover:text-white">
+                            Book Appointment
+                        </a>
+                        <a href="doctor-profile.html?doctor=Dr.%20Usman%20Tariq"
+                            class="w-full py-2 rounded-xl bg-slate-50 text-slate-600 font-bold text-xs hover:bg-slate-100 transition-all text-center block border border-slate-200">
+                            Profile
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Pagination Section -->
+            <div class="mt-12 flex items-center justify-center gap-2">
+                <button
+                    class="w-10 h-10 rounded-xl bg-white border border-slate-200 text-slate-500 hover:bg-slate-100 text-xs font-bold flex items-center justify-center transition-all disabled:opacity-50 cursor-pointer"
+                    disabled>
+                    <i class="fa-solid fa-chevron-left text-[10px]"></i>
+                </button>
+                <button
+                    class="w-10 h-10 rounded-xl bg-teal-600 text-white text-xs font-extrabold flex items-center justify-center shadow-sm shadow-teal-600/20 transition-all">
+                    1
+                </button>
+                <button
+                    class="w-10 h-10 rounded-xl bg-white border border-slate-200 text-slate-700 hover:bg-slate-100 text-xs font-bold flex items-center justify-center transition-all">
+                    2
+                </button>
+                <button
+                    class="w-10 h-10 rounded-xl bg-white border border-slate-200 text-slate-700 hover:bg-slate-100 text-xs font-bold flex items-center justify-center transition-all">
+                    3
+                </button>
+                <span class="text-slate-400 px-1 text-xs font-bold">...</span>
+                <button
+                    class="w-10 h-10 rounded-xl bg-white border border-slate-200 text-slate-700 hover:bg-slate-100 text-xs font-bold flex items-center justify-center transition-all">
+                    10
+                </button>
+                <button
+                    class="w-10 h-10 rounded-xl bg-white border border-slate-200 text-slate-700 hover:bg-slate-100 text-xs font-bold flex items-center justify-center transition-all cursor-pointer">
+                    <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Services & Facilities Section -->
+    <section class="py-14 bg-gradient-to-b from-slate-50/50 to-white border-t border-slate-200/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-8">
+                <div>
+                    <span
+                        class="text-teal-600 font-extrabold text-[11px] uppercase tracking-wider block mb-1">World-Class
+                        Care</span>
+                    <h2 class="text-2xl font-extrabold text-slate-900 tracking-tight">Hospital Facilities & Services
+                    </h2>
+                    <p class="text-xs text-slate-500 mt-1">We provide state-of-the-art medical amenities and emergency
+                        care for our patients.</p>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+                <div
+                    class="group bg-white border border-slate-200/80 rounded-2xl p-5 text-center hover:border-teal-500 hover:shadow-lg hover:shadow-teal-500/5 hover:-translate-y-1 transition-all duration-300">
+                    <div
+                        class="w-12 h-12 mx-auto rounded-2xl bg-teal-50 text-teal-600 flex items-center justify-center text-base mb-3 group-hover:bg-teal-600 group-hover:text-white transition-all duration-300 shadow-sm">
+                        <i class="fa-solid fa-truck-medical"></i>
+                    </div>
+                    <h3 class="text-xs font-extrabold text-slate-800 group-hover:text-teal-600 transition-colors">24/7
+                        Emergency</h3>
+                </div>
+                <div
+                    class="group bg-white border border-slate-200/80 rounded-2xl p-5 text-center hover:border-teal-500 hover:shadow-lg hover:shadow-teal-500/5 hover:-translate-y-1 transition-all duration-300">
+                    <div
+                        class="w-12 h-12 mx-auto rounded-2xl bg-teal-50 text-teal-600 flex items-center justify-center text-base mb-3 group-hover:bg-teal-600 group-hover:text-white transition-all duration-300 shadow-sm">
+                        <i class="fa-solid fa-pills"></i>
+                    </div>
+                    <h3 class="text-xs font-extrabold text-slate-800 group-hover:text-teal-600 transition-colors">
+                        Pharmacy</h3>
+                </div>
+                <div
+                    class="group bg-white border border-slate-200/80 rounded-2xl p-5 text-center hover:border-teal-500 hover:shadow-lg hover:shadow-teal-500/5 hover:-translate-y-1 transition-all duration-300">
+                    <div
+                        class="w-12 h-12 mx-auto rounded-2xl bg-teal-50 text-teal-600 flex items-center justify-center text-base mb-3 group-hover:bg-teal-600 group-hover:text-white transition-all duration-300 shadow-sm">
+                        <i class="fa-solid fa-flask"></i>
+                    </div>
+                    <h3 class="text-xs font-extrabold text-slate-800 group-hover:text-teal-600 transition-colors">Lab
+                        Tests</h3>
+                </div>
+                <div
+                    class="group bg-white border border-slate-200/80 rounded-2xl p-5 text-center hover:border-teal-500 hover:shadow-lg hover:shadow-teal-500/5 hover:-translate-y-1 transition-all duration-300">
+                    <div
+                        class="w-12 h-12 mx-auto rounded-2xl bg-teal-50 text-teal-600 flex items-center justify-center text-base mb-3 group-hover:bg-teal-600 group-hover:text-white transition-all duration-300 shadow-sm">
+                        <i class="fa-solid fa-bed-pulse"></i>
+                    </div>
+                    <h3 class="text-xs font-extrabold text-slate-800 group-hover:text-teal-600 transition-colors">ICU /
+                        NICU</h3>
+                </div>
+                <div
+                    class="group bg-white border border-slate-200/80 rounded-2xl p-5 text-center hover:border-teal-500 hover:shadow-lg hover:shadow-teal-500/5 hover:-translate-y-1 transition-all duration-300">
+                    <div
+                        class="w-12 h-12 mx-auto rounded-2xl bg-teal-50 text-teal-600 flex items-center justify-center text-base mb-3 group-hover:bg-teal-600 group-hover:text-white transition-all duration-300 shadow-sm">
+                        <i class="fa-solid fa-x-ray"></i>
+                    </div>
+                    <h3 class="text-xs font-extrabold text-slate-800 group-hover:text-teal-600 transition-colors">X-Ray
+                        & MRI</h3>
+                </div>
+                <div
+                    class="group bg-white border border-slate-200/80 rounded-2xl p-5 text-center hover:border-teal-500 hover:shadow-lg hover:shadow-teal-500/5 hover:-translate-y-1 transition-all duration-300">
+                    <div
+                        class="w-12 h-12 mx-auto rounded-2xl bg-teal-50 text-teal-600 flex items-center justify-center text-base mb-3 group-hover:bg-teal-600 group-hover:text-white transition-all duration-300 shadow-sm">
+                        <i class="fa-solid fa-car"></i>
+                    </div>
+                    <h3 class="text-xs font-extrabold text-slate-800 group-hover:text-teal-600 transition-colors">Free
+                        Parking</h3>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FEATURED HOME NURSES IN CITY -->
-    <section class="py-16 bg-white border-b border-slate-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12" data-aos="fade-up">
+    <!-- Patient Reviews Section -->
+    <section class="py-14 bg-white border-t border-slate-200/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
                 <div>
                     <span
-                        class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200 mb-3 shadow-sm">
-                        <i class="fa-solid fa-user-nurse"></i> PNC Verified Nursing Staff
-                    </span>
-                    <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900">Certified Home Nurses in Lahore</h2>
-                    <p class="text-slate-600 text-sm mt-2">Professional nursing care, elderly assistance, and
-                        post-operative recovery at your doorstep.</p>
+                        class="text-teal-600 font-extrabold text-[11px] uppercase tracking-wider block mb-1">Testimonials</span>
+                    <h2 class="text-2xl font-extrabold text-slate-900 tracking-tight">Patient Reviews</h2>
+                    <p class="text-xs text-slate-500 mt-1">Real feedback and experiences shared by verified patients.
+                    </p>
                 </div>
-                <div class="mt-4 md:mt-0">
-                    <a href="nurses.html"
-                        class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-800 font-bold text-xs hover:bg-slate-100 transition-all shadow-sm">
-                        View All Nurses <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                    </a>
+                <div
+                    class="bg-amber-500/10 border border-amber-500/20 px-4 py-2.5 rounded-2xl flex items-center gap-2 self-start sm:self-auto">
+                    <div class="flex items-center gap-1 text-amber-500 text-sm">
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="text-xs font-extrabold text-slate-900">4.8 <span
+                            class="text-slate-400 font-normal">(350+ Reviews)</span></span>
                 </div>
             </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6" data-aos="fade-up" data-aos-delay="200">
-                <!-- Nurse Card 1 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div
-                    class="bg-slate-50 border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                    class="bg-slate-50/70 border border-slate-200/80 rounded-3xl p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
                     <div>
-                        <div class="flex items-center gap-4 mb-4">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-3">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-teal-600 text-white font-extrabold text-xs flex items-center justify-center shadow-inner">
+                                    AR
+                                </div>
+                                <div>
+                                    <h4 class="text-xs font-extrabold text-slate-900">Ali Raza</h4>
+                                    <span class="text-[10px] text-slate-400 font-medium">Verified Patient</span>
+                                </div>
+                            </div>
+                            <span
+                                class="text-xs font-extrabold text-amber-500 bg-amber-500/10 px-2.5 py-1 rounded-xl flex items-center gap-1">
+                                <i class="fa-solid fa-star text-[10px]"></i> 5.0
+                            </span>
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed italic">"Bahot hi acha hospital hai,
+                            cleanliness achi hai aur staff ka behaviour bhi kaafi polite aur cooperative tha."</p>
+                    </div>
+                    <span class="text-[10px] text-slate-400 mt-4 block font-medium">2 days ago</span>
+                </div>
+                <div
+                    class="bg-slate-50/70 border border-slate-200/80 rounded-3xl p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-3">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-teal-600 text-white font-extrabold text-xs flex items-center justify-center shadow-inner">
+                                    FN
+                                </div>
+                                <div>
+                                    <h4 class="text-xs font-extrabold text-slate-900">Fatima Noor</h4>
+                                    <span class="text-[10px] text-slate-400 font-medium">Verified Patient</span>
+                                </div>
+                            </div>
+                            <span
+                                class="text-xs font-extrabold text-amber-500 bg-amber-500/10 px-2.5 py-1 rounded-xl flex items-center gap-1">
+                                <i class="fa-solid fa-star text-[10px]"></i> 4.5
+                            </span>
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed italic">"Doctors bohot experienced hain.
+                            Appointment system bhi smooth hai, bas thora wait karna para peak hours mein."</p>
+                    </div>
+                    <span class="text-[10px] text-slate-400 mt-4 block font-medium">1 week ago</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map & Location Section -->
+    <section class="py-14 bg-gradient-to-b from-white to-slate-50/50 border-t border-slate-200/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-8">
+                <span class="text-teal-600 font-extrabold text-[11px] uppercase tracking-wider block mb-1">Find Us
+                    Easily</span>
+                <h2 class="text-2xl font-extrabold text-slate-900 tracking-tight">Location & Directions</h2>
+                <p class="text-xs text-slate-500 mt-1">Visit our premises or reach out to our helpline for immediate
+                    guidance.</p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <!-- Address Details Box -->
+                <div
+                    class="bg-white border border-slate-200/80 rounded-3xl p-6 shadow-sm flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-3.5 group">
                             <div
-                                class="w-14 h-14 rounded-2xl bg-teal-100 text-teal-700 font-bold flex items-center justify-center text-xl overflow-hidden shadow-inner flex-shrink-0">
-                                <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=200"
-                                    alt="Sister Fatima Bibi" class="w-full h-full object-cover">
+                                class="w-11 h-11 rounded-2xl bg-teal-50 text-teal-600 flex items-center justify-center shrink-0 group-hover:bg-teal-600 group-hover:text-white transition-all duration-300">
+                                <i class="fa-solid fa-location-dot text-sm"></i>
                             </div>
                             <div>
-                                <h3 class="font-bold text-base text-slate-900">Sister Fatima Bibi</h3>
-                                <p class="text-xs text-teal-600 font-semibold">ICU & Post-Op Specialist</p>
-                                <p class="text-[11px] text-slate-400">PNC Registered, 6 Yrs Exp</p>
+                                <span
+                                    class="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">Address</span>
+                                <p class="text-xs font-extrabold text-slate-800 mt-0.5 leading-snug">Main Boulevard,
+                                    Gulberg III, Lahore, Pakistan</p>
                             </div>
                         </div>
-                        <ul class="space-y-2 text-xs text-slate-600 mb-6 border-t border-slate-100 pt-3">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-shield-check text-teal-600"></i>
-                                Police Verified & Certified
-                            </li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-clock text-teal-600"></i>
-                                Available for 12/24 Hour Shifts</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-star text-amber-400"></i> <strong
-                                    class="text-slate-800">4.9</strong> (85+ Assignments)</li>
-                        </ul>
+                        <div class="flex items-start gap-3.5 group">
+                            <div
+                                class="w-11 h-11 rounded-2xl bg-teal-50 text-teal-600 flex items-center justify-center shrink-0 group-hover:bg-teal-600 group-hover:text-white transition-all duration-300">
+                                <i class="fa-solid fa-phone text-sm"></i>
+                            </div>
+                            <div>
+                                <span
+                                    class="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">Helpline</span>
+                                <p class="text-xs font-extrabold text-slate-800 mt-0.5">+92 42 111 222 333</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3.5 group">
+                            <div
+                                class="w-11 h-11 rounded-2xl bg-teal-50 text-teal-600 flex items-center justify-center shrink-0 group-hover:bg-teal-600 group-hover:text-white transition-all duration-300">
+                                <i class="fa-solid fa-clock text-sm"></i>
+                            </div>
+                            <div>
+                                <span
+                                    class="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">Emergency</span>
+                                <p class="text-xs font-extrabold text-emerald-600 mt-0.5">Open 24/7 (All Days)</p>
+                            </div>
+                        </div>
                     </div>
-                    <a href="nurse-profile.html?id=fatima-bibi"
-                        class="w-full py-2.5 rounded-xl bg-teal-600 text-white font-bold text-xs hover:bg-teal-700 transition-all text-center block shadow-sm hover:text-white">
-                        Hire Home Nurse
+                    <a href="https://maps.google.com" target="_blank"
+                        class="w-full py-3 rounded-2xl bg-slate-900 text-white font-bold text-xs hover:bg-teal-600 transition-all text-center block shadow-md shadow-slate-900/10 hover:shadow-teal-600/20 hover:text-white">
+                        <i class="fa-solid fa-location-arrow mr-1.5"></i> Open in Google Maps
                     </a>
                 </div>
 
-                <!-- Nurse Card 2 -->
+                <!-- Map View Box -->
                 <div
-                    class="bg-slate-50 border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center gap-4 mb-4">
-                            <div
-                                class="w-14 h-14 rounded-2xl bg-teal-100 text-teal-700 font-bold flex items-center justify-center text-xl overflow-hidden shadow-inner flex-shrink-0">
-                                <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&q=80&w=200"
-                                    alt="Muhammad Akram" class="w-full h-full object-cover">
-                            </div>
-                            <div>
-                                <h3 class="font-bold text-base text-slate-900">Muhammad Akram</h3>
-                                <p class="text-xs text-teal-600 font-semibold">Elderly & Stroke Care Expert</p>
-                                <p class="text-[11px] text-slate-400">PNC Registered, 5 Yrs Exp</p>
-                            </div>
-                        </div>
-                        <ul class="space-y-2 text-xs text-slate-600 mb-6 border-t border-slate-100 pt-3">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-shield-check text-teal-600"></i>
-                                Police Verified & Certified</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-clock text-teal-600"></i>
-                                Available for Night / Day Shifts</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-star text-amber-400"></i> <strong
-                                    class="text-slate-800">4.88</strong> (64+ Assignments)</li>
-                        </ul>
-                    </div>
-                    <a href="nurse-profile.html?id=muhammad-akram"
-                        class="w-full py-2.5 rounded-xl bg-teal-600 text-white font-bold text-xs hover:bg-teal-700 transition-all text-center block shadow-sm hover:text-white">
-                        Hire Home Nurse
-                    </a>
-                </div>
-
-                <!-- Nurse Card 3 -->
-                <div
-                    class="bg-slate-50 border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center gap-4 mb-4">
-                            <div
-                                class="w-14 h-14 rounded-2xl bg-teal-100 text-teal-700 font-bold flex items-center justify-center text-xl overflow-hidden shadow-inner flex-shrink-0">
-                                <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=200"
-                                    alt="Sister Zainab Noor" class="w-full h-full object-cover">
-                            </div>
-                            <div>
-                                <h3 class="font-bold text-base text-slate-900">Sister Zainab Noor</h3>
-                                <p class="text-xs text-teal-600 font-semibold">Neonatal & Mother Care</p>
-                                <p class="text-[11px] text-slate-400">PNC Registered, 4 Yrs Exp</p>
-                            </div>
-                        </div>
-                        <ul class="space-y-2 text-xs text-slate-600 mb-6 border-t border-slate-100 pt-3">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-shield-check text-teal-600"></i>
-                                Police Verified & Certified</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-clock text-teal-600"></i>
-                                Available for Live-In Care</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-star text-amber-400"></i> <strong
-                                    class="text-slate-800">4.92</strong> (92+ Assignments)</li>
-                        </ul>
-                    </div>
-                    <a href="nurse-profile.html?id=zainab-noor"
-                        class="w-full py-2.5 rounded-xl bg-teal-600 text-white font-bold text-xs hover:bg-teal-700 transition-all text-center block shadow-sm hover:text-white">
-                        Hire Home Nurse
-                    </a>
+                    class="lg:col-span-2 bg-white border border-slate-200/80 rounded-3xl overflow-hidden shadow-sm h-[340px] relative">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3401.5959!2d74.3587!3d31.5204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzDCsDMxJzEzLjQiTiA3NMKwMjEnMzEuMyJF!5e0!3m2!1sen!2spk!4v1620000000000!5m2!1sen!2spk"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        class="w-full h-full object-cover"></iframe>
                 </div>
             </div>
         </div>
@@ -954,7 +1125,38 @@
 
     <!-- Dedicated Scripts -->
     <script src="/assets/js/main.js"></script>
-    <script src="/assets/js/legal.js"></script>
+    <!-- JavaScript for Category Filter Animation -->
+    <script>
+        function filterCategory(category, event) {
+            // Update Active Button Styles
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-teal-600', 'text-white', 'shadow-sm');
+                btn.classList.add('text-slate-600', 'hover:bg-slate-100');
+            });
+            event.currentTarget.classList.remove('text-slate-600', 'hover:bg-slate-100');
+            event.currentTarget.classList.add('bg-teal-600', 'text-white', 'shadow-sm');
+
+            // Filter Cards with Smooth Animation
+            const cards = document.querySelectorAll('.doctor-card');
+            cards.forEach(card => {
+                const cardCategory = card.getAttribute('data-category');
+                if (category === 'all' || cardCategory === category) {
+                    card.style.display = 'flex';
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'scale(1)';
+                    }, 50);
+                } else {
+                    card.style.opacity = '0';
+                    card.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        card.style.display = 'none';
+                    }, 200);
+                }
+            });
+        }
+    </script>
 </body>
 
 </html>
